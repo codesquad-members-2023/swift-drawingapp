@@ -13,6 +13,7 @@
 		DB3AA8D229D140B0002B95E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3AA8D029D140B0002B95E6 /* Main.storyboard */; };
 		DB3AA8D429D140B1002B95E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3AA8D329D140B1002B95E6 /* Assets.xcassets */; };
 		DB3AA8D729D140B1002B95E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3AA8D529D140B1002B95E6 /* LaunchScreen.storyboard */; };
+		DB3AA8DF29D168D0002B95E6 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AA8DE29D168D0002B95E6 /* Rectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DB3AA8D329D140B1002B95E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3AA8D629D140B1002B95E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB3AA8D829D140B1002B95E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3AA8DE29D168D0002B95E6 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		DB3AA8C929D140B0002B95E6 /* DrawingApp */ = {
 			isa = PBXGroup;
 			children = (
+				DB3AA8DE29D168D0002B95E6 /* Rectangle.swift */,
 				DB3AA8CA29D140B0002B95E6 /* AppDelegate.swift */,
 				DB3AA8CC29D140B0002B95E6 /* SceneDelegate.swift */,
 				DB3AA8CE29D140B0002B95E6 /* ViewController.swift */,
@@ -141,6 +144,7 @@
 				DB3AA8CF29D140B0002B95E6 /* ViewController.swift in Sources */,
 				DB3AA8CB29D140B0002B95E6 /* AppDelegate.swift in Sources */,
 				DB3AA8CD29D140B0002B95E6 /* SceneDelegate.swift in Sources */,
+				DB3AA8DF29D168D0002B95E6 /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
