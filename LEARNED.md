@@ -80,6 +80,8 @@
     
 - 다시 말해서 팩토리메서드 패턴이란 **하위 클래스에서 팩토리 메서드를 오버라이딩해서 객체를 반환**하게 하는 패턴이다.
 
+# Factory Method
+
 ## PhoneFactory 예시
 
 <img width="605" alt="스크린샷 2023-03-27 오후 5 52 57" src="https://user-images.githubusercontent.com/88966578/227893776-e3ee53be-f4dd-4e1d-bf27-361d3b7a032c.png">
