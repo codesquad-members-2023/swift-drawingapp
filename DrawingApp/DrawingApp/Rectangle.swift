@@ -9,31 +9,31 @@ import Foundation
 
 class Rectangle{
     var id : String
-    var width : Double
-    var height : Double
+    var width = Double(150)
+    var height = Double(120)
     var locatedX : Double
     var locatedY : Double
-    var colorR : Int
-    var colorG : Int
-    var colorB : Int
-    var alpha : Int
     
-    init(id: String, width: Double, height: Double, locatedX: Double, locatedY: Double, colorR: Int, colorG: Int, colorB: Int, alpha: Int) {
+    var colorR = (0...255).randomElement()
+    var colorG = (0...255).randomElement()
+    var colorB = (0...255).randomElement()
+    var alpha = (1...10).randomElement()
+    
+    init(id: String, locatedX : Double, locatedY : Double){
         self.id = id
-        self.width = width
-        self.height = height
         self.locatedX = locatedX
         self.locatedY = locatedY
-        self.colorR = colorR
-        self.colorG = colorG
-        self.colorB = colorB
-        self.alpha = alpha
     }
 }
 
 extension Rectangle : CustomStringConvertible{
     //Rect1 (fxd-0fz-4b9), X:10,Y:200, W150, H120, R:245, G:0, B:245, Alpha: 9
     var description: String {
-            return "(\(id), X:\(locatedX), Y:\(locatedY), W\(width), H\(height), R:\(colorR), G:\(colorG), B:\(colorB), Alpha:\(alpha)"
+        if colorR != nil && colorG != nil && colorB != nil{
+            return "(\(id), X:\(locatedX), Y:\(locatedY), W\(width), H\(height), R:\(colorR!), G:\(colorG!), B:\(colorB!), Alpha:\(alpha!)"
+        }
+           return "check your color"
         }
 }
+
+
