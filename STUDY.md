@@ -12,4 +12,10 @@
 
 - - -
 
+### 학습-3) iOS13+ 이상에서 적용가능한 시스템 로그함수 학습
 
+os_log, os_log_info, os_log_debug, os_log_error, os_log_fault, os_signpost, os_activity, os_trace, os_log_create, os_log_pack 등이 있다.
+
+애플 공식문서 참고 )_https://developer.apple.com/documentation/os/logging
+
+- - -
