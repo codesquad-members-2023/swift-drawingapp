@@ -8,7 +8,12 @@
 import Foundation
 
 class Rectangle{
-    var id : String
+    let chars = Array("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*").map({String($0)})
+    var id : String{
+        let randomChars = (0..<9).map { _ in chars.randomElement()! }
+        let tempId = randomChars[0...2].joined() + "-" + randomChars[3...5].joined() + "-" + randomChars[6...8].joined()
+        return tempId
+    }
     var width = Double(150)
     var height = Double(120)
     var locatedX : Double
@@ -19,15 +24,14 @@ class Rectangle{
     var colorB = (0...255).randomElement()
     var alpha = (1...10).randomElement()
     
-    init(id: String, locatedX : Double, locatedY : Double){
-        self.id = id
+    init(locatedX : Double, locatedY : Double){
+       
         self.locatedX = locatedX
         self.locatedY = locatedY
     }
 }
 
 extension Rectangle : CustomStringConvertible{
-    //Rect1 (fxd-0fz-4b9), X:10,Y:200, W150, H120, R:245, G:0, B:245, Alpha: 9
     var description: String {
         if colorR != nil && colorG != nil && colorB != nil{
             return "(\(id), X:\(locatedX), Y:\(locatedY), W\(width), H\(height), R:\(colorR!), G:\(colorG!), B:\(colorB!), Alpha:\(alpha!)"
