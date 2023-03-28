@@ -107,7 +107,7 @@
 [SRC 2: [https://ko.wikipedia.org/wiki/옵서버_패턴](https://ko.wikipedia.org/wiki/%EC%98%B5%EC%84%9C%EB%B2%84_%ED%8C%A8%ED%84%B4)]
 
 <img width="253" alt="스크린샷 2023-03-28 오전 10 56 35" src="https://user-images.githubusercontent.com/88966578/228112914-40d915a9-e90b-4c6c-91c6-a915f2929f41.png">
-딱 걸렸다. ~~이 새끼~~
+딱 걸렸다. 이 자식.
 
 ## 개요
 
