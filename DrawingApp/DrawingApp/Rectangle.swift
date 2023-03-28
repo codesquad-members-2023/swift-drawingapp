@@ -1,10 +1,3 @@
-//
-//  Rectangle.swift
-//  DrawingApp
-//
-//  Created by leehwajin on 2023/03/27.
-//
-
 import Foundation
 
 class Rectangle{
@@ -25,7 +18,6 @@ class Rectangle{
     var alpha = (1...10).randomElement()
     
     init(locatedX : Double, locatedY : Double){
-       
         self.locatedX = locatedX
         self.locatedY = locatedY
     }
