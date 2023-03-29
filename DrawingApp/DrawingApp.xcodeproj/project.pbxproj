@@ -13,6 +13,7 @@
 		F412CAAB29D15D1D0034F420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F412CAA929D15D1D0034F420 /* Main.storyboard */; };
 		F412CAAD29D15D1D0034F420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F412CAAC29D15D1D0034F420 /* Assets.xcassets */; };
 		F412CAB029D15D1D0034F420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F412CAAE29D15D1D0034F420 /* LaunchScreen.storyboard */; };
+		F437A51D29D404FB004D38C8 /* DRID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51C29D404FB004D38C8 /* DRID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F412CAAC29D15D1D0034F420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F412CAAF29D15D1D0034F420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F412CAB129D15D1D0034F420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F437A51C29D404FB004D38C8 /* DRID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F412CAA329D15D1D0034F420 /* AppDelegate.swift */,
 				F412CAA529D15D1D0034F420 /* SceneDelegate.swift */,
 				F412CAA729D15D1D0034F420 /* ViewController.swift */,
+				F437A51C29D404FB004D38C8 /* DRID.swift */,
 				F412CAA929D15D1D0034F420 /* Main.storyboard */,
 				F412CAAC29D15D1D0034F420 /* Assets.xcassets */,
 				F412CAAE29D15D1D0034F420 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F437A51D29D404FB004D38C8 /* DRID.swift in Sources */,
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,
 				F412CAA629D15D1D0034F420 /* SceneDelegate.swift in Sources */,
