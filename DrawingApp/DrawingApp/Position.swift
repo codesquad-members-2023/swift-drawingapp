@@ -24,10 +24,10 @@ class Position {
     }
     
     private func setX () -> Double {
-        return Double.random(in: 0.0 ... xLimit - widthOfViewFrame )
+        return Double.random(in: 0...(xLimit - widthOfViewFrame))
     }
     
     private func setY () -> Double{
-        return Double.random(in: 0.0 ... yLimit - heightOfViewFrame)
+        return Double.random(in: 0...(yLimit - heightOfViewFrame))
     }
 }
