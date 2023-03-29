@@ -21,7 +21,6 @@ class Square {
         self.backgroundColor = backgroundColor
         self.alpha = alpha
     }
-    
 }
 
 extension Square : CustomStringConvertible {
