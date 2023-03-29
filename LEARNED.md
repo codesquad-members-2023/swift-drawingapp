@@ -92,6 +92,95 @@
 - 테스트하는게 유리한 구조.
 - 항상 추상화된 프로토콜 타입을 사용하여 쓰는 구조.
 
+## 팩메 vs 추팩 
+
+- 팩메 
+```swift 
+protocol Animal {
+    func makeSound()
+}
+
+class Cat: Animal {
+    func makeSound() {
+        print("Meow")
+    }
+}
+
+class Dog: Animal {
+    func makeSound() {
+        print("Woof")
+    }
+}
+
+class AnimalFactory {
+    static func createAnimal(type: String) -> Animal? {
+        switch type {
+        case "cat":
+            return Cat()
+        case "dog":
+            return Dog()
+        default:
+            return nil
+        }
+    }
+}
+
+// Usage
+if let animal = AnimalFactory.createAnimal(type: "cat") {
+    animal.makeSound() // Output: "Meow"
+}
+```
+
+- 추팩 
+
+```swift
+protocol Animal {
+    func makeSound()
+}
+
+class Cat: Animal {
+    func makeSound() {
+        print("Meow")
+    }
+}
+
+class Dog: Animal {
+    func makeSound() {
+        print("Woof")
+    }
+}
+
+protocol AnimalFactory {
+    func createAnimal() -> Animal
+}
+
+class CatFactory: AnimalFactory {
+    func createAnimal() -> Animal {
+        return Cat()
+    }
+}
+
+class DogFactory: AnimalFactory {
+    func createAnimal() -> Animal {
+        return Dog()
+    }
+}
+
+// Usage
+let catFactory = CatFactory()
+let cat = catFactory.createAnimal()
+cat.makeSound() // Output: "Meow"
+
+let dogFactory = DogFactory()
+let dog = dogFactory.createAnimal()
+dog.makeSound() // Output: "Woof"
+
+```
+
+- 일반 팩토리 패턴에서는 팩토리 메서드에 전달된 매개 변수를 기반으로 다양한 유형의 객체를 생성하는 팩토리 클래스가 있습니다. 반대로 추상 팩토리 패턴에서는 객체를 생성하는 방법을 정의하는 추상 팩토리 인터페이스와 이 인터페이스를 구현하고 특정 유형의 객체를 생성하는 구체적인 팩토리가 있다.
+
+- 이 example에서 일반 공장 패턴에는 유형 매개 변수를 기반으로 Cat 또는 Dog 개체를 만드는 단일 공장 클래스 AnimalFactory가 있습니다. 한편, 추상 팩토리 패턴은 AnimalFactory 인터페이스를 구현하는 CatFactory와 DogFactory 두 개의 콘크리트 팩토리 클래스가 있으며, 각각 Cat과 Dog 객체를 생성한다.
+
 ## 테스트 하기 어려운 것들.
 
 - 일단 리턴타입이 없는 경우. 테스트하려면 실행결과를 확인할 수밖에 없음. 이러면 단위 테스트 하기가 어려워.
