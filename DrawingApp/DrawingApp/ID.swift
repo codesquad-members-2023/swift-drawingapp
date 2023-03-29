@@ -18,7 +18,6 @@ class ID {
         var name = ""
         
         for i in 1...11 {
-            
             if i == 4 || i == 8 {
                 name += "-"
                 continue
