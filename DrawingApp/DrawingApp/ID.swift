@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DRID: Equatable, Randomizable, CustomStringConvertible {
+struct ID: Equatable, Randomizable, CustomStringConvertible {
   
   typealias Figure = String
 
@@ -19,7 +19,7 @@ struct DRID: Equatable, Randomizable, CustomStringConvertible {
   
   // MARK: Equatable
   
-  static func == (lhs: DRID, rhs: DRID) -> Bool {
+  static func == (lhs: ID, rhs: ID) -> Bool {
     lhs.id == rhs.id
   }
   

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DRColor: Randomizable, CustomStringConvertible {
+struct Color: Randomizable, CustomStringConvertible {
   typealias Figure = UInt8
   
   private let red: Figure

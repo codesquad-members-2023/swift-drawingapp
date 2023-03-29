@@ -13,15 +13,15 @@
 		F412CAAB29D15D1D0034F420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F412CAA929D15D1D0034F420 /* Main.storyboard */; };
 		F412CAAD29D15D1D0034F420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F412CAAC29D15D1D0034F420 /* Assets.xcassets */; };
 		F412CAB029D15D1D0034F420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F412CAAE29D15D1D0034F420 /* LaunchScreen.storyboard */; };
-		F437A51D29D404FB004D38C8 /* DRID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51C29D404FB004D38C8 /* DRID.swift */; };
-		F437A51F29D40634004D38C8 /* DRPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51E29D40634004D38C8 /* DRPoint.swift */; };
+		F437A51D29D404FB004D38C8 /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51C29D404FB004D38C8 /* ID.swift */; };
+		F437A51F29D40634004D38C8 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51E29D40634004D38C8 /* Point.swift */; };
 		F437A52129D40710004D38C8 /* Randomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52029D40710004D38C8 /* Randomizable.swift */; };
-		F437A52329D40826004D38C8 /* DRSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52229D40826004D38C8 /* DRSize.swift */; };
-		F437A52529D40883004D38C8 /* DRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52429D40883004D38C8 /* DRColor.swift */; };
-		F437A52729D408D3004D38C8 /* DRAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52629D408D3004D38C8 /* DRAlpha.swift */; };
-		F437A52929D40B19004D38C8 /* DRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52829D40B19004D38C8 /* DRView.swift */; };
-		F437A52B29D40BB8004D38C8 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52A29D40BB8004D38C8 /* ViewFactory.swift */; };
-		F437A52D29D40C0A004D38C8 /* RandomViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52C29D40C0A004D38C8 /* RandomViewFactory.swift */; };
+		F437A52329D40826004D38C8 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52229D40826004D38C8 /* Size.swift */; };
+		F437A52529D40883004D38C8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52429D40883004D38C8 /* Color.swift */; };
+		F437A52729D408D3004D38C8 /* Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52629D408D3004D38C8 /* Alpha.swift */; };
+		F437A52929D40B19004D38C8 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52829D40B19004D38C8 /* Rectangle.swift */; };
+		F437A52B29D40BB8004D38C8 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52A29D40BB8004D38C8 /* RectangleFactory.swift */; };
+		F437A52D29D40C0A004D38C8 /* RandomRectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52C29D40C0A004D38C8 /* RandomRectangleFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +33,15 @@
 		F412CAAC29D15D1D0034F420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F412CAAF29D15D1D0034F420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F412CAB129D15D1D0034F420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F437A51C29D404FB004D38C8 /* DRID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRID.swift; sourceTree = "<group>"; };
-		F437A51E29D40634004D38C8 /* DRPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRPoint.swift; sourceTree = "<group>"; };
+		F437A51C29D404FB004D38C8 /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		F437A51E29D40634004D38C8 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		F437A52029D40710004D38C8 /* Randomizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizable.swift; sourceTree = "<group>"; };
-		F437A52229D40826004D38C8 /* DRSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSize.swift; sourceTree = "<group>"; };
-		F437A52429D40883004D38C8 /* DRColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRColor.swift; sourceTree = "<group>"; };
-		F437A52629D408D3004D38C8 /* DRAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRAlpha.swift; sourceTree = "<group>"; };
-		F437A52829D40B19004D38C8 /* DRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRView.swift; sourceTree = "<group>"; };
-		F437A52A29D40BB8004D38C8 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
-		F437A52C29D40C0A004D38C8 /* RandomViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewFactory.swift; sourceTree = "<group>"; };
+		F437A52229D40826004D38C8 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		F437A52429D40883004D38C8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F437A52629D408D3004D38C8 /* Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpha.swift; sourceTree = "<group>"; };
+		F437A52829D40B19004D38C8 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		F437A52A29D40BB8004D38C8 /* RectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
+		F437A52C29D40C0A004D38C8 /* RandomRectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRectangleFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +78,14 @@
 				F412CAA529D15D1D0034F420 /* SceneDelegate.swift */,
 				F412CAA729D15D1D0034F420 /* ViewController.swift */,
 				F437A52029D40710004D38C8 /* Randomizable.swift */,
-				F437A51C29D404FB004D38C8 /* DRID.swift */,
-				F437A51E29D40634004D38C8 /* DRPoint.swift */,
-				F437A52229D40826004D38C8 /* DRSize.swift */,
-				F437A52429D40883004D38C8 /* DRColor.swift */,
-				F437A52629D408D3004D38C8 /* DRAlpha.swift */,
-				F437A52829D40B19004D38C8 /* DRView.swift */,
-				F437A52A29D40BB8004D38C8 /* ViewFactory.swift */,
-				F437A52C29D40C0A004D38C8 /* RandomViewFactory.swift */,
+				F437A51C29D404FB004D38C8 /* ID.swift */,
+				F437A51E29D40634004D38C8 /* Point.swift */,
+				F437A52229D40826004D38C8 /* Size.swift */,
+				F437A52429D40883004D38C8 /* Color.swift */,
+				F437A52629D408D3004D38C8 /* Alpha.swift */,
+				F437A52829D40B19004D38C8 /* Rectangle.swift */,
+				F437A52A29D40BB8004D38C8 /* RectangleFactory.swift */,
+				F437A52C29D40C0A004D38C8 /* RandomRectangleFactory.swift */,
 				F412CAA929D15D1D0034F420 /* Main.storyboard */,
 				F412CAAC29D15D1D0034F420 /* Assets.xcassets */,
 				F412CAAE29D15D1D0034F420 /* LaunchScreen.storyboard */,
@@ -165,18 +165,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F437A51D29D404FB004D38C8 /* DRID.swift in Sources */,
+				F437A51D29D404FB004D38C8 /* ID.swift in Sources */,
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
-				F437A52729D408D3004D38C8 /* DRAlpha.swift in Sources */,
-				F437A51F29D40634004D38C8 /* DRPoint.swift in Sources */,
+				F437A52729D408D3004D38C8 /* Alpha.swift in Sources */,
+				F437A51F29D40634004D38C8 /* Point.swift in Sources */,
 				F437A52129D40710004D38C8 /* Randomizable.swift in Sources */,
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,
-				F437A52929D40B19004D38C8 /* DRView.swift in Sources */,
-				F437A52529D40883004D38C8 /* DRColor.swift in Sources */,
-				F437A52B29D40BB8004D38C8 /* ViewFactory.swift in Sources */,
+				F437A52929D40B19004D38C8 /* Rectangle.swift in Sources */,
+				F437A52529D40883004D38C8 /* Color.swift in Sources */,
+				F437A52B29D40BB8004D38C8 /* RectangleFactory.swift in Sources */,
 				F412CAA629D15D1D0034F420 /* SceneDelegate.swift in Sources */,
-				F437A52D29D40C0A004D38C8 /* RandomViewFactory.swift in Sources */,
-				F437A52329D40826004D38C8 /* DRSize.swift in Sources */,
+				F437A52D29D40C0A004D38C8 /* RandomRectangleFactory.swift in Sources */,
+				F437A52329D40826004D38C8 /* Size.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RandomViewFactory: ViewFactory {
+class RandomRectangleFactory: RectangleFactory {
   private let xRange: ClosedRange<Double>
   
   private let yRange: ClosedRange<Double>
@@ -17,34 +17,34 @@ class RandomViewFactory: ViewFactory {
     self.yRange = yRange
   }
   
-  private func makeRandomID() -> DRID {
-    let randomString = DRID.makeRandomFigure()
+  private func makeRandomID() -> ID {
+    let randomString = ID.makeRandomFigure()
     return .init(id: randomString)
   }
   
-  private func makeRandomPosition() -> DRPoint {
-    let x = DRPoint.makeRandomFigure(range: xRange)
-    let y = DRPoint.makeRandomFigure(range: yRange)
+  private func makeRandomPosition() -> Point {
+    let x = Point.makeRandomFigure(range: xRange)
+    let y = Point.makeRandomFigure(range: yRange)
     return .init(x: x, y: y)
   }
   
-  private func makeRandomColor() -> DRColor {
-    let r = DRColor.makeRandomFigure()
-    let g = DRColor.makeRandomFigure()
-    let b = DRColor.makeRandomFigure()
+  private func makeRandomColor() -> Color {
+    let r = Color.makeRandomFigure()
+    let g = Color.makeRandomFigure()
+    let b = Color.makeRandomFigure()
     return .init(r: r, g: g, b: b)
   }
   
-  private func makeRandomAlpha() -> DRAlpha {
-    let level = DRAlpha.makeRandomFigure()
+  private func makeRandomAlpha() -> Alpha {
+    let level = Alpha.makeRandomFigure()
     return .init(level: level)
   }
   
   // MARK: ViewFactory
   
-  func makeView() -> DRView? {
+  func makeRectangle() -> Rectangle? {
       let id = makeRandomID()
-      let size = DRSize(width: 150, height: 120)
+      let size = Size(width: 150, height: 120)
       let position = makeRandomPosition()
       let color = makeRandomColor()
       let alpha = makeRandomAlpha()

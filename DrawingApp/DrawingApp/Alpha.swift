@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DRAlpha: CustomStringConvertible, Randomizable {
+struct Alpha: CustomStringConvertible, Randomizable {
   enum Level: Int, CaseIterable, Comparable {
     case lv1 = 1
     case lv2
@@ -20,7 +20,7 @@ struct DRAlpha: CustomStringConvertible, Randomizable {
     case lv9
     case lv10
     
-    static func < (lhs: DRAlpha.Level, rhs: DRAlpha.Level) -> Bool {
+    static func < (lhs: Alpha.Level, rhs: Alpha.Level) -> Bool {
       lhs.rawValue < rhs.rawValue
     }
   }
