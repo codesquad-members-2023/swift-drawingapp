@@ -8,13 +8,13 @@
 import Foundation
 
 class ID {
-    private var id : String
+    private var id : String = ""
     
     init() {
-        self.id = ""
+        self.id = setId()
     }
     
-    func generate() -> String {
+    func setId() -> String {
         var name = ""
         
         for i in 1...11 {
