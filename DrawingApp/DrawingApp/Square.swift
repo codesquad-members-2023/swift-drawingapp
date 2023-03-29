@@ -8,4 +8,18 @@
 import Foundation
 
 class Square {
+    var id : ID
+    var size : Size
+    var position : Position
+    var backgroundColor : Color
+    var alpha : Alpha
+    
+    init(id: ID, size: Size, position: Position, backgroundColor: Color, alpha: Alpha) {
+        self.id = id
+        self.size = size
+        self.position = position
+        self.backgroundColor = backgroundColor
+        self.alpha = alpha
+    }
+    
 }
