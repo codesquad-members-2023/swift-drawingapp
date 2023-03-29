@@ -12,6 +12,9 @@ class Position {
     private var y : Double = 0.0
     private var xLimit : Double
     private var yLimit : Double
+    private let widthOfViewFrame = 150.0
+    private let heightOfViewFrame = 120.0
+    
     
     init(width : Double , height : Double ) {
         self.xLimit = width
@@ -21,10 +24,10 @@ class Position {
     }
     
     private func setX () -> Double {
-        return Double.random(in: 0.0 ... xLimit)
+        return Double.random(in: 0.0 ... xLimit - widthOfViewFrame )
     }
     
     private func setY () -> Double{
-        return Double.random(in: 0.0 ... yLimit)
+        return Double.random(in: 0.0 ... yLimit - heightOfViewFrame)
     }
 }
