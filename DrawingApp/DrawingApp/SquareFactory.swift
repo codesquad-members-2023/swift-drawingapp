@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SquareFactory {
-    func produce() -> Square
+    
+    func produce(widthLimit : Double, heightLimit : Double) -> Square?
 }
