@@ -16,6 +16,7 @@
 		F437A51D29D404FB004D38C8 /* DRID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51C29D404FB004D38C8 /* DRID.swift */; };
 		F437A51F29D40634004D38C8 /* DRPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51E29D40634004D38C8 /* DRPoint.swift */; };
 		F437A52129D40710004D38C8 /* Randomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52029D40710004D38C8 /* Randomizable.swift */; };
+		F437A52329D40826004D38C8 /* DRSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52229D40826004D38C8 /* DRSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F437A51C29D404FB004D38C8 /* DRID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRID.swift; sourceTree = "<group>"; };
 		F437A51E29D40634004D38C8 /* DRPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRPoint.swift; sourceTree = "<group>"; };
 		F437A52029D40710004D38C8 /* Randomizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizable.swift; sourceTree = "<group>"; };
+		F437A52229D40826004D38C8 /* DRSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				F437A52029D40710004D38C8 /* Randomizable.swift */,
 				F437A51C29D404FB004D38C8 /* DRID.swift */,
 				F437A51E29D40634004D38C8 /* DRPoint.swift */,
+				F437A52229D40826004D38C8 /* DRSize.swift */,
 				F412CAA929D15D1D0034F420 /* Main.storyboard */,
 				F412CAAC29D15D1D0034F420 /* Assets.xcassets */,
 				F412CAAE29D15D1D0034F420 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				F437A52129D40710004D38C8 /* Randomizable.swift in Sources */,
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,
 				F412CAA629D15D1D0034F420 /* SceneDelegate.swift in Sources */,
+				F437A52329D40826004D38C8 /* DRSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
