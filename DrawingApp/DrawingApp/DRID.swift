@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct DRID: Equatable, CustomStringConvertible {
+struct DRID: Equatable, Randomizable, CustomStringConvertible {
+  
+  typealias Figure = String
 
-  private let id: String
+  private let id: Figure
   
   init(id: String) {
     self.id = id
@@ -27,9 +29,11 @@ struct DRID: Equatable, CustomStringConvertible {
     id
   }
   
-  static func makeRandomID() -> String {
-    let componentLength = [3, 3, 3]
-    
+  // MARK: Randomizable
+  
+  static private let componentLength = [3, 3, 3]
+  
+  static func makeRandomFigure(range: ClosedRange<Figure>? = nil) -> Figure {
     var tempID = UUID().uuidString
     var result: String = ""
     
