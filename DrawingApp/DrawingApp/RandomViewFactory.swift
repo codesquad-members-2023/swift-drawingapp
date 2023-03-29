@@ -8,9 +8,9 @@
 import Foundation
 
 class RandomViewFactory: ViewFactory {
-  let xRange: ClosedRange<Double>
+  private let xRange: ClosedRange<Double>
   
-  let yRange: ClosedRange<Double>
+  private let yRange: ClosedRange<Double>
   
   init(xRange: ClosedRange<Double>, yRange: ClosedRange<Double>) {
     self.xRange = xRange
@@ -39,6 +39,8 @@ class RandomViewFactory: ViewFactory {
     let level = DRAlpha.makeRandomFigure()
     return .init(level: level)
   }
+  
+  // MARK: ViewFactory
   
   func makeView() -> DRView? {
       let id = makeRandomID()
