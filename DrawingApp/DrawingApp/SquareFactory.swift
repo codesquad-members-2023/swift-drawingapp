@@ -7,6 +7,6 @@
 
 import Foundation
 
-class SquareFactory {
-    
+protocol SquareFactory {
+    func produce() -> Square
 }
