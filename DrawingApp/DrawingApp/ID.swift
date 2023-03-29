@@ -30,7 +30,7 @@ extension ID: CustomStringConvertible {
   }
 }
 
-extension ID: Randomizable {
+extension ID {
   static private let componentLength = [3, 3, 3]
   
   static func makeRandomFigure(range: ClosedRange<Figure>? = nil) -> Figure {
@@ -47,4 +47,3 @@ extension ID: Randomizable {
     return result
   }
 }
-

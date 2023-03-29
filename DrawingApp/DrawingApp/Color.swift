@@ -8,11 +8,9 @@
 import Foundation
 
 struct Color {
-  typealias Figure = UInt8
-  
-  private let red: Figure
-  private let green: Figure
-  private let blue: Figure
+  private let red: UInt8
+  private let green: UInt8
+  private let blue: UInt8
   
   init(r red: UInt8, g green: UInt8, b blue: UInt8) {
     self.red = red
@@ -24,11 +22,5 @@ struct Color {
 extension Color: CustomStringConvertible {
   var description: String {
     "R:\(red), G:\(green), B:\(blue)"
-  }
-}
-
-extension Color: Randomizable {
-  static func makeRandomFigure(range: ClosedRange<UInt8>? = nil) -> UInt8 {
-    (0...UInt8.max).randomElement() ?? UInt8.min
   }
 }
