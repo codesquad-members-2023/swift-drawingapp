@@ -7,18 +7,18 @@
 
 import Foundation
 
-class DRView: Equatable, CustomStringConvertible {
-  private let id: DRID
+class Rectangle: Equatable, CustomStringConvertible {
+  private let id: ID
   
-  private var size: DRSize
+  private var size: Size
   
-  private var position: DRPoint
+  private var position: Point
   
-  private var backgroundColor: DRColor
+  private var backgroundColor: Color
   
-  private var alpha: DRAlpha
+  private var alpha: Alpha
   
-  init(id: DRID, size: DRSize, position: DRPoint, backgroundColor: DRColor, alpha: DRAlpha) {
+  init(id: ID, size: Size, position: Point, backgroundColor: Color, alpha: Alpha) {
     self.id = id
     self.size = size
     self.position = position
@@ -28,7 +28,7 @@ class DRView: Equatable, CustomStringConvertible {
   
   // MARK: Equatable
   
-  static func == (lhs: DRView, rhs: DRView) -> Bool {
+  static func == (lhs: Rectangle, rhs: Rectangle) -> Bool {
     lhs.id == rhs.id
   }
   

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ViewFactory {
-  func makeView() -> DRView?
+protocol RectangleFactory {
+  func makeRectangle() -> Rectangle?
 }

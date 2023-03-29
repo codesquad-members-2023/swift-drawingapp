@@ -1,5 +1,5 @@
 //
-//  DRSize.swift
+//  DRPoint.swift
 //  DrawingApp
 //
 //  Created by Effie on 2023/03/29.
@@ -7,27 +7,27 @@
 
 import Foundation
 
-struct DRSize: Randomizable, CustomStringConvertible {
+struct Point: Randomizable, CustomStringConvertible {
   typealias Figure = Double
   
-  private let width: Figure
-  private let height: Figure
+  private let x: Figure
+  private let y: Figure
   
-  init(width: Double, height: Double) {
-    self.width = width
-    self.height = height
+  init(x: Double, y: Double) {
+    self.x = x
+    self.y = y
   }
   
   // MARK: CustomStringConvertible
   
   var description: String {
-    "W\(Int(width)), H\(Int(height))"
+    "X: \(Int(x)), Y: \(Int(y))"
   }
   
   // MARK: Randomizable
   
   static func makeRandomFigure(range: ClosedRange<Figure>?) -> Figure {
-    guard let range else { return 100 }
+    guard let range else { return 0 }
     return Double.random(in: range)
   }
 }
