@@ -40,9 +40,3 @@ extension Alpha: CustomStringConvertible {
     "Alpha: \(level.rawValue)"
   }
 }
-
-extension Alpha: Randomizable {
-  static func makeRandomFigure(range: ClosedRange<Figure>? = nil) -> Figure {
-    Figure.allCases.randomElement() ?? .lv10
-  }
-}
