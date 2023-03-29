@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Color: Randomizable, CustomStringConvertible {
+struct Color {
   typealias Figure = UInt8
   
   private let red: Figure
@@ -19,15 +19,15 @@ struct Color: Randomizable, CustomStringConvertible {
     self.green = green
     self.blue = blue
   }
-  
-  // MARK: CustomStringConvertible
-  
+}
+
+extension Color: CustomStringConvertible {
   var description: String {
     "R:\(red), G:\(green), B:\(blue)"
   }
-  
-  // MARK: Randomizable
-  
+}
+
+extension Color: Randomizable {
   static func makeRandomFigure(range: ClosedRange<UInt8>? = nil) -> UInt8 {
     (0...UInt8.max).randomElement() ?? UInt8.min
   }
