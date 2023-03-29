@@ -8,5 +8,11 @@
 import Foundation
 
 class Size {
+    private let width : Double
+    private let height : Double
     
+    init() {
+        self.width = 150
+        self.height = 120
+    }
 }
