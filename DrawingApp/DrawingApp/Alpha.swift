@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Alpha : CGFloat {
+enum Alpha : CGFloat, CaseIterable {
     case one = 0.0
     case two = 0.11111
     case three = 0.22222
