@@ -21,6 +21,7 @@
 		F437A52729D408D3004D38C8 /* DRAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52629D408D3004D38C8 /* DRAlpha.swift */; };
 		F437A52929D40B19004D38C8 /* DRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52829D40B19004D38C8 /* DRView.swift */; };
 		F437A52B29D40BB8004D38C8 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52A29D40BB8004D38C8 /* ViewFactory.swift */; };
+		F437A52D29D40C0A004D38C8 /* RandomViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52C29D40C0A004D38C8 /* RandomViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F437A52629D408D3004D38C8 /* DRAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRAlpha.swift; sourceTree = "<group>"; };
 		F437A52829D40B19004D38C8 /* DRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRView.swift; sourceTree = "<group>"; };
 		F437A52A29D40BB8004D38C8 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		F437A52C29D40C0A004D38C8 /* RandomViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				F437A52629D408D3004D38C8 /* DRAlpha.swift */,
 				F437A52829D40B19004D38C8 /* DRView.swift */,
 				F437A52A29D40BB8004D38C8 /* ViewFactory.swift */,
+				F437A52C29D40C0A004D38C8 /* RandomViewFactory.swift */,
 				F412CAA929D15D1D0034F420 /* Main.storyboard */,
 				F412CAAC29D15D1D0034F420 /* Assets.xcassets */,
 				F412CAAE29D15D1D0034F420 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				F437A52529D40883004D38C8 /* DRColor.swift in Sources */,
 				F437A52B29D40BB8004D38C8 /* ViewFactory.swift in Sources */,
 				F412CAA629D15D1D0034F420 /* SceneDelegate.swift in Sources */,
+				F437A52D29D40C0A004D38C8 /* RandomViewFactory.swift in Sources */,
 				F437A52329D40826004D38C8 /* DRSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
