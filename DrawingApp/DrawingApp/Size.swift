@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Size: Randomizable, CustomStringConvertible {
+struct Size {
   typealias Figure = Double
   
   private let width: Figure
@@ -17,15 +17,15 @@ struct Size: Randomizable, CustomStringConvertible {
     self.width = width
     self.height = height
   }
-  
-  // MARK: CustomStringConvertible
-  
+}
+
+extension Size: CustomStringConvertible {
   var description: String {
     "W\(Int(width)), H\(Int(height))"
   }
-  
-  // MARK: Randomizable
-  
+}
+
+extension Size: Randomizable {
   static func makeRandomFigure(range: ClosedRange<Figure>?) -> Figure {
     guard let range else { return 100 }
     return Double.random(in: range)

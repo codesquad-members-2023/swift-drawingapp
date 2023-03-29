@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RandomRectangleFactory: RectangleFactory {
+class RandomRectangleFactory {
   private let xRange: ClosedRange<Double>
   
   private let yRange: ClosedRange<Double>
@@ -39,9 +39,9 @@ class RandomRectangleFactory: RectangleFactory {
     let level = Alpha.makeRandomFigure()
     return .init(level: level)
   }
-  
-  // MARK: ViewFactory
-  
+}
+
+extension RandomRectangleFactory: RectangleFactory {
   func makeRectangle() -> Rectangle? {
       let id = makeRandomID()
       let size = Size(width: 150, height: 120)

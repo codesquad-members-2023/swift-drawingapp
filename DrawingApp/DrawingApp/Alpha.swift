@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Alpha: CustomStringConvertible, Randomizable {
+struct Alpha {
   enum Level: Int, CaseIterable, Comparable {
     case lv1 = 1
     case lv2
@@ -33,12 +33,15 @@ struct Alpha: CustomStringConvertible, Randomizable {
     self.level = level
   }
   
-  // MARK: CustomStringConvertible
-  
+}
+
+extension Alpha: CustomStringConvertible {
   var description: String {
     "Alpha: \(level.rawValue)"
   }
-  
+}
+
+extension Alpha: Randomizable {
   static func makeRandomFigure(range: ClosedRange<Figure>? = nil) -> Figure {
     Figure.allCases.randomElement() ?? .lv10
   }

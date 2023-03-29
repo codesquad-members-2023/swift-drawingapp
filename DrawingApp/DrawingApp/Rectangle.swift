@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Rectangle: Equatable, CustomStringConvertible {
+class Rectangle {
   private let id: ID
   
   private var size: Size
@@ -25,15 +25,15 @@ class Rectangle: Equatable, CustomStringConvertible {
     self.backgroundColor = backgroundColor
     self.alpha = alpha
   }
-  
-  // MARK: Equatable
-  
+}
+
+extension Rectangle: Equatable {
   static func == (lhs: Rectangle, rhs: Rectangle) -> Bool {
     lhs.id == rhs.id
   }
-  
-  // MARK: CustomStringConvertible
-  
+}
+
+extension Rectangle: CustomStringConvertible {
   var description: String {
     "(\(id.description)), \(position.description), \(size.description), \(backgroundColor.description), \(alpha.description)"
   }

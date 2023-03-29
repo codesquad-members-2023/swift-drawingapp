@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ID: Equatable, Randomizable, CustomStringConvertible {
+struct ID {
   
   typealias Figure = String
 
@@ -16,21 +16,21 @@ struct ID: Equatable, Randomizable, CustomStringConvertible {
   init(id: String) {
     self.id = id
   }
-  
-  // MARK: Equatable
-  
+}
+
+extension ID: Equatable {
   static func == (lhs: ID, rhs: ID) -> Bool {
     lhs.id == rhs.id
   }
-  
-  // MARK: CustomStringConvertible
-  
+}
+
+extension ID: CustomStringConvertible {
   var description: String {
     id
   }
-  
-  // MARK: Randomizable
-  
+}
+
+extension ID: Randomizable {
   static private let componentLength = [3, 3, 3]
   
   static func makeRandomFigure(range: ClosedRange<Figure>? = nil) -> Figure {
@@ -47,3 +47,4 @@ struct ID: Equatable, Randomizable, CustomStringConvertible {
     return result
   }
 }
+
