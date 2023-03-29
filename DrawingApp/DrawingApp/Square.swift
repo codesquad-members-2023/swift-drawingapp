@@ -23,3 +23,9 @@ class Square {
     }
     
 }
+
+extension Square : CustomStringConvertible {
+    var description: String {
+        return "\(self.id) \(self.size) \(self.position) \(self.backgroundColor) \(self.alpha)"
+    }
+}
