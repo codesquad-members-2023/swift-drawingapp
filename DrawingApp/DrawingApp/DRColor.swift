@@ -20,9 +20,13 @@ struct DRColor: Randomizable, CustomStringConvertible {
     self.blue = blue
   }
   
+  // MARK: CustomStringConvertible
+  
   var description: String {
     "R:\(red), G:\(green), B:\(blue)"
   }
+  
+  // MARK: Randomizable
   
   static func makeRandomFigure(range: ClosedRange<UInt8>? = nil) -> UInt8 {
     (0...UInt8.max).randomElement() ?? UInt8.min

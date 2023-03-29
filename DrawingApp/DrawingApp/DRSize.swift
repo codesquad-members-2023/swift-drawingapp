@@ -13,14 +13,18 @@ struct DRSize: Randomizable, CustomStringConvertible {
   private let width: Figure
   private let height: Figure
   
-  var description: String {
-    "W\(Int(width)), H\(Int(height))"
-  }
-  
   init(width: Double, height: Double) {
     self.width = width
     self.height = height
   }
+  
+  // MARK: CustomStringConvertible
+  
+  var description: String {
+    "W\(Int(width)), H\(Int(height))"
+  }
+  
+  // MARK: Randomizable
   
   static func makeRandomFigure(range: ClosedRange<Figure>?) -> Figure {
     guard let range else { return 100 }

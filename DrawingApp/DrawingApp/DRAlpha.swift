@@ -8,8 +8,6 @@
 import Foundation
 
 struct DRAlpha: CustomStringConvertible, Randomizable {
-  typealias Figure = Level
-  
   enum Level: Int, CaseIterable, Comparable {
     case lv1 = 1
     case lv2
@@ -26,6 +24,8 @@ struct DRAlpha: CustomStringConvertible, Randomizable {
       lhs.rawValue < rhs.rawValue
     }
   }
+  
+  typealias Figure = Level
   
   private let level: Level
   
