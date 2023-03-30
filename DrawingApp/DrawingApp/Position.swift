@@ -19,15 +19,15 @@ class Position {
     init(width : Double , height : Double ) {
         self.xLimit = width
         self.yLimit = height
-        self.x = setX()
-        self.y = setY()
+        self.x = generateX()
+        self.y = generateY()
     }
     
-    private func setX () -> Double {
+    private func generateX () -> Double {
         return round(Double.random(in: 0...(xLimit - widthOfViewFrame)))
     }
     
-    private func setY () -> Double{
+    private func generateY () -> Double{
         return round(Double.random(in: 0...(yLimit - heightOfViewFrame)))
     }
 }
