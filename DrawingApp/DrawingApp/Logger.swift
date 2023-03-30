@@ -9,9 +9,9 @@ import Foundation
 import os.log
 
 class Logger {
-    func printLog(of sqaure: Square ) {
+    func printLog(of sqaure: Square , order : Int) {
         let log = OSLog(subsystem: "", category: "data")
 
-        os_log("%@", log: log, type: .info, sqaure.description)
+        os_log("SQUARE%@ : %@", log: log, type: .info, String(order) ,sqaure.description)
     }
 }

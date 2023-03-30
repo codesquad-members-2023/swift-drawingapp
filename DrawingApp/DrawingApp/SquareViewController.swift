@@ -21,11 +21,11 @@ class SquareViewController: UIViewController {
         let heightLimit = self.view.bounds.height
         let randomSquareFactory = RandomSquareFactory()
         
-        for _ in 1...amount{
+        for order in 1...amount{
             guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
                 return
             }
-            log.printLog(of: newSquare)
+            log.printLog(of: newSquare,order:order)
         }
     }
 
