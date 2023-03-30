@@ -125,7 +125,6 @@ class AnimalFactory {
     }
 }
 
-// Usage
 if let animal = AnimalFactory.createAnimal(type: "cat") {
     animal.makeSound() // Output: "Meow"
 }
@@ -166,7 +165,6 @@ class DogFactory: AnimalFactory {
     }
 }
 
-// Usage
 let catFactory = CatFactory()
 let cat = catFactory.createAnimal()
 cat.makeSound() // Output: "Meow"
