@@ -16,14 +16,11 @@ class Rectangle {
   
   private var backgroundColor: Color
   
-  private var alpha: Alpha
-  
-  init(id: ID, size: Size, position: Point, backgroundColor: Color, alpha: Alpha) {
+  init(id: ID, size: Size, position: Point, backgroundColor: Color) {
     self.id = id
     self.size = size
     self.position = position
     self.backgroundColor = backgroundColor
-    self.alpha = alpha
   }
 }
 
@@ -35,6 +32,6 @@ extension Rectangle: Equatable {
 
 extension Rectangle: CustomStringConvertible {
   var description: String {
-    "(\(id.description)), \(position.description), \(size.description), \(backgroundColor.description), \(alpha.description)"
+    "(\(id.description)), \(position.description), \(size.description), \(backgroundColor.description)"
   }
 }
