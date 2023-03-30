@@ -34,3 +34,9 @@ class ID {
         return name
     }
 }
+
+extension ID : CustomStringConvertible {
+    var description: String {
+        return "ID : \(self.id)"
+    }
+}
