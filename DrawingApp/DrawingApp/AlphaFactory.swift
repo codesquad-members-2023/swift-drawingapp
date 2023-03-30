@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol AlphaFactory: Factory where Product == Alpha { }
+protocol AlphaFactory {
+  func produce() -> Alpha?
+}
 
 class RandomAlphaFactory: AlphaFactory {
   func produce() -> Alpha? {

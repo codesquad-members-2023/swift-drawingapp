@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol ColorFactory: Factory where Product == Color { }
+protocol ColorFactory {
+  func produce() -> Color?
+}
 
 class RandomColorFactory: ColorFactory {
   func produce() -> Color? {

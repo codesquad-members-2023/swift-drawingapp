@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol PointFactory: Factory where Product == Point { }
+protocol PointFactory {
+  func produce() -> Point?
+}
 
 class RandomPointFactory: PointFactory {
   
