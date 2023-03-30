@@ -11,10 +11,10 @@ class ID {
     private var id : String = ""
     
     init() {
-        self.id = setId()
+        self.id = generateId()
     }
     
-    func setId() -> String {
+    func generateId() -> String {
         var name = ""
         
         for i in 1...11 {
