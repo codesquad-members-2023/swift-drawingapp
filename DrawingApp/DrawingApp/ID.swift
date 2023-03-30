@@ -8,10 +8,7 @@
 import Foundation
 
 struct ID {
-  
-  typealias Figure = String
-
-  private let id: Figure
+  private let id: String
   
   init(id: String) {
     self.id = id
@@ -27,23 +24,5 @@ extension ID: Equatable {
 extension ID: CustomStringConvertible {
   var description: String {
     id
-  }
-}
-
-extension ID {
-  static private let componentLength = [3, 3, 3]
-  
-  static func makeRandomFigure(range: ClosedRange<Figure>? = nil) -> Figure {
-    var tempID = UUID().uuidString
-    var result: String = ""
-    
-    for (index, length) in componentLength.enumerated() {
-      for _ in 0..<length {
-        guard let char = tempID.popLast() else { break }
-        result += String(char)
-      }
-      if index != componentLength.count - 1 { result.append("-") }
-    }
-    return result
   }
 }

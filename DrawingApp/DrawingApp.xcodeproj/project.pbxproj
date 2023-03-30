@@ -23,6 +23,7 @@
 		F437A53129D48B17004D38C8 /* PointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53029D48B17004D38C8 /* PointFactory.swift */; };
 		F437A53329D48B30004D38C8 /* ColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53229D48B30004D38C8 /* ColorFactory.swift */; };
 		F437A53529D48B41004D38C8 /* AlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53429D48B41004D38C8 /* AlphaFactory.swift */; };
+		F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53629D52F58004D38C8 /* IDGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F437A53029D48B17004D38C8 /* PointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFactory.swift; sourceTree = "<group>"; };
 		F437A53229D48B30004D38C8 /* ColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFactory.swift; sourceTree = "<group>"; };
 		F437A53429D48B41004D38C8 /* AlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaFactory.swift; sourceTree = "<group>"; };
+		F437A53629D52F58004D38C8 /* IDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				F412CAA529D15D1D0034F420 /* SceneDelegate.swift */,
 				F412CAA729D15D1D0034F420 /* ViewController.swift */,
 				F437A51C29D404FB004D38C8 /* ID.swift */,
+				F437A53629D52F58004D38C8 /* IDGenerator.swift */,
 				F437A51E29D40634004D38C8 /* Point.swift */,
 				F437A53029D48B17004D38C8 /* PointFactory.swift */,
 				F437A52229D40826004D38C8 /* Size.swift */,
@@ -170,6 +173,7 @@
 			files = (
 				F437A51D29D404FB004D38C8 /* ID.swift in Sources */,
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
+				F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */,
 				F437A52729D408D3004D38C8 /* Alpha.swift in Sources */,
 				F437A51F29D40634004D38C8 /* Point.swift in Sources */,
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,
