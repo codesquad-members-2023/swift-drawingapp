@@ -24,10 +24,16 @@ class Position {
     }
     
     private func setX () -> Double {
-        return Double.random(in: 0...(xLimit - widthOfViewFrame))
+        return round(Double.random(in: 0...(xLimit - widthOfViewFrame)))
     }
     
     private func setY () -> Double{
-        return Double.random(in: 0...(yLimit - heightOfViewFrame))
+        return round(Double.random(in: 0...(yLimit - heightOfViewFrame)))
+    }
+}
+
+extension Position : CustomStringConvertible {
+    var description: String {
+        return "X : \(self.x) , Y : \(self.y)"
     }
 }

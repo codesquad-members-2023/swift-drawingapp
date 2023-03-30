@@ -23,3 +23,9 @@ class Color {
     }
     
 }
+
+extension Color : CustomStringConvertible {
+    var description: String {
+        return "R : \(self.red), G : \(self.green), B : \(self.blue)"
+    }
+}

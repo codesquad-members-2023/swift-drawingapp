@@ -16,3 +16,9 @@ class Size {
         self.height = 120
     }
 }
+
+extension Size : CustomStringConvertible {
+    var description: String {
+        return "width : \(self.width), height : \(self.height)"
+    }
+}

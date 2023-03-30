@@ -7,15 +7,21 @@
 
 import Foundation
 
-enum Alpha : CGFloat, CaseIterable {
-    case one = 0.0
-    case two = 0.11111
-    case three = 0.22222
-    case four = 0.33333
-    case five = 0.44444
-    case six = 0.55555
-    case seven = 0.66666
-    case eight = 0.77777
-    case nine = 0.88888
-    case ten = 1
+enum Alpha : Int, CaseIterable {
+    case one = 1
+    case two = 2
+    case three = 3
+    case four = 4
+    case five = 5
+    case six = 6
+    case seven = 7
+    case eight = 8
+    case nine = 9
+    case ten = 10
+}
+
+extension Alpha : CustomStringConvertible {
+    var description: String {
+        return "Alpha level : \(self.rawValue)"
+    }
 }

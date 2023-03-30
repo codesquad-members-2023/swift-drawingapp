@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import os.log
 
 class SquareViewController: UIViewController {
 
@@ -22,8 +23,6 @@ class SquareViewController: UIViewController {
         guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
             return
         }
-        
-        print(newSquare)
     }
 
 }
