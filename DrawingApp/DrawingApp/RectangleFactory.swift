@@ -8,6 +8,7 @@
 import Foundation
 
 protocol RectangleFactory {
+  var idGenerator: IDGenerator { get set }
   var pointFactory: PointFactory { get set }
   var colorFactory: ColorFactory { get set }
   var alphaFactory: AlphaFactory { get set }
@@ -16,24 +17,20 @@ protocol RectangleFactory {
 }
 
 class RandomRectangleFactory: RectangleFactory {
-  var pointFactory: any PointFactory
+  var idGenerator: IDGenerator
   var pointFactory: PointFactory
   var colorFactory: ColorFactory
   var alphaFactory: AlphaFactory
   
   init(pointFactory: RandomPointFactory) {
+    self.idGenerator = IDGenerator()
     self.pointFactory = pointFactory
     self.colorFactory = RandomColorFactory()
     self.alphaFactory = RandomAlphaFactory()
   }
   
-  private func makeRandomID() -> ID {
-    let randomString = ID.makeRandomFigure()
-    return .init(id: randomString)
-  }
-  
   func produce() -> Rectangle? {
-    let id = makeRandomID()
+    let id = idGenerator.generate()
     let size = Size(width: 150, height: 120)
     let position = pointFactory.produce() ?? Point(x: 0, y: 0)
     let color = colorFactory.produce() ?? Color(r: 0, g: 0, b: 0)
