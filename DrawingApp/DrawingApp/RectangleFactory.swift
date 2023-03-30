@@ -7,16 +7,19 @@
 
 import Foundation
 
-protocol RectangleFactory: Factory where Product == Rectangle {
-  var pointFactory: any PointFactory { get set }
-  var colorFactory: any ColorFactory { get set }
-  var alphaFactory: any AlphaFactory { get set }
+protocol RectangleFactory {
+  var pointFactory: PointFactory { get set }
+  var colorFactory: ColorFactory { get set }
+  var alphaFactory: AlphaFactory { get set }
+  
+  func produce() -> Rectangle?
 }
 
 class RandomRectangleFactory: RectangleFactory {
   var pointFactory: any PointFactory
-  var colorFactory: any ColorFactory
-  var alphaFactory: any AlphaFactory
+  var pointFactory: PointFactory
+  var colorFactory: ColorFactory
+  var alphaFactory: AlphaFactory
   
   init(pointFactory: RandomPointFactory) {
     self.pointFactory = pointFactory
