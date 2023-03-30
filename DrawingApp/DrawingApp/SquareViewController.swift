@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import os.log
 
 class SquareViewController: UIViewController {
 
@@ -16,6 +15,8 @@ class SquareViewController: UIViewController {
     }
 
     func run() {
+        let log = Logger()
+        
         let widthLimit = self.view.bounds.width
         let heightLimit = self.view.bounds.height
         let randomSquareFactory = RandomSquareFactory()
@@ -23,6 +24,8 @@ class SquareViewController: UIViewController {
         guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
             return
         }
+        
+        log.printLog(of: newSquare)
     }
 
 }
