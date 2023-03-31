@@ -13,7 +13,7 @@ class RandomSquareFactory : SquareFactory {
         
         let id = ID()
         let position = Position(width: widthLimit , height: heightLimit)
-        let color = Color()
+        let color = generateRandomColor()
         let size = Size()
         guard let alpha : Alpha = .allCases.randomElement() else {
             return nil
@@ -21,4 +21,12 @@ class RandomSquareFactory : SquareFactory {
 
         return Square(id: id, size: size, position: position, backgroundColor: color, alpha: alpha)
     }
+    
+    func generateRandomColor() -> Color {
+        let red = Int.random(in: 0...255)
+        let green = Int.random(in: 0...255)
+        let blue = Int.random(in: 0...255)
+        return Color(red: red, green: green, blue: blue)
+    }
+
 }

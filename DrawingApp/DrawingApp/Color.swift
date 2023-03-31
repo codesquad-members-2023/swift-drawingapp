@@ -8,18 +8,14 @@
 import Foundation
 
 class Color {
-    private var red : Int = 0
-    private var green : Int = 0
-    private var blue : Int = 0
+    private var red : Int
+    private var green : Int
+    private var blue : Int
     
-    init() {
-        self.red = generateRandom()
-        self.green = generateRandom()
-        self.blue = generateRandom()
-    }
-    
-    func generateRandom() -> Int {
-        return Int.random(in: 0...255)
+    init(red: Int , green: Int , blue : Int) {
+        self.red = red
+        self.green = green
+        self.blue = blue
     }
     
 }
