@@ -10,5 +10,8 @@ import Foundation
 struct Plane {
     var squareIncluded : [Square]
     
-    
+    mutating func add(_ square : Square) {
+        self.squareIncluded.append(square)
+    }
+
 }
