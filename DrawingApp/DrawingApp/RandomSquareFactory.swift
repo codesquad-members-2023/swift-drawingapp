@@ -9,7 +9,7 @@ import Foundation
 
 class RandomSquareFactory : SquareFactory {
     
-    func produce(widthLimit : Double, heightLimit : Double ) -> RandomSquare? {
+    func produce(widthLimit : Double, heightLimit : Double ) -> Square? {
         
         let id = ID()
         let position = Position(width: widthLimit , height: heightLimit)
