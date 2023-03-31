@@ -9,7 +9,7 @@ import Foundation
 import os.log
 
 class Logger {
-    func printLog(of sqaure: RandomSquare , order : Int) {
+    func printLog(of sqaure: Square , order : Int) {
         let log = OSLog(subsystem: "", category: "data")
 
         os_log("SQUARE%@ , %@", log: log, type: .info, String(order) ,sqaure.description)
