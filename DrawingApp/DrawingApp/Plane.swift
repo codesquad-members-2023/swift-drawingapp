@@ -13,5 +13,8 @@ struct Plane {
     mutating func add(_ square : Square) {
         self.squareIncluded.append(square)
     }
-
+    
+    func count() -> Int{
+        return self.squareIncluded.count
+    }
 }
