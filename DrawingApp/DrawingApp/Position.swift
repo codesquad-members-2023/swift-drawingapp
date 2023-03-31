@@ -26,6 +26,15 @@ class Position {
     private func generateY (yLimit : Double) -> Double{
         return round(Double.random(in: 0...(yLimit - heightOfViewFrame)))
     }
+    
+    func isCoordinateContained(point : CGPoint) -> Bool {
+        let x = Double(point.x)
+        let y = Double(point.y)
+        let xRange = self.x...self.x+widthOfViewFrame
+        let yRange = self.y...self.y+heightOfViewFrame
+        
+        return xRange.contains(x) && yRange.contains(y)
+    }
 }
 
 extension Position : CustomStringConvertible {
