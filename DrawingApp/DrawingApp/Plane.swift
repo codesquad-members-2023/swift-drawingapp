@@ -10,6 +10,10 @@ import Foundation
 struct Plane {
     var squareIncluded : [Square]
     
+    subscript(index: Int) -> Square {
+        return self.squareIncluded[index]
+    }
+    
     mutating func add(_ square : Square) {
         self.squareIncluded.append(square)
     }
@@ -17,4 +21,7 @@ struct Plane {
     func count() -> Int{
         return self.squareIncluded.count
     }
+    
+    
+    
 }
