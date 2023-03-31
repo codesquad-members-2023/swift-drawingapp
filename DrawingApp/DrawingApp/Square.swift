@@ -14,5 +14,5 @@ protocol Square {
     var backgroundColor : Color { get }
     var alpha : Alpha { get }
     
-    var description: String { get }
+    var description : String { get }
 }
