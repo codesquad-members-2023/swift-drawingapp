@@ -10,24 +10,20 @@ import Foundation
 class Position {
     private var x : Double = 0.0
     private var y : Double = 0.0
-    private var xLimit : Double
-    private var yLimit : Double
     private let widthOfViewFrame = 150.0
     private let heightOfViewFrame = 120.0
     
     
     init(width : Double , height : Double ) {
-        self.xLimit = width
-        self.yLimit = height
-        self.x = generateX()
-        self.y = generateY()
+        self.x = generateX(xLimit: width)
+        self.y = generateY(yLimit: height)
     }
     
-    private func generateX () -> Double {
+    private func generateX (xLimit : Double) -> Double {
         return round(Double.random(in: 0...(xLimit - widthOfViewFrame)))
     }
     
-    private func generateY () -> Double{
+    private func generateY (yLimit : Double) -> Double{
         return round(Double.random(in: 0...(yLimit - heightOfViewFrame)))
     }
 }
