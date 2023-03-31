@@ -8,14 +8,14 @@
 import UIKit
 
 class SquareViewController: UIViewController {
-
+    let log = Logger()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         run(howMany: 4)
     }
 
     func run(howMany amount : Int) {
-        let log = Logger()
         
         let widthLimit = self.view.bounds.width
         let heightLimit = self.view.bounds.height
