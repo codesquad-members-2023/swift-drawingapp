@@ -25,7 +25,7 @@ class SquareViewController: UIViewController {
             guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
                 return
             }
-            log.printLog(of: newSquare,order:order)
+            log.printLog(of: newSquare as! RandomSquare,order:order)
         }
     }
 
