@@ -22,14 +22,12 @@ struct Plane {
         return self.squareIncluded.count
     }
     
-    func pickSquareIncludedCoordinate (point : CGPoint) -> [Square]{
-        var picked : [Square] = []
+    func isThereSquareIncludedCoordinate (point : CGPoint) -> Bool{
         for item in squareIncluded {
-            guard item.position.isCoordinateContained(point: point) else {
-                continue
+            guard !item.position.isCoordinateContained(point: point) else {
+                return true
             }
-            picked.append(item)
         }
-        return picked
+        return false
     }
 }
