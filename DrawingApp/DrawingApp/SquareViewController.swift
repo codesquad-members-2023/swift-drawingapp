@@ -13,22 +13,27 @@ class SquareViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        run(howMany: 4)
     }
+    
+    
 
-    func run(howMany amount : Int) {
+    func createSquare(howMany amount : Int) -> Square?{
 
         let widthLimit = self.view.bounds.width
         let heightLimit = self.view.bounds.height
         let randomSquareFactory = RandomSquareFactory()
-        
-        for order in 1...amount{
-            guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
-                return
+        guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
+                return nil
             }
-            log.printLog(of: newSquare ,order:order)
-            plane.add(newSquare)
-        }
+        log.printLog(of: newSquare ,order:1)
+        return newSquare
     }
 
+    @IBAction func createButtonTouched(_ sender: UIButton) {
+        guard let randomSquare = createSquare(howMany: 1) else {
+            return
+        }
+        
+        self.plane.add(randomSquare)
+    }
 }
