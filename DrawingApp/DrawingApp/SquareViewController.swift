@@ -9,6 +9,7 @@ import UIKit
 
 class SquareViewController: UIViewController {
     let log = Logger()
+    var plane = Plane()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +17,7 @@ class SquareViewController: UIViewController {
     }
 
     func run(howMany amount : Int) {
-        
+
         let widthLimit = self.view.bounds.width
         let heightLimit = self.view.bounds.height
         let randomSquareFactory = RandomSquareFactory()
@@ -26,6 +27,7 @@ class SquareViewController: UIViewController {
                 return
             }
             log.printLog(of: newSquare ,order:order)
+            plane.add(newSquare)
         }
     }
 
