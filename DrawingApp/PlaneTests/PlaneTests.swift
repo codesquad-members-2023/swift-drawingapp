@@ -1,14 +1,13 @@
 //
-//  DrawingAppTests.swift
-//  DrawingAppTests
+//  PlaneTests.swift
+//  PlaneTests
 //
-//  Created by SONG on 2023/03/27.
+//  Created by SONG on 2023/03/31.
 //
 
 import XCTest
-@testable import DrawingApp
 
-final class DrawingAppTests: XCTestCase {
+final class PlaneTests: XCTestCase {
 
     override func setUpWithError() throws {
     }
@@ -20,7 +19,7 @@ final class DrawingAppTests: XCTestCase {
     }
 
     func testPerformanceExample() throws {
-        self.measure {
+        measure {
         }
     }
 
