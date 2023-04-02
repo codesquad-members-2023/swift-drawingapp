@@ -28,7 +28,6 @@ class ViewController: UIViewController {
             let systemLog = Logger()
             systemLog.log("Rect\(i) \(randomRectangle)")
         }
-
     }
 }
 
