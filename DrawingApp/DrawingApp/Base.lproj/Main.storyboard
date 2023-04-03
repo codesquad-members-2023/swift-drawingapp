@@ -74,6 +74,9 @@
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-vz-Tpa">
                                                                 <rect key="frame" x="-2" y="26" width="163" height="31"/>
+                                                                <connections>
+                                                                    <action selector="alphaChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="m8p-hG-wOr"/>
+                                                                </connections>
                                                             </slider>
                                                         </subviews>
                                                     </stackView>

@@ -35,4 +35,8 @@ extension RectangleView {
   func deselect() {
     self.layer.borderWidth = 0
   }
+  
+  func setAlpha(to newValue: Float) {
+    alpha = CGFloat(newValue)
+  }
 }
