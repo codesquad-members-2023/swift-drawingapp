@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol Square {
     var id : ID { get }
