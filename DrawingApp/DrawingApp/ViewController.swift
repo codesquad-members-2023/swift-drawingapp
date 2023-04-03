@@ -13,3 +13,9 @@ class ViewController: UIViewController {
     }
 }
 
+func randomPosition() -> Point {
+    let randomPositionX = Double.random(in: 0...UIScreen.main.bounds.width)
+    let randomPositionY = Double.random(in: 0...UIScreen.main.bounds.height)
+    
+    return Point(positionX: randomPositionX, positionY: randomPositionY)
+}
