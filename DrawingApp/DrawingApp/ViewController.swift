@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     guard let rect else { return }
     colorInfoSection.isHidden = false
     alphaSection.isHidden = false
-    colorInfoLabel.text = rect.backgroundColor.hexDescription
+    colorInfoLabel.text = "#\(rect.backgroundColor.hexDescription)"
     alphaSlider.value = rect.backgroundColor.alpha.floatValue
   }
 }
