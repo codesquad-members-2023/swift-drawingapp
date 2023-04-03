@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RandomSquare : Square{
     
@@ -23,8 +24,19 @@ class RandomSquare : Square{
         self.alpha = alpha
     }
     
-    func convertToUIView() {
+    func convertToUIView() -> UIView {
+        let point = self.position.convertToCGPoint()
+        let size = self.size.convertToCGSize()
+        let viewColor = self.backgroundColor.convertToUIColor()
+        let alpha = self.alpha.convertToCGFloat()
         
+        let rect = CGRect(origin: point, size: size)
+        let squareView = UIImageView(frame: rect)
+        
+        squareView.backgroundColor = viewColor
+        squareView.alpha = alpha
+        
+        return squareView
     }
 }
 
