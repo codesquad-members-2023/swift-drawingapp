@@ -42,9 +42,6 @@
                             <constraint firstItem="90z-sq-zoR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RPx-ET-gRH"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="CreateButton" destination="8bC-Xf-vdC" id="AAA-ia-fvL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
