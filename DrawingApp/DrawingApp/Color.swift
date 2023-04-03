@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Color {
     private var red : Int
@@ -16,6 +17,17 @@ class Color {
         self.red = red
         self.green = green
         self.blue = blue
+    }
+    
+    func convertToUIColor()-> UIColor {
+        let red : CGFloat = CGFloat(Double(self.red) / 255)
+        let green : CGFloat = CGFloat(Double(self.green) / 255)
+        let blue : CGFloat = CGFloat(Double(self.blue) / 255)
+        let defaultAlpha : Int = 1
+        
+        let color = UIColor(red: red, green: green, blue: blue, alpha:CGFloat(defaultAlpha))
+        
+        return color
     }
     
 }
