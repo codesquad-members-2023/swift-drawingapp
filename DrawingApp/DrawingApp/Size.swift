@@ -22,3 +22,11 @@ extension Size: CustomStringConvertible {
     "W\(Int(width)), H\(Int(height))"
   }
 }
+
+extension Size {
+  func getArea(fromOrigin origin: Point) -> (xRange: ClosedRange<Double>, yRange: ClosedRange<Double>) {
+    let xRange = origin.x.getRange(withLength: width)
+    let yRange = origin.y.getRange(withLength: height)
+    return (xRange, yRange)
+  }
+}

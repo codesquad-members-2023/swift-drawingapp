@@ -8,8 +8,8 @@
 import Foundation
 
 struct Point {
-  private let x: Double
-  private let y: Double
+  let x: Double
+  let y: Double
   
   init(x: Double, y: Double) {
     self.x = x
@@ -22,3 +22,5 @@ extension Point: CustomStringConvertible {
     "X: \(Int(x)), Y: \(Int(y))"
   }
 }
+
+
