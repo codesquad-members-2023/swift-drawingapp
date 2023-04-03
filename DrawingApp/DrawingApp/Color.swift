@@ -20,15 +20,19 @@ struct Color {
     case lv9 = 9
     case lv10 = 10
     
+    var floatValue: Float {
+      Float(self.rawValue) / Float(10)
+    }
+    
     static func < (lhs: AlphaLevel, rhs: AlphaLevel) -> Bool {
       lhs.rawValue < rhs.rawValue
     }
   }
   
-  private let red: Float
-  private let green: Float
-  private let blue: Float
-  private let alpha: AlphaLevel
+  let red: Float
+  let green: Float
+  let blue: Float
+  let alpha: AlphaLevel
   
   init(r red: Float, g green: Float, b blue: Float, alpha: AlphaLevel) {
     self.red = red
