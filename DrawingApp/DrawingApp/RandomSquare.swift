@@ -8,6 +8,7 @@
 import Foundation
 
 class RandomSquare : Square{
+    
     var id : ID
     var size : Size
     var position : Position
@@ -20,6 +21,10 @@ class RandomSquare : Square{
         self.position = position
         self.backgroundColor = backgroundColor
         self.alpha = alpha
+    }
+    
+    func convertToUIView() {
+        
     }
 }
 
