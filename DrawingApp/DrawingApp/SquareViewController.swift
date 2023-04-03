@@ -10,7 +10,6 @@ import UIKit
 class SquareViewController: UIViewController {
     let log = Logger()
     var plane = Plane()
-    var basePlane = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +32,17 @@ class SquareViewController: UIViewController {
             return
         }
         self.plane.add(randomSquare)
+        UpdateViewStatus()
+        self.view.bringSubviewToFront(sender)
     }
     
-    func UpdateBasePlane() {
+    func UpdateViewStatus() {
+        guard let createdSquare = self.plane.squareIncluded.last else {
+            return
+        }
+        let squareView = createdSquare.convertToUIView()
+        
+        self.view.addSubview(squareView)
+        
     }
 }
