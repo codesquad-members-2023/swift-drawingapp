@@ -15,6 +15,10 @@ class Size {
         self.width = 150
         self.height = 120
     }
+    
+    func convertToCGSize( )-> CGSize {
+        return CGSize(width: self.width, height: self.height)
+    }
 }
 
 extension Size : CustomStringConvertible {
