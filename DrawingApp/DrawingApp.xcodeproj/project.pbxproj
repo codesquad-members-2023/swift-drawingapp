@@ -25,6 +25,8 @@
 		F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53629D52F58004D38C8 /* IDGenerator.swift */; };
 		F469C1B929DA67A4005E7150 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1B829DA67A4005E7150 /* Plane.swift */; };
 		F469C1BD29DAAE8B005E7150 /* Double+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1BC29DAAE8B005E7150 /* Double+Range.swift */; };
+		F469C1C329DAC4D0005E7150 /* UIColor+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */; };
+		F469C1C929DB08D7005E7150 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1C829DB08D7005E7150 /* RectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		F437A53629D52F58004D38C8 /* IDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
 		F469C1B829DA67A4005E7150 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		F469C1BC29DAAE8B005E7150 /* Double+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Range.swift"; sourceTree = "<group>"; };
+		F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Color.swift"; sourceTree = "<group>"; };
+		F469C1C829DB08D7005E7150 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				F412CAA329D15D1D0034F420 /* AppDelegate.swift */,
 				F412CAA529D15D1D0034F420 /* SceneDelegate.swift */,
 				F412CAA729D15D1D0034F420 /* ViewController.swift */,
+				F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */,
 				F469C1BC29DAAE8B005E7150 /* Double+Range.swift */,
 				F437A51C29D404FB004D38C8 /* ID.swift */,
 				F437A53629D52F58004D38C8 /* IDGenerator.swift */,
@@ -94,6 +99,7 @@
 				F437A53429D48B41004D38C8 /* AlphaFactory.swift */,
 				F437A52829D40B19004D38C8 /* Rectangle.swift */,
 				F437A52A29D40BB8004D38C8 /* RectangleFactory.swift */,
+				F469C1C829DB08D7005E7150 /* RectangleView.swift */,
 				F469C1B829DA67A4005E7150 /* Plane.swift */,
 				F412CAA929D15D1D0034F420 /* Main.storyboard */,
 				F412CAAC29D15D1D0034F420 /* Assets.xcassets */,
@@ -178,6 +184,7 @@
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
 				F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */,
 				F437A51F29D40634004D38C8 /* Point.swift in Sources */,
+				F469C1C329DAC4D0005E7150 /* UIColor+Color.swift in Sources */,
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,
 				F437A53129D48B17004D38C8 /* PointFactory.swift in Sources */,
 				F469C1B929DA67A4005E7150 /* Plane.swift in Sources */,
@@ -187,6 +194,7 @@
 				F437A52529D40883004D38C8 /* Color.swift in Sources */,
 				F437A52B29D40BB8004D38C8 /* RectangleFactory.swift in Sources */,
 				F412CAA629D15D1D0034F420 /* SceneDelegate.swift in Sources */,
+				F469C1C929DB08D7005E7150 /* RectangleView.swift in Sources */,
 				F437A53529D48B41004D38C8 /* AlphaFactory.swift in Sources */,
 				F437A52329D40826004D38C8 /* Size.swift in Sources */,
 			);
