@@ -36,7 +36,7 @@ class Position {
         return xRange.contains(x) && yRange.contains(y)
     }
     
-    func convertToCGPoint( )-> CGPoint {
+    func convert( )-> CGPoint {
         return CGPoint(x: self.x, y: self.y)
     }
 }
