@@ -145,6 +145,9 @@
                             <constraint firstItem="QQX-vI-Q3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wrt-AM-pMm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="planeArea" destination="IOE-iW-fZT" id="NnC-38-4oh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
