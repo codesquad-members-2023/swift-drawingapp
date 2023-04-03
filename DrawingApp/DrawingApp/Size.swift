@@ -16,7 +16,7 @@ class Size {
         self.height = 120
     }
     
-    func convertToCGSize( )-> CGSize {
+    func convert( )-> CGSize {
         return CGSize(width: self.width, height: self.height)
     }
 }

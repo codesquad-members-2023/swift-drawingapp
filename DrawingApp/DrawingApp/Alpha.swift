@@ -19,7 +19,7 @@ enum Alpha : Int, CaseIterable {
     case nine = 9
     case ten = 10
     
-    func convertToCGFloat( )-> CGFloat {
+    func convert( )-> CGFloat {
         switch self {
         case .one :
             return 0.1
