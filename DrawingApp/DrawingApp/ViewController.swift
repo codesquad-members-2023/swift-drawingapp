@@ -11,9 +11,19 @@ import OSLog
 class ViewController: UIViewController {
   private lazy var plane = Plane(size: Size(width: 0, height: 0))
   
-  private var rectangleFactory: RectangleFactory? = nil
+  private var rectangleFactory: RectangleFactory?
+  
+  private var selectedRectangleView: RectangleView?
   
   @IBOutlet weak var planeArea: UIView!
+  
+  @IBOutlet weak var colorInfoSection: UIStackView!
+  
+  @IBOutlet weak var alphaSection: UIStackView!
+  
+  @IBOutlet weak var colorInfoLabel: UILabel!
+  
+  @IBOutlet weak var alphaSlider: UISlider!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,6 +33,26 @@ class ViewController: UIViewController {
   @IBAction func addRandomRect(_ sender: Any) {
     guard let factory = rectangleFactory else { return }
     makeRect(with: factory)
+  }
+  
+  @IBAction func somePositionDidTouched(_ sender: UITapGestureRecognizer) {
+    selectedRectangleView?.deselect()
+    
+    let location = sender.location(in: planeArea)
+    let latest = planeArea.hitTest(location, with: nil)
+    guard let lastesRectView = latest as? RectangleView else {
+      selectedRectangleView = nil
+      colorInfoSection.isHidden = true
+      alphaSection.isHidden = true
+      return
+    }
+    
+    selectedRectangleView = lastesRectView
+    lastesRectView.select()
+    
+    let point = Point(x: location.x, y: location.y)
+    let rect = plane.getRectangles(on: point).last
+    updateInfoPane(with: rect)
   }
   
   private func configure() {
@@ -45,5 +75,13 @@ class ViewController: UIViewController {
     
     let rectView = RectangleView(rect: newRect)
     planeArea.addSubview(rectView)
+  }
+  
+  private func updateInfoPane(with rect: Rectangle?) {
+    guard let rect else { return }
+    colorInfoSection.isHidden = false
+    alphaSection.isHidden = false
+    colorInfoLabel.text = rect.backgroundColor.hexDescription
+    alphaSlider.value = rect.backgroundColor.alpha.floatValue
   }
 }
