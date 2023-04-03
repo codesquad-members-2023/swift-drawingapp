@@ -10,7 +10,7 @@ import UIKit
 class SquareViewController: UIViewController {
     let log = Logger()
     var plane = Plane()
-    var views : [UIView] = []
+    var squareViews : [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,22 +55,22 @@ class SquareViewController: UIViewController {
         let blue = material.viewColor[2]
         let alpha = material.alpha
         
-        var newView = UIView()
+        let newView = UIView()
         
         newView.frame = material.rect
         newView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        self.views.append(newView)
+        newView.tag = Int.random(in: 0...99) // tap test 
+        self.squareViews.append(newView)
         return newView
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
             let location = sender.location(in: self.view)
             
-            // Get the view at the tapped location using viewWithTag
             if let selectedView = self.view.hitTest(location, with: nil), selectedView != self.view {
                 
-                // Do something with the selected view
-                print("Selected view tag: \(selectedView.tag)")
+                selectedView.layer.borderWidth = 2.0
+                selectedView.layer.borderColor = UIColor.red.cgColor
             }
         }
     
