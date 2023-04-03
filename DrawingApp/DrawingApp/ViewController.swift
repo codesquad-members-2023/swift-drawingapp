@@ -11,7 +11,7 @@ import OSLog
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        var log = Log()
+        let log = Log()
         log.printLog()
     }
 }

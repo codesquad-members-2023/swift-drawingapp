@@ -18,9 +18,9 @@ class Color: CustomStringConvertible {
     }
     
     convenience init() {
-        var red: Int = Int.random(in: 0...255)
-        var green: Int = Int.random(in: 0...255)
-        var blue: Int = Int.random(in: 0...255)
+        let red: Int = Int.random(in: 0...255)
+        let green: Int = Int.random(in: 0...255)
+        let blue: Int = Int.random(in: 0...255)
         self.init(red: red, green: green, blue: blue)
     }
     
