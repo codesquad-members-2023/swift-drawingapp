@@ -9,15 +9,19 @@ import UIKit
 import OSLog
 
 class ViewController: UIViewController {
-  private lazy var plane = Plane(size: Size(width: 0, height: 0), rectangles: [])
+  private lazy var plane = Plane(size: Size(width: 0, height: 0))
+  
+  private var rectangleViews = [RectangleView]()
+  
+  @IBOutlet weak var planeArea: UIView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let viewWidth = Double(view.frame.size.width)
-    let viewHeight = Double(view.frame.size.height)
+    let viewWidth = Double(planeArea.frame.size.width)
+    let viewHeight = Double(planeArea.frame.size.height)
     
-    self.plane = Plane(size: Size(width: viewWidth, height: viewHeight), rectangles: [])
+    self.plane = Plane(size: Size(width: viewWidth, height: viewHeight))
     
     let viewXRange = (0.0 ... viewWidth)
     let viewYRange = (0.0 ... viewHeight)
@@ -26,7 +30,13 @@ class ViewController: UIViewController {
     let rectFactory = RandomRectangleFactory(pointFactory: pointFactory)
     let newRects = makeRect(with: rectFactory, count: 4)
     
-    newRects.forEach { rect in plane.add(rect: rect) }
+    newRects.forEach { rect in
+      plane.add(rect: rect)
+      let newRectView = RectangleView(rect: rect)
+      rectangleViews.append(newRectView)
+    }
+    
+    presentRects()
   }
   
   private func makeRect(with factory: any RectangleFactory, count: Int) -> [Rectangle] {
@@ -38,5 +48,11 @@ class ViewController: UIViewController {
       logger.log("Rect\(i + 1) \(newRect.description)")
     }
     return newRects
+  }
+  
+  private func presentRects() {
+    for rectView in rectangleViews {
+      planeArea.addSubview(rectView)
+    }
   }
 }

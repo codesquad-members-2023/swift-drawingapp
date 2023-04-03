@@ -16,9 +16,9 @@ struct Plane {
     rectangles.count
   }
   
-  init(size: Size, rectangles: [Rectangle]) {
+  init(size: Size) {
     self.size = size
-    self.rectangles = rectangles
+    self.rectangles = []
   }
   
   subscript(index: Int) -> Rectangle? {
