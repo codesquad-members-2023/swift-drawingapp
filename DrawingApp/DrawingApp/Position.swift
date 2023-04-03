@@ -35,6 +35,10 @@ class Position {
         
         return xRange.contains(x) && yRange.contains(y)
     }
+    
+    func convertToCGPoint( )-> CGPoint {
+        return CGPoint(x: self.x, y: self.y)
+    }
 }
 
 extension Position : CustomStringConvertible {
