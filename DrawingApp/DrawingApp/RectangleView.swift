@@ -21,5 +21,18 @@ class RectangleView: UIView {
     let viewOrigin = CGPoint(x: rect.origin.x, y: rect.origin.y)
     self.init(frame: CGRect(origin: viewOrigin, size: viewSize))
     self.backgroundColor = UIColor(color: rect.backgroundColor)
+    
+    layer.borderColor = UIColor.systemBlue.cgColor
+    deselect()
+  }
+}
+
+extension RectangleView {
+  func select() {
+    self.layer.borderWidth = 4
+  }
+  
+  func deselect() {
+    self.layer.borderWidth = 0
   }
 }

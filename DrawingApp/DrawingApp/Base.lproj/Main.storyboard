@@ -23,6 +23,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-iW-fZT">
                                         <rect key="frame" x="0.0" y="0.0" width="995" height="790"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="sT5-Fu-S5s" appends="YES" id="HC7-22-czw"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbv-aM-kHQ">
                                         <rect key="frame" x="995" y="0.0" width="199" height="790"/>
@@ -149,10 +153,19 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alphaSection" destination="4Ha-Mg-8RS" id="5Jf-Ka-QbO"/>
+                        <outlet property="alphaSlider" destination="Ymr-vz-Tpa" id="O0f-YP-dKd"/>
+                        <outlet property="colorInfoLabel" destination="yqN-Jv-hgw" id="55c-qS-nkb"/>
+                        <outlet property="colorInfoSection" destination="0sh-nj-IHs" id="MqV-qv-08W"/>
                         <outlet property="planeArea" destination="IOE-iW-fZT" id="NnC-38-4oh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sT5-Fu-S5s">
+                    <connections>
+                        <action selector="somePositionDidTouched:" destination="BYZ-38-t0r" id="WbS-wL-yac"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="82.914572864321613" y="-34.53237410071943"/>
         </scene>

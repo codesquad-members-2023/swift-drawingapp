@@ -47,3 +47,16 @@ extension Color: CustomStringConvertible {
     "R:\(red), G:\(green), B:\(blue), Alpha: \(alpha.rawValue)"
   }
 }
+
+extension Color {
+  var hexDescription: String {
+    let fixedRed = Int(Float(255) * red)
+    let fixedGreen = Int(Float(255) * green)
+    let fixedBlue = Int(Float(255) * blue)
+    
+    let redHex = String(format: "%02X", fixedRed)
+    let greenHex = String(format: "%02X", fixedGreen)
+    let blueHex = String(format: "%02X", fixedBlue)
+    return "\(redHex)\(greenHex)\(blueHex)"
+  }
+}
