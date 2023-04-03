@@ -32,7 +32,7 @@ struct Color {
   let red: Float
   let green: Float
   let blue: Float
-  let alpha: AlphaLevel
+  var alpha: AlphaLevel
   
   init(r red: Float, g green: Float, b blue: Float, alpha: AlphaLevel) {
     self.red = red
@@ -58,5 +58,12 @@ extension Color {
     let greenHex = String(format: "%02X", fixedGreen)
     let blueHex = String(format: "%02X", fixedBlue)
     return "\(redHex)\(greenHex)\(blueHex)"
+  }
+}
+
+extension Color.AlphaLevel {
+  init(floatValue: Float) {
+    let matchingLevel = Int(floatValue)
+    self = Self.init(rawValue: matchingLevel) ?? .lv10
   }
 }

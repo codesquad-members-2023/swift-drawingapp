@@ -15,6 +15,8 @@ class ViewController: UIViewController {
   
   private var selectedRectangleView: RectangleView?
   
+  private var selectedRectangle: Rectangle?
+  
   @IBOutlet weak var planeArea: UIView!
   
   @IBOutlet weak var colorInfoSection: UIStackView!
@@ -42,6 +44,7 @@ class ViewController: UIViewController {
     let latest = planeArea.hitTest(location, with: nil)
     guard let lastesRectView = latest as? RectangleView else {
       selectedRectangleView = nil
+      selectedRectangle = nil
       colorInfoSection.isHidden = true
       alphaSection.isHidden = true
       return
@@ -52,7 +55,14 @@ class ViewController: UIViewController {
     
     let point = Point(x: location.x, y: location.y)
     let rect = plane.getRectangles(on: point).last
+    selectedRectangle = rect
     updateInfoPane(with: rect)
+  }
+  
+  @IBAction func alphaChanged(_ sender: UISlider) {
+    let newValue = sender.value
+    selectedRectangle?.setAlpha(to: newValue)
+    selectedRectangleView?.setAlpha(to: newValue)
   }
   
   private func configure() {

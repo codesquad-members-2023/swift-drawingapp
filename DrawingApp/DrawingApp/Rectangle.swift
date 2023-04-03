@@ -42,3 +42,10 @@ extension Rectangle {
     return point.x.isOn(range: xRange) && point.y.isOn(range: yRange)
   }
 }
+
+extension Rectangle {
+  func setAlpha(to newValue: Float) {
+    let newAlpha = Color.AlphaLevel.init(floatValue: newValue)
+    backgroundColor.alpha = newAlpha
+  }
+}
