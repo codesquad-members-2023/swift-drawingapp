@@ -10,12 +10,11 @@ import UIKit
 class SquareViewController: UIViewController {
     let log = Logger()
     var plane = Plane()
+    var basePlane = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
 
     func createSquare(howMany amount : Int) -> Square?{
 
@@ -33,7 +32,9 @@ class SquareViewController: UIViewController {
         guard let randomSquare = createSquare(howMany: 1) else {
             return
         }
-        
         self.plane.add(randomSquare)
+    }
+    
+    func UpdateBasePlane() {
     }
 }
