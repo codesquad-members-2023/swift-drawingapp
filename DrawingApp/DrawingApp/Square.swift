@@ -17,5 +17,5 @@ protocol Square {
     
     var description : String { get }
     
-    func convertToUIView() -> UIView
+    func manufacturing() -> MaterialOfSquareView
 }

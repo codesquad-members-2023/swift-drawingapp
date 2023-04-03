@@ -24,19 +24,15 @@ class RandomSquare : Square{
         self.alpha = alpha
     }
     
-    func convertToUIView() -> UIView {
-        let point = self.position.convertToCGPoint()
-        let size = self.size.convertToCGSize()
-        let viewColor = self.backgroundColor.convertToUIColor()
-        let alpha = self.alpha.convertToCGFloat()
+    func manufacturing() -> MaterialOfSquareView {
+        let point = self.position.convert()
+        let size = self.size.convert()
+        let viewColor = self.backgroundColor.convert()
+        let alpha = self.alpha.convert()
         
         let rect = CGRect(origin: point, size: size)
-        let squareView = UIImageView(frame: rect)
         
-        squareView.backgroundColor = viewColor
-        squareView.alpha = alpha
-        
-        return squareView
+        return MaterialOfSquareView(rect: rect, viewColor: viewColor, alpha: alpha)
     }
 }
 
