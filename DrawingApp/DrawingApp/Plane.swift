@@ -10,6 +10,7 @@ import Foundation
 struct Plane {
     var squareIncluded : [Square] = []
     
+    
     subscript(index: Int) -> Square {
         return self.squareIncluded[index]
     }
