@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     presentRects()
   }
   
-  private func makeRect(with factory: any RectangleFactory, count: Int) -> [Rectangle] {
+  private func makeRect(with factory: RectangleFactory, count: Int) -> [Rectangle] {
     var newRects = [Rectangle]()
     let logger = Logger()
     for i in 0..<count {
