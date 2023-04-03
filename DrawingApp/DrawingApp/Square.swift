@@ -15,4 +15,6 @@ protocol Square {
     var alpha : Alpha { get }
     
     var description : String { get }
+    
+    func convertToUIView() -> UIView
 }
