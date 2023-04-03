@@ -8,10 +8,6 @@
 import Foundation
 
 protocol RectangleFactory {
-  var idGenerator: IDGenerator { get set }
-  var pointFactory: PointFactory { get set }
-  var colorFactory: ColorFactory { get set }
-  
   func produce() -> Rectangle?
 }
 

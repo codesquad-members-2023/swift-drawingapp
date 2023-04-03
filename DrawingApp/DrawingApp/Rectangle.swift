@@ -35,3 +35,10 @@ extension Rectangle: CustomStringConvertible {
     "(\(id.description)), \(origin.description), \(size.description), \(backgroundColor.description)"
   }
 }
+
+extension Rectangle {
+  func areaContains(_ point: Point) -> Bool {
+    let (xRange, yRange) = size.getArea(fromOrigin: origin)
+    return point.x.isOn(range: xRange) && point.y.isOn(range: yRange)
+  }
+}
