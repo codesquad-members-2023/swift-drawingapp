@@ -8,27 +8,14 @@
 import Foundation
 
 class RectangleFactory {
-    func makeRectangle(x: Double, y:Double, width: Double, height: Double) -> Rectangle {
-        let str = "abcdefghijklmnopqrstuvwxyz0123456789"
-        let length = 9
-        let id = str.createRandomString(length: length)
-        let (r, g, b, alpha) = (Int.random(in: 0...255), Int.random(in: 0...255), Int.random(in: 0...255), Int.random(in: 1...10))
-        
-        return Rectangle(id: id, width: width, height: height, xCoordinate: x, yCoordinate: y, R: r, G: g, B: b, alpha: alpha)
-    }
-}
 
-extension String {
-    func createRandomString(length: Int) -> String {
-        var str = ""
+    func makeRectangle(viewWidth: Double, viewHeight: Double) -> Rectangle {
+        let id = Id()
+        let size = Size()
+        let coordinate = Coordinate(width: viewWidth, height: viewHeight)
+        let rgb = Rgb()
+        let alpha = Alpha()
         
-        for i in 1...length {
-            str += String(self.randomElement()!)
-            if i != length && i % 3 == 0 {
-                str += "-"
-            }
-        }
-        
-        return str
+        return Rectangle(id: id, size: size, coordinate: coordinate, color: rgb, alpha: alpha)
     }
 }
