@@ -7,25 +7,31 @@
 
 import Foundation
 
-class RandomId {
-    private static let str = "abcdefghijklmnopqrstuvwxyz0123456789"
-    private static let lengthOfId = 9
-    private static var id = ""
+class Id {
+    private let str = "abcdefghijklmnopqrstuvwxyz0123456789"
+    private let lengthOfId = 9
+    private var id = ""
     
-    static func createRandomString() -> String {
+    init() {
+        self.id = createRandomString()
+    }
+    
+    func createRandomString() -> String {
+        var generatedId = ""
+        
         for i in 1...lengthOfId {
-            id += String(str.randomElement()!)
+            generatedId += String(str.randomElement()!)
             if i != lengthOfId && i % 3 == 0 {
-                id += "-"
+                generatedId += "-"
             }
         }
         
-        return id
+        return generatedId
     }
 }
 
-extension RandomId: CustomStringConvertible {
+extension Id: CustomStringConvertible {
     var description: String {
-        return "\(RandomId.id)"
+        return "(\(id))"
     }
 }
