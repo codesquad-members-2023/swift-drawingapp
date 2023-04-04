@@ -15,8 +15,9 @@
 		4F2D840729D1763B0050E07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2D840529D1763B0050E07F /* LaunchScreen.storyboard */; };
 		4F52ED2629DB1E2E00473E8E /* RandomId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2529DB1E2E00473E8E /* RandomId.swift */; };
 		4F52ED2829DB1E4000473E8E /* RandomCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2729DB1E4000473E8E /* RandomCoordinate.swift */; };
-		4F52ED2A29DB1E4D00473E8E /* RandomRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2929DB1E4C00473E8E /* RandomRGB.swift */; };
+		4F52ED2A29DB1E4D00473E8E /* RandomRgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2929DB1E4C00473E8E /* RandomRgb.swift */; };
 		4F52ED2C29DB1E5500473E8E /* RandomAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2B29DB1E5500473E8E /* RandomAlpha.swift */; };
+		4F52ED2E29DBFBA000473E8E /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2D29DBFBA000473E8E /* Size.swift */; };
 		4F8A4A7529D9AE2C004BCE03 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */; };
 		4FFC1B8C29D60A2E0075672B /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC1B8B29D60A2E0075672B /* Rectangle.swift */; };
 /* End PBXBuildFile section */
@@ -49,8 +50,9 @@
 		4F2D840829D1763B0050E07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F52ED2529DB1E2E00473E8E /* RandomId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomId.swift; sourceTree = "<group>"; };
 		4F52ED2729DB1E4000473E8E /* RandomCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCoordinate.swift; sourceTree = "<group>"; };
-		4F52ED2929DB1E4C00473E8E /* RandomRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRGB.swift; sourceTree = "<group>"; };
+		4F52ED2929DB1E4C00473E8E /* RandomRgb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRgb.swift; sourceTree = "<group>"; };
 		4F52ED2B29DB1E5500473E8E /* RandomAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlpha.swift; sourceTree = "<group>"; };
+		4F52ED2D29DBFBA000473E8E /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
 		4F8A4A7C29D9FAF3004BCE03 /* DrawingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8A4A8B29D9FB09004BCE03 /* DrawingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +123,7 @@
 			children = (
 				4F52ED2529DB1E2E00473E8E /* RandomId.swift */,
 				4F52ED2729DB1E4000473E8E /* RandomCoordinate.swift */,
-				4F52ED2929DB1E4C00473E8E /* RandomRGB.swift */,
+				4F52ED2929DB1E4C00473E8E /* RandomRgb.swift */,
 				4F52ED2B29DB1E5500473E8E /* RandomAlpha.swift */,
 			);
 			path = Random;
@@ -140,6 +142,7 @@
 			children = (
 				4FFC1B8B29D60A2E0075672B /* Rectangle.swift */,
 				4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */,
+				4F52ED2D29DBFBA000473E8E /* Size.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,8 +284,9 @@
 				4F52ED2829DB1E4000473E8E /* RandomCoordinate.swift in Sources */,
 				4F2D83FF29D1763A0050E07F /* ViewController.swift in Sources */,
 				4F2D83FB29D1763A0050E07F /* AppDelegate.swift in Sources */,
+				4F52ED2E29DBFBA000473E8E /* Size.swift in Sources */,
 				4F2D83FD29D1763A0050E07F /* SceneDelegate.swift in Sources */,
-				4F52ED2A29DB1E4D00473E8E /* RandomRGB.swift in Sources */,
+				4F52ED2A29DB1E4D00473E8E /* RandomRgb.swift in Sources */,
 				4FFC1B8C29D60A2E0075672B /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
