@@ -9,27 +9,21 @@ import UIKit
 import OSLog
 
 class ViewController: UIViewController {
+    private let numberOfRectangles = 4
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let numberOfRectangles = 4
-        let width: Double = 150
-        let height: Double = 120
-
-        generateRectangles(numberOfRectangle: numberOfRectangles, width: width, height: height)
+        generateRandomRectangles(numberOfRectangles: self.numberOfRectangles)
     }
     
-    func generateRectangles(numberOfRectangle: Int, width: Double, height: Double) {
-        let rectangle = RectangleFactory()
+    func generateRandomRectangles(numberOfRectangles: Int) {
+        let widthOfView = view.frame.width
+        let heightOfView = view.frame.height
+        let rectangleFactory = RectangleFactory()
         
-        for i in 1...numberOfRectangle {
-            let xRange = 0...Double(self.view.frame.size.width - width)
-            let yRange = 0...Double(self.view.frame.size.height - height)
-            let xCoordinate = Double.random(in: xRange)
-            let yCoordinate = Double.random(in: yRange)
-            let randomRectangle = rectangle.makeRectangle(x: xCoordinate, y: yCoordinate, width: width, height: height)
-            let systemLog = Logger()
-            systemLog.log("Rect\(i) \(randomRectangle)")
+        for i in 1...numberOfRectangles {
+            let rectangle = rectangleFactory.makeRectangle(viewWidth: widthOfView, viewHeight: heightOfView)
+            os_log("Rect\(i) \(rectangle)")
         }
     }
 }
