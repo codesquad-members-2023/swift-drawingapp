@@ -19,9 +19,9 @@
     - [ ] UIKit
     - [ ] App and Environment
 ### 작업 결과 화면
-<img width="1853" alt="Screenshot 2023-04-03 at 2 53 46 AM" src="https://user-images.githubusercontent.com/57861751/229371855-c8ce356b-57e2-4ca2-83b2-6a4497da3431.png">
+<img width="1490" alt="Screenshot 2023-04-04 at 7 15 28 PM" src="https://user-images.githubusercontent.com/57861751/229761580-e9b76ec4-4e7f-4c70-a535-8b5ef5f93fc8.png">
 
-### 완성 날짜 = 04.03
+### 완성 날짜 = 04.03 / 피드백 반영 날짜 = 04.04
 ## step2
 ### 학습
 - [ ] 구조체와 클래스의 차이
