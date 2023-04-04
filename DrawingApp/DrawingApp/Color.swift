@@ -63,7 +63,7 @@ extension Color {
 
 extension Color.AlphaLevel {
   init(floatValue: Float) {
-    let matchingLevel = Int(floatValue)
+    let matchingLevel = Int(floatValue * 10)
     self = Self.init(rawValue: matchingLevel) ?? .lv10
   }
 }
