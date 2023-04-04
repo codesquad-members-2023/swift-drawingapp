@@ -18,6 +18,7 @@
 		4F52ED2A29DB1E4D00473E8E /* RandomRgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2929DB1E4C00473E8E /* RandomRgb.swift */; };
 		4F52ED2C29DB1E5500473E8E /* RandomAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2B29DB1E5500473E8E /* RandomAlpha.swift */; };
 		4F52ED2E29DBFBA000473E8E /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2D29DBFBA000473E8E /* Size.swift */; };
+		4F52ED3029DC4ABC00473E8E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2F29DC4ABC00473E8E /* Plane.swift */; };
 		4F8A4A7529D9AE2C004BCE03 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */; };
 		4FFC1B8C29D60A2E0075672B /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC1B8B29D60A2E0075672B /* Rectangle.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		4F52ED2929DB1E4C00473E8E /* RandomRgb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRgb.swift; sourceTree = "<group>"; };
 		4F52ED2B29DB1E5500473E8E /* RandomAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlpha.swift; sourceTree = "<group>"; };
 		4F52ED2D29DBFBA000473E8E /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		4F52ED2F29DC4ABC00473E8E /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
 		4F8A4A7C29D9FAF3004BCE03 /* DrawingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8A4A8B29D9FB09004BCE03 /* DrawingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				4FFC1B8B29D60A2E0075672B /* Rectangle.swift */,
 				4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */,
 				4F52ED2D29DBFBA000473E8E /* Size.swift */,
+				4F52ED2F29DC4ABC00473E8E /* Plane.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				4F2D83FD29D1763A0050E07F /* SceneDelegate.swift in Sources */,
 				4F52ED2A29DB1E4D00473E8E /* RandomRgb.swift in Sources */,
 				4FFC1B8C29D60A2E0075672B /* Rectangle.swift in Sources */,
+				4F52ED3029DC4ABC00473E8E /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
