@@ -6,4 +6,20 @@
 //
 
 import Foundation
-// 이걸 할려면 가로 세로 길이 알아야 되는데
+
+class Coordinate {
+    private var x: Double = 0
+    private var y: Double = 0
+    private let size = Size()
+
+    init(width: Double, height: Double) {
+        x = Double.random(in: 0...(width - size.width))
+        y = Double.random(in: 0...(height - size.height))
+    }
+}
+
+extension Coordinate:CustomStringConvertible {
+    var description: String {
+        return "X:\(Int(x)),Y:\(Int(y))"
+    }
+}
