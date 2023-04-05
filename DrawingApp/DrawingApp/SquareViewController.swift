@@ -15,7 +15,6 @@ class SquareViewController: UIViewController {
     @IBOutlet weak var controlPanel: UIStackView!
     @IBOutlet weak var colorWell: UIColorWell!
     
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -102,18 +101,16 @@ class SquareViewController: UIViewController {
         modificationOf.backgroundColor = sender.selectedColor
     }
     
-    func pickCorrespondenceSquare(selectedView : UIView) -> Square? {
+    func pickCorrespondenceSquare(selectedView : UIView) -> Int? {
         var index = 0
         
         for item in squareViews {
             let square = self.plane.squareIncluded[index]
             if item == selectedView {
-                return square
+                return index
             }
             index += 1
         }
         return nil
     }
-    
-    
 }
