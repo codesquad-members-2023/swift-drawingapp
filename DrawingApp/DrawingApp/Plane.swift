@@ -15,7 +15,7 @@ class Plane {
         return self.squareIncluded[index]
     }
     
-    mutating func add(_ square : Square) {
+    func add(_ square : Square) {
         self.squareIncluded.append(square)
     }
     
