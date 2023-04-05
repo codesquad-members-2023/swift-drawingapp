@@ -8,7 +8,7 @@
 import Foundation
 
 class Alpha {
-    let alpha = Int.random(in: 1...10)
+    private let alpha = Int.random(in: 1...10)
 }
 
 extension Alpha: CustomStringConvertible {

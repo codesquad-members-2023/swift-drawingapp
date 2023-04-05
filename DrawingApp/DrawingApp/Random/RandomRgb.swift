@@ -8,9 +8,9 @@
 import Foundation
 
 class Rgb {
-    let red = Int.random(in: 0...255)
-    let green = Int.random(in: 0...255)
-    let blue = Int.random(in: 0...255)
+    private let red = Int.random(in: 0...255)
+    private let green = Int.random(in: 0...255)
+    private let blue = Int.random(in: 0...255)
 }
 
 extension Rgb: CustomStringConvertible {
