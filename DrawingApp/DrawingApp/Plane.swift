@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Plane {
+class Plane {
     var squareIncluded : [Square] = []
     
     
