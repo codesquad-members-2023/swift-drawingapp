@@ -11,9 +11,10 @@ class SquareViewController: UIViewController {
     let log = Logger()
     var plane = Plane()
     var squareViews : [UIView] = []
+    var selectedView : UIView? = nil
     @IBOutlet weak var controlPanel: UIStackView!
     @IBOutlet weak var colorWell: UIColorWell!
-    var selectedView : UIView? = nil
+    
     
     override func viewDidLoad() {
         
@@ -42,12 +43,20 @@ class SquareViewController: UIViewController {
             return
         }
         self.plane.add(randomSquare)
-        UpdateViewStatus()
+        updateViewStatus()
         self.view.bringSubviewToFront(sender)
         self.view.bringSubviewToFront(controlPanel)
     }
     
-    func UpdateViewStatus() {
+    
+    @IBAction func sliderValueDidChanged(_ sender: UISlider) {
+        guard let newView = selectedView else {
+            return
+        }
+        newView.alpha = CGFloat(sender.value)
+    }
+    
+    func updateViewStatus() {
         guard let createdSquare = self.plane.squareIncluded.last else {
             return
         }

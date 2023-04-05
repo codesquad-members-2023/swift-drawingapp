@@ -65,6 +65,9 @@
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BHD-CF-2HM">
                                                 <rect key="frame" x="41.5" y="0.0" width="169" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderValueDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2I6-eK-P7t"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
