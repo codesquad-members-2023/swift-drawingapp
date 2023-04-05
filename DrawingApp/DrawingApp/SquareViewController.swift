@@ -11,10 +11,12 @@ class SquareViewController: UIViewController {
     let log = Logger()
     var plane = Plane()
     var squareViews : [UIView] = []
+    @IBOutlet weak var controlPanel: UIStackView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-    
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
                 self.view.addGestureRecognizer(tapGestureRecognizer)
     }
@@ -38,6 +40,7 @@ class SquareViewController: UIViewController {
         self.plane.add(randomSquare)
         UpdateViewStatus()
         self.view.bringSubviewToFront(sender)
+        self.view.bringSubviewToFront(controlPanel)
     }
     
     func UpdateViewStatus() {
@@ -59,19 +62,33 @@ class SquareViewController: UIViewController {
         
         newView.frame = material.rect
         newView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        newView.tag = Int.random(in: 0...99) // tap test 
         self.squareViews.append(newView)
         return newView
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-            let location = sender.location(in: self.view)
+        let location = sender.location(in: self.view)
+        
+        if let selectedView = self.view.hitTest(location, with: nil), selectedView != self.view && type(of: selectedView) == UIView.self {
             
-            if let selectedView = self.view.hitTest(location, with: nil), selectedView != self.view {
-                
-                selectedView.layer.borderWidth = 2.0
-                selectedView.layer.borderColor = UIColor.red.cgColor
-            }
+            //print(type(of: selectedView))
+            selectedView.layer.borderWidth = 2.0
+            selectedView.layer.borderColor = UIColor.red.cgColor
+            // 1. 일단 컨트롤패널과 사각형을 연결 해
+            // 2. 옵저버 -> 신호감지 -> 선택 x -> 새로선택된
         }
+    }
     
+    func pickCorrespondenceSquare(selectedView : UIView) -> Square? {
+        var index = 0
+        
+        for item in squareViews {
+            let square = self.plane.squareIncluded[index]
+            if item == selectedView {
+                return square
+            }
+            index += 1
+        }
+        return nil
+    }
 }
