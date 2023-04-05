@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Plane {
+class Plane  {
     var squareIncluded : [Square] = []
     
     
@@ -31,4 +31,5 @@ class Plane {
         }
         return false
     }
+    
 }
