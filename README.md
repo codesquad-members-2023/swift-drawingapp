@@ -19,6 +19,7 @@
     - [x] 모델 클래스 출력을 위한 Custom String Convertible 프로토콜 추가
     - [x] 랜덤값을 생성해 모델 생성하는 초기값을 넘겨주는 팩토리 구현
 <img width="1558" alt="스크린샷 2023-04-05 오후 2 35 52" src="https://user-images.githubusercontent.com/86761640/229990477-a96b3868-d161-454d-ba00-e36ddbfde299.png">
+23.4.5 완료
 
 ### step3-2
 - [ ] 화면에 사각형 표시
