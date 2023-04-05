@@ -50,10 +50,10 @@ class SquareViewController: UIViewController {
     
     
     @IBAction func sliderValueDidChanged(_ sender: UISlider) {
-        guard let newView = selectedView else {
+        guard let modificationOf = selectedView else {
             return
         }
-        newView.alpha = CGFloat(sender.value)
+        modificationOf.alpha = CGFloat(sender.value)
     }
     
     func updateViewStatus() {
@@ -96,10 +96,10 @@ class SquareViewController: UIViewController {
     }
     
     @objc func colorWellDidChange(_ sender: UIColorWell) {
-        guard let newView = selectedView else {
+        guard let modificationOf = selectedView else {
             return
         }
-        newView.backgroundColor = sender.selectedColor
+        modificationOf.backgroundColor = sender.selectedColor
     }
     
     func pickCorrespondenceSquare(selectedView : UIView) -> Square? {
