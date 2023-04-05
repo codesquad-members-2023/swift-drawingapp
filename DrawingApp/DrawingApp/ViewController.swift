@@ -80,8 +80,6 @@ class ViewController: UIViewController {
   private func makeRect(with factory: RectangleFactory) {
     guard let newRect = factory.produce() else { return }
     plane.add(rect: newRect)
-    let index = plane.count
-    Logger().log("Rect\(index) \(newRect.description)")
     
     let rectView = RectangleView(rect: newRect)
     planeArea.addSubview(rectView)
