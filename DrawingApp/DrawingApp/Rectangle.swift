@@ -12,14 +12,14 @@ class Rectangle {
     private var id: String
     private var w: Double
     private var h: Double
-    private var x: Int
-    private var y: Int
+    private var x: Double
+    private var y: Double
     private var r: Int
     private var g: Int
     private var b: Int
     private var alpha: Int
     
-    init(id:String, w: Double, h:Double, x:Int, y:Int, r: Int, g: Int, b:Int, alpha:Int) {
+    init(id:String, w: Double, h:Double, x:Double, y:Double, r: Int, g: Int, b:Int, alpha:Int) {
         self.id = id
         self.w = w
         self.h = h
