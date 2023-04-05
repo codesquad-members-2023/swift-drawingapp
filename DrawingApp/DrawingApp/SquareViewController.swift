@@ -12,6 +12,8 @@ class SquareViewController: UIViewController {
     var plane = Plane()
     var squareViews : [UIView] = []
     @IBOutlet weak var controlPanel: UIStackView!
+    @IBOutlet weak var colorWell: UIColorWell!
+    var selectedView : UIView? = nil
     
     override func viewDidLoad() {
         
@@ -19,6 +21,8 @@ class SquareViewController: UIViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
                 self.view.addGestureRecognizer(tapGestureRecognizer)
+        
+        colorWell.addTarget(self, action: #selector(colorWellDidChange(_:)), for: .valueChanged)
     }
 
     func createSquare(howMany amount : Int) -> Square?{
@@ -71,12 +75,19 @@ class SquareViewController: UIViewController {
         
         if let selectedView = self.view.hitTest(location, with: nil), selectedView != self.view && type(of: selectedView) == UIView.self {
             
-            //print(type(of: selectedView))
+
             selectedView.layer.borderWidth = 2.0
             selectedView.layer.borderColor = UIColor.red.cgColor
-            // 1. 일단 컨트롤패널과 사각형을 연결 해
-            // 2. 옵저버 -> 신호감지 -> 선택 x -> 새로선택된
+ 
+            self.selectedView = selectedView
         }
+    }
+    
+    @objc func colorWellDidChange(_ sender: UIColorWell) {
+        guard let newView = selectedView else {
+            return
+        }
+        newView.backgroundColor = sender.selectedColor
     }
     
     func pickCorrespondenceSquare(selectedView : UIView) -> Square? {
@@ -91,4 +102,6 @@ class SquareViewController: UIViewController {
         }
         return nil
     }
+    
+    
 }
