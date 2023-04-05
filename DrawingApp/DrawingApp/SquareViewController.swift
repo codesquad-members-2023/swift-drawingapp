@@ -82,9 +82,12 @@ class SquareViewController: UIViewController {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: self.view)
         
+        if let old = self.selectedView {
+            old.layer.borderWidth = 1.0
+            old.layer.borderColor = UIColor.clear.cgColor
+        }
+        
         if let selectedView = self.view.hitTest(location, with: nil), selectedView != self.view && type(of: selectedView) == UIView.self {
-            
-
             selectedView.layer.borderWidth = 2.0
             selectedView.layer.borderColor = UIColor.red.cgColor
  
