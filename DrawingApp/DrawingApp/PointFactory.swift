@@ -8,8 +8,8 @@
 import Foundation
 
 protocol PointFactory {
-  func produce() -> Point?
-  func produceOrigin(consideringSize size: Size) -> Point?
+  func make() -> Point?
+  func makeOrigin(consideringSize size: Size) -> Point?
 }
 
 class RandomPointFactory: PointFactory {
@@ -22,13 +22,13 @@ class RandomPointFactory: PointFactory {
     self.yRange = yRange
   }
   
-  func produce() -> Point? {
+  func make() -> Point? {
     let x = Double.random(in: xRange)
     let y = Double.random(in: yRange)
     return .init(x: x, y: y)
   }
   
-  func produceOrigin(consideringSize size: Size) -> Point? {
+  func makeOrigin(consideringSize size: Size) -> Point? {
     let newXUpperBound = xRange.upperBound - size.width
     let newYUpperBound = yRange.upperBound - size.height
     let newXRange = (xRange.lowerBound ... newXUpperBound)

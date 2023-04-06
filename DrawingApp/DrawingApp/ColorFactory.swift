@@ -10,7 +10,7 @@ import Foundation
 protocol ColorFactory {
   var alphaFactory: AlphaFactory { get set }
   
-  func produce() -> Color?
+  func make() -> Color?
 }
 
 class RandomColorFactory: ColorFactory {
@@ -24,11 +24,11 @@ class RandomColorFactory: ColorFactory {
     Float.random(in: (0.0 ... 1.0))
   }
   
-  func produce() -> Color? {
+  func make() -> Color? {
     let r = generateRandomFloat()
     let g = generateRandomFloat()
     let b = generateRandomFloat()
-    let alpha = alphaFactory.produce() ?? Color.AlphaLevel.lv10
+    let alpha = alphaFactory.make() ?? Color.AlphaLevel.lv10
     return .init(r: r, g: g, b: b, alpha: alpha)
   }
 }

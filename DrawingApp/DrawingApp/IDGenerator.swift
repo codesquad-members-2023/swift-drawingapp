@@ -35,7 +35,7 @@ class IDGenerator {
     return result
   }
   
-  func generate() -> ID {
+  func make() -> ID {
     let idString = makeRandomFigure()
     return ID(id: idString)
   }
