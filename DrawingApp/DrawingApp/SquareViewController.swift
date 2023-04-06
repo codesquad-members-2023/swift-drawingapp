@@ -109,6 +109,19 @@ class SquareViewController: UIViewController {
             return
         }
         modificationOf.backgroundColor = sender.selectedColor
+        
+        guard let matchedIndex = pickCorrespondenceSquare(selectedView: modificationOf) else {
+            return
+        }
+        
+        let matchedModel = self.plane.squareIncluded[matchedIndex]
+        
+        guard let convertedColor = modificationOf.backgroundColor?.convert() else {
+            return
+        }
+        
+        modelSynchronizer.detectChangeOfColor(synchronizeTarget: matchedModel, color: convertedColor)
+        log.printLog(of: matchedModel, order: 1)
     }
     
     func pickCorrespondenceSquare(selectedView : UIView) -> Int? {
