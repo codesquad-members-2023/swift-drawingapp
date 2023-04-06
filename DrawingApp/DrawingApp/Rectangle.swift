@@ -45,7 +45,7 @@ extension Rectangle {
 
 extension Rectangle {
   func setAlpha(to newValue: Float) {
-    let newAlpha = Color.AlphaLevel.init(floatValue: newValue)
+    let newAlpha = Color.Alpha.init(floatValue: newValue)
     backgroundColor.alpha = newAlpha
   }
 }

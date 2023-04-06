@@ -8,23 +8,23 @@
 import Foundation
 
 struct Color {
-  enum AlphaLevel: Int, CaseIterable, Comparable {
-    case lv1 = 1
-    case lv2 = 2
-    case lv3 = 3
-    case lv4 = 4
-    case lv5 = 5
-    case lv6 = 6
-    case lv7 = 7
-    case lv8 = 8
-    case lv9 = 9
-    case lv10 = 10
+  enum Alpha: Int, CaseIterable, Comparable {
+    case level1 = 1
+    case level2 = 2
+    case level3 = 3
+    case level4 = 4
+    case level5 = 5
+    case level6 = 6
+    case level7 = 7
+    case level8 = 8
+    case level9 = 9
+    case level10 = 10
     
     var floatValue: Float {
       Float(self.rawValue) / Float(10)
     }
     
-    static func < (lhs: AlphaLevel, rhs: AlphaLevel) -> Bool {
+    static func < (lhs: Alpha, rhs: Alpha) -> Bool {
       lhs.rawValue < rhs.rawValue
     }
   }
@@ -32,9 +32,9 @@ struct Color {
   let red: Float
   let green: Float
   let blue: Float
-  var alpha: AlphaLevel
+  var alpha: Alpha
   
-  init(r red: Float, g green: Float, b blue: Float, alpha: AlphaLevel) {
+  init(r red: Float, g green: Float, b blue: Float, alpha: Alpha) {
     self.red = red
     self.green = green
     self.blue = blue
@@ -61,9 +61,9 @@ extension Color {
   }
 }
 
-extension Color.AlphaLevel {
+extension Color.Alpha {
   init(floatValue: Float) {
     let matchingLevel = Int(floatValue * 10)
-    self = Self.init(rawValue: matchingLevel) ?? .lv10
+    self = Self.init(rawValue: matchingLevel) ?? .level10
   }
 }
