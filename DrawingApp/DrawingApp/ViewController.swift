@@ -78,7 +78,7 @@ class ViewController: UIViewController {
   }
   
   private func makeRect(with factory: RectangleFactory) {
-    guard let newRect = factory.produce() else { return }
+    guard let newRect = factory.make() else { return }
     plane.add(rect: newRect)
     
     let rectView = RectangleView(rect: newRect)

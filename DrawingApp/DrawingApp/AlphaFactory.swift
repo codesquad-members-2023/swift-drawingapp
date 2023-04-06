@@ -8,11 +8,11 @@
 import Foundation
 
 protocol AlphaFactory {
-  func produce() -> Color.AlphaLevel?
+  func make() -> Color.AlphaLevel?
 }
 
 class RandomAlphaFactory: AlphaFactory {
-  func produce() -> Color.AlphaLevel? {
+  func make() -> Color.AlphaLevel? {
     Color.AlphaLevel.allCases.randomElement()
   }
 }
