@@ -53,6 +53,7 @@ class SquareViewController: UIViewController {
             return
         }
         modificationOf.alpha = CGFloat(sender.value)
+        
         guard let matchedIndex = pickCorrespondenceSquare(selectedView: modificationOf) else {
             return
         }
