@@ -28,7 +28,7 @@ class RandomColorFactory: ColorFactory {
     let r = generateRandomFloat()
     let g = generateRandomFloat()
     let b = generateRandomFloat()
-    let alpha = alphaFactory.make() ?? Color.Alpha.level10
+    guard let alpha = alphaFactory.make() else { return nil }
     return .init(r: r, g: g, b: b, alpha: alpha)
   }
 }
