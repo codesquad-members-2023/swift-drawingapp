@@ -9,5 +9,5 @@ import Foundation
 
 protocol SquareFactory {
     
-    func produce(widthLimit : Double, heightLimit : Double) -> Square?
+    func makeSquare(widthLimit : Double, heightLimit : Double) -> Square?
 }
