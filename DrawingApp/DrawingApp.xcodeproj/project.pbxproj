@@ -27,6 +27,10 @@
 		F469C1BD29DAAE8B005E7150 /* Double+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1BC29DAAE8B005E7150 /* Double+Range.swift */; };
 		F469C1C329DAC4D0005E7150 /* UIColor+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */; };
 		F469C1C929DB08D7005E7150 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1C829DB08D7005E7150 /* RectangleView.swift */; };
+		F484773E29DE71E200CE5BB8 /* RandomPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484773D29DE71E200CE5BB8 /* RandomPointFactory.swift */; };
+		F484774029DE720D00CE5BB8 /* RandomColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */; };
+		F484774229DE721B00CE5BB8 /* RandomAlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */; };
+		F484774429DE722A00CE5BB8 /* RandomRectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		F469C1BC29DAAE8B005E7150 /* Double+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Range.swift"; sourceTree = "<group>"; };
 		F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Color.swift"; sourceTree = "<group>"; };
 		F469C1C829DB08D7005E7150 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		F484773D29DE71E200CE5BB8 /* RandomPointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPointFactory.swift; sourceTree = "<group>"; };
+		F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorFactory.swift; sourceTree = "<group>"; };
+		F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlphaFactory.swift; sourceTree = "<group>"; };
+		F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRectangleFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +101,16 @@
 				F437A53629D52F58004D38C8 /* IDGenerator.swift */,
 				F437A51E29D40634004D38C8 /* Point.swift */,
 				F437A53029D48B17004D38C8 /* PointFactory.swift */,
+				F484773D29DE71E200CE5BB8 /* RandomPointFactory.swift */,
 				F437A52229D40826004D38C8 /* Size.swift */,
 				F437A52429D40883004D38C8 /* Color.swift */,
 				F437A53229D48B30004D38C8 /* ColorFactory.swift */,
+				F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */,
 				F437A53429D48B41004D38C8 /* AlphaFactory.swift */,
+				F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */,
 				F437A52829D40B19004D38C8 /* Rectangle.swift */,
 				F437A52A29D40BB8004D38C8 /* RectangleFactory.swift */,
+				F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */,
 				F469C1C829DB08D7005E7150 /* RectangleView.swift */,
 				F469C1B829DA67A4005E7150 /* Plane.swift */,
 				F412CAA929D15D1D0034F420 /* Main.storyboard */,
@@ -188,10 +200,14 @@
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,
 				F437A53129D48B17004D38C8 /* PointFactory.swift in Sources */,
 				F469C1B929DA67A4005E7150 /* Plane.swift in Sources */,
+				F484773E29DE71E200CE5BB8 /* RandomPointFactory.swift in Sources */,
 				F469C1BD29DAAE8B005E7150 /* Double+Range.swift in Sources */,
+				F484774029DE720D00CE5BB8 /* RandomColorFactory.swift in Sources */,
 				F437A53329D48B30004D38C8 /* ColorFactory.swift in Sources */,
 				F437A52929D40B19004D38C8 /* Rectangle.swift in Sources */,
+				F484774429DE722A00CE5BB8 /* RandomRectangleFactory.swift in Sources */,
 				F437A52529D40883004D38C8 /* Color.swift in Sources */,
+				F484774229DE721B00CE5BB8 /* RandomAlphaFactory.swift in Sources */,
 				F437A52B29D40BB8004D38C8 /* RectangleFactory.swift in Sources */,
 				F412CAA629D15D1D0034F420 /* SceneDelegate.swift in Sources */,
 				F469C1C929DB08D7005E7150 /* RectangleView.swift in Sources */,

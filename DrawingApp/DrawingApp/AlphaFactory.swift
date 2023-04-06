@@ -10,9 +10,3 @@ import Foundation
 protocol AlphaFactory {
   func make() -> Color.Alpha?
 }
-
-class RandomAlphaFactory: AlphaFactory {
-  func make() -> Color.Alpha? {
-    Color.Alpha.allCases.randomElement()
-  }
-}
