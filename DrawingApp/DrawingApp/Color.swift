@@ -62,8 +62,9 @@ extension Color {
 }
 
 extension Color.Alpha {
-  init(floatValue: Float) {
+  init?(floatValue: Float) {
+    guard (0.0 ... 1.0).contains(floatValue) else { return nil }
     let matchingLevel = Int(floatValue * 10)
-    self = Self.init(rawValue: matchingLevel) ?? .level10
+    self.init(rawValue: matchingLevel)
   }
 }
