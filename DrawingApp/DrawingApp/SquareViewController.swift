@@ -43,7 +43,7 @@ class SquareViewController: UIViewController {
             return
         }
         self.plane.add(randomSquare)
-        updateViewStatus()
+        visualize()
         self.view.bringSubviewToFront(sender)
         self.view.bringSubviewToFront(controlPanel)
     }
@@ -58,14 +58,14 @@ class SquareViewController: UIViewController {
             return
         }
         
-        let matchedModel = self.plane.squareIncluded[matchedIndex]
+        let matchedModel = self.plane[matchedIndex]
         
         modelSynchronizer.detectChangeOfAlpha(synchronizeTarget: matchedModel, alpha: modificationOf.alpha)
         
         log.printLog(of: matchedModel, order: 1)
     }
     
-    func updateViewStatus() {
+    func visualize() {
         guard let createdSquare = self.plane.squareIncluded.last else {
             return
         }
@@ -114,7 +114,7 @@ class SquareViewController: UIViewController {
             return
         }
         
-        let matchedModel = self.plane.squareIncluded[matchedIndex]
+        let matchedModel = self.plane[matchedIndex]
         
         guard let convertedColor = modificationOf.backgroundColor?.convert() else {
             return
