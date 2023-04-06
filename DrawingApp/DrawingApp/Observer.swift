@@ -24,4 +24,9 @@ class ModelSynchronizer : Observer {
             }
         }
     }
+    
+    func detectChangeOfColor(synchronizeTarget : Square , color : Color) {
+        var square = synchronizeTarget
+        square.backgroundColor = color
+    }
 }
