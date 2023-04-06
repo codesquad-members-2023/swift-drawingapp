@@ -60,7 +60,7 @@ class SquareViewController: UIViewController {
         
         let matchedModel = self.plane[matchedIndex]
         
-        modelSynchronizer.detectChangeOfAlpha(synchronizeTarget: matchedModel, alpha: modificationOf.alpha)
+        modelSynchronizer.synchronizeAlphaOfModel(synchronizeTarget: matchedModel, alpha: modificationOf.alpha)
         
         log.printLog(of: matchedModel, order: 1)
     }
@@ -120,7 +120,7 @@ class SquareViewController: UIViewController {
             return
         }
         
-        modelSynchronizer.detectChangeOfColor(synchronizeTarget: matchedModel, color: convertedColor)
+        modelSynchronizer.synchronizeColorOfModel(synchronizeTarget: matchedModel, color: convertedColor)
         log.printLog(of: matchedModel, order: 1)
     }
     
