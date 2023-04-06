@@ -34,7 +34,7 @@ class ViewController: UIViewController {
   
   @IBAction func addRandomRect(_ sender: Any) {
     guard let factory = rectangleFactory else { return }
-    makeRect(with: factory)
+    makeRect()
   }
   
   @IBAction func somePositionDidTouched(_ sender: UITapGestureRecognizer) {
@@ -77,8 +77,8 @@ class ViewController: UIViewController {
     self.rectangleFactory = rectFactory
   }
   
-  private func makeRect(with factory: RectangleFactory) {
-    guard let newRect = factory.make() else { return }
+  private func makeRect() {
+    guard let newRect = rectangleFactory?.make() else { return }
     plane.add(rect: newRect)
     
     let rectView = RectangleView(rect: newRect)
