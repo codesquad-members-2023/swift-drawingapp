@@ -9,6 +9,7 @@ import Foundation
 
 protocol Observer {
     func detectChangeOfAlpha(synchronizeTarget : Square , alpha : CGFloat)
+    func detectChangeOfColor(synchronizeTarget : Square , color : Color)
 }
 
 class ModelSynchronizer : Observer {
