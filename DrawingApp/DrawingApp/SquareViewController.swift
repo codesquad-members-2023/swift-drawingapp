@@ -31,7 +31,7 @@ class SquareViewController: UIViewController {
         let widthLimit = self.view.bounds.width
         let heightLimit = self.view.bounds.height
         let randomSquareFactory = RandomSquareFactory()
-        guard let newSquare = randomSquareFactory.produce(widthLimit: widthLimit, heightLimit: heightLimit) else {
+        guard let newSquare = randomSquareFactory.makeSquare(widthLimit: widthLimit, heightLimit: heightLimit) else {
                 return nil
             }
         log.printLog(of: newSquare ,order:1)
