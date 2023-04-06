@@ -14,6 +14,7 @@ class SquareViewController: UIViewController {
     var selectedView : UIView? = nil
     @IBOutlet weak var controlPanel: UIStackView!
     @IBOutlet weak var colorWell: UIColorWell!
+    var modelSynchronizer = ModelSynchronizer()
     
     override func viewDidLoad() {
         
@@ -47,12 +48,20 @@ class SquareViewController: UIViewController {
         self.view.bringSubviewToFront(controlPanel)
     }
     
-    
     @IBAction func sliderValueDidChanged(_ sender: UISlider) {
         guard let modificationOf = selectedView else {
             return
         }
         modificationOf.alpha = CGFloat(sender.value)
+        guard let matchedIndex = pickCorrespondenceSquare(selectedView: modificationOf) else {
+            return
+        }
+        
+        let matchedModel = self.plane.squareIncluded[matchedIndex]
+        
+        modelSynchronizer.detectChangeOfAlpha(synchronizeTarget: matchedModel, alpha: modificationOf.alpha)
+        
+        log.printLog(of: matchedModel, order: 1)
     }
     
     func updateViewStatus() {
@@ -105,7 +114,6 @@ class SquareViewController: UIViewController {
         var index = 0
         
         for item in squareViews {
-            let square = self.plane.squareIncluded[index]
             if item == selectedView {
                 return index
             }
