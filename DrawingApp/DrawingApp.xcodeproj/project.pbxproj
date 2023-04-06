@@ -21,7 +21,7 @@
 		E43F46A729D6A6D000F8F4DB /* PlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F46A629D6A6D000F8F4DB /* PlaneTests.swift */; };
 		E43F46AE29D6A6F400F8F4DB /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F469E29D6775A00F8F4DB /* Plane.swift */; };
 		E4D64EA429DAB7A200BE9862 /* MaterialOfSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EA329DAB7A200BE9862 /* MaterialOfSquareView.swift */; };
-		E4D64EAA29DD6E9100BE9862 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EA929DD6E9100BE9862 /* Observer.swift */; };
+		E4D64EAA29DD6E9100BE9862 /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EA929DD6E9100BE9862 /* Synchronizer.swift */; };
 		E4D64EAC29DE8F9900BE9862 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EAB29DE8F9900BE9862 /* Extension.swift */; };
 		E4E9CE5529D1325F0052762E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9CE5429D1325F0052762E /* AppDelegate.swift */; };
 		E4E9CE5729D1325F0052762E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9CE5629D1325F0052762E /* SceneDelegate.swift */; };
@@ -70,7 +70,7 @@
 		E43F46A429D6A6D000F8F4DB /* PlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43F46A629D6A6D000F8F4DB /* PlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneTests.swift; sourceTree = "<group>"; };
 		E4D64EA329DAB7A200BE9862 /* MaterialOfSquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialOfSquareView.swift; sourceTree = "<group>"; };
-		E4D64EA929DD6E9100BE9862 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		E4D64EA929DD6E9100BE9862 /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		E4D64EAB29DE8F9900BE9862 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E4E9CE5129D1325F0052762E /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E9CE5429D1325F0052762E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 				E4E9CE5629D1325F0052762E /* SceneDelegate.swift */,
 				E4E9CE5A29D1325F0052762E /* Main.storyboard */,
 				E4E9CE8429D3E5F50052762E /* SquareViewController.swift */,
-				E4D64EA929DD6E9100BE9862 /* Observer.swift */,
+				E4D64EA929DD6E9100BE9862 /* Synchronizer.swift */,
 				E43F469A29D52EEF00F8F4DB /* Logger.swift */,
 				E432C71829D3E6D300F78809 /* RandomSquare.swift */,
 				E43F469C29D673B700F8F4DB /* Square.swift */,
@@ -343,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E432C71929D3E6D300F78809 /* RandomSquare.swift in Sources */,
-				E4D64EAA29DD6E9100BE9862 /* Observer.swift in Sources */,
+				E4D64EAA29DD6E9100BE9862 /* Synchronizer.swift in Sources */,
 				E4E9CE5529D1325F0052762E /* AppDelegate.swift in Sources */,
 				E43F469B29D52EEF00F8F4DB /* Logger.swift in Sources */,
 				E4D64EA429DAB7A200BE9862 /* MaterialOfSquareView.swift in Sources */,

@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol Observer {
-    func detectChangeOfAlpha(synchronizeTarget : Square , alpha : CGFloat)
-    func detectChangeOfColor(synchronizeTarget : Square , color : Color)
+protocol Synchronizer {
+    func synchronizeAlphaOfModel(synchronizeTarget : Square , alpha : CGFloat)
+    func synchronizeColorOfModel(synchronizeTarget : Square , color : Color)
 }
 
-class ModelSynchronizer : Observer {
+class ModelSynchronizer : Synchronizer {
     
-    func detectChangeOfAlpha(synchronizeTarget : Square , alpha : CGFloat) {
+    func synchronizeAlphaOfModel(synchronizeTarget : Square , alpha : CGFloat) {
         let newAlpha = round(alpha * 10)
         var square = synchronizeTarget
         
@@ -26,7 +26,7 @@ class ModelSynchronizer : Observer {
         }
     }
     
-    func detectChangeOfColor(synchronizeTarget : Square , color : Color) {
+    func synchronizeColorOfModel(synchronizeTarget : Square , color : Color) {
         var square = synchronizeTarget
         square.backgroundColor = color
     }
