@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol Synchronizer {
-    func synchronizeAlphaOfModel(synchronizeTarget : Square , alpha : CGFloat)
-    func synchronizeColorOfModel(synchronizeTarget : Square , color : Color)
-}
-
-class ModelSynchronizer : Synchronizer {
+class ModelSynchronizer {
     
     func synchronizeAlphaOfModel(synchronizeTarget : Square , alpha : CGFloat) {
         let newAlpha = round(alpha * 10)
