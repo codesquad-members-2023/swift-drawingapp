@@ -24,7 +24,7 @@ class Plane  {
     }
     
     func isThereSquareIncludedCoordinate (point : CGPoint) -> Bool{
-        for item in squareIncluded {
+        for item in squareIncluded.reversed() {
             guard !item.position.isCoordinateContained(point: point) else {
                 return true
             }
