@@ -20,6 +20,41 @@ final class PlaneTest: XCTestCase {
         try super.tearDownWithError()
 
     }
+    
+    func testAdd_OneSquare() {
+           test = Plane() // []
+           XCTAssertTrue(test.squareIncluded.isEmpty)
+           
+           test.add(MockSquare()) //
+           XCTAssertFalse(test.squareIncluded.isEmpty)
+       }
+       
+       func testCount_Zero() {
+           test = Plane()
+           XCTAssertTrue(test.count() == 0)
+       }
+       
+       func testCount_Three() {
+           test = Plane()
+           for _ in 0...2 {
+               test.add(MockSquare())
+           }
+           XCTAssertTrue(test.count() == 3)
+       }
+       
+       func testIsThereSquareIncludedCoordinate_When_x100_y50() {
+           test = Plane()
+           test.add(MockSquare()) // origin = 0,0
+           
+           XCTAssertTrue(test.isThereSquareIncludedCoordinate(point: CGPoint(x: 100, y: 50)))
+       }
+       
+       func testIsThereSquareIncludedCoordinate_When_x300_y500() {
+           test = Plane()
+           test.add(MockSquare()) // origin = 0,0
+           
+           XCTAssertFalse(test.isThereSquareIncludedCoordinate(point: CGPoint(x: 300, y: 500)))
+       }
 }
 
 protocol Square {
