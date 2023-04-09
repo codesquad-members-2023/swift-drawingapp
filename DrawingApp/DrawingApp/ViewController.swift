@@ -33,8 +33,11 @@ class ViewController: UIViewController {
   }
   
   @IBAction func addRandomRect(_ sender: Any) {
-    guard let factory = rectangleFactory else { return }
-    makeRect()
+    guard let newRect = rectangleFactory?.make() else { return }
+    plane.add(rect: newRect)
+    
+    let rectView = makeRectView(outOf: newRect)
+    planeArea.addSubview(rectView)
   }
   
   @IBAction func somePositionDidTouched(_ sender: UITapGestureRecognizer) {
@@ -77,13 +80,19 @@ class ViewController: UIViewController {
     self.rectangleFactory = rectFactory
   }
   
-  private func makeRect() {
-    guard let newRect = rectangleFactory?.make() else { return }
-    plane.add(rect: newRect)
-    
-    let rectView = RectangleView(rect: newRect)
-    planeArea.addSubview(rectView)
-  }
+  private func makeRectView(outOf rect: Rectangle) -> RectangleView {
+      let rectSize = CGSize(width: rect.size.width, height: rect.size.height)
+      let rectOrigin = CGPoint(x: rect.origin.x, y: rect.origin.y)
+      let rectView = RectangleView(frame: CGRect(origin: rectOrigin, size: rectSize))
+      let color = rect.backgroundColor
+      let uiColor = UIColor(
+        red: CGFloat(color.red),
+        green: CGFloat(color.green),
+        blue: CGFloat(color.blue),
+        alpha: CGFloat(color.alpha.floatValue))
+      rectView.setColor(with: uiColor)
+      return rectView
+    }
   
   private func updateInfoPane(with rect: Rectangle?) {
     guard let rect else { return }
