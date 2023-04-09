@@ -9,13 +9,15 @@ import UIKit
 import OSLog
 
 class ViewController: UIViewController {
-  private lazy var plane = Plane(size: Size(width: 0, height: 0))
-  
   private var rectangleFactory: RectangleFactory?
   
   private var selectedRectangleView: RectangleView?
   
   private var selectedRectangle: Rectangle?
+  
+  private lazy var plane = Plane(size: Size(width: 0, height: 0))
+  
+  private var rectangleViews: [Rectangle: RectangleView] = [:]
   
   @IBOutlet weak var planeArea: UIView!
   
@@ -38,6 +40,8 @@ class ViewController: UIViewController {
     
     let rectView = makeRectView(outOf: newRect)
     planeArea.addSubview(rectView)
+    
+    rectangleViews.updateValue(rectView, forKey: newRect)
   }
   
   @IBAction func somePositionDidTouched(_ sender: UITapGestureRecognizer) {

@@ -15,9 +15,13 @@ struct ID {
   }
 }
 
-extension ID: Equatable {
+extension ID: Hashable {
   static func == (lhs: ID, rhs: ID) -> Bool {
     lhs.id == rhs.id
+  }
+  
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
   }
 }
 
