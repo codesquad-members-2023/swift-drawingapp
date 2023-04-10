@@ -52,12 +52,24 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtM-Oj-pV8">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="49"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                                        <connections>
+                                                                            <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5O-xa-Qif"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="ZtM-Oj-pV8" secondAttribute="trailing" id="P5s-iZ-YxX"/>
                                                                     <constraint firstItem="yqN-Jv-hgw" firstAttribute="top" secondItem="RNR-Ns-TqD" secondAttribute="top" constant="8" id="Ra5-C5-QnX"/>
+                                                                    <constraint firstItem="ZtM-Oj-pV8" firstAttribute="leading" secondItem="RNR-Ns-TqD" secondAttribute="leading" id="Ugg-hi-ICn"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ZtM-Oj-pV8" secondAttribute="bottom" id="VYn-Tk-My8"/>
                                                                     <constraint firstItem="yqN-Jv-hgw" firstAttribute="leading" secondItem="RNR-Ns-TqD" secondAttribute="leading" constant="8" id="dBR-Oi-5LU"/>
                                                                     <constraint firstAttribute="trailing" secondItem="yqN-Jv-hgw" secondAttribute="trailing" constant="8" id="pXo-99-87L"/>
+                                                                    <constraint firstItem="ZtM-Oj-pV8" firstAttribute="top" secondItem="RNR-Ns-TqD" secondAttribute="top" id="u0n-zM-VCu"/>
                                                                     <constraint firstAttribute="bottom" secondItem="yqN-Jv-hgw" secondAttribute="bottom" constant="8" id="wv4-Nf-6q3"/>
                                                                 </constraints>
                                                             </view>

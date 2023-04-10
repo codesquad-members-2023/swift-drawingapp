@@ -31,6 +31,7 @@
 		F484774029DE720D00CE5BB8 /* RandomColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */; };
 		F484774229DE721B00CE5BB8 /* RandomAlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */; };
 		F484774429DE722A00CE5BB8 /* RandomRectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */; };
+		F4C77BBF29E3A868007CA205 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C77BBE29E3A868007CA205 /* ColorConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorFactory.swift; sourceTree = "<group>"; };
 		F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlphaFactory.swift; sourceTree = "<group>"; };
 		F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRectangleFactory.swift; sourceTree = "<group>"; };
+		F4C77BBE29E3A868007CA205 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				F412CAA329D15D1D0034F420 /* AppDelegate.swift */,
 				F412CAA529D15D1D0034F420 /* SceneDelegate.swift */,
 				F412CAA729D15D1D0034F420 /* ViewController.swift */,
+				F4C77BBE29E3A868007CA205 /* ColorConverter.swift */,
 				F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */,
 				F469C1BC29DAAE8B005E7150 /* Double+Range.swift */,
 				F437A51C29D404FB004D38C8 /* ID.swift */,
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C77BBF29E3A868007CA205 /* ColorConverter.swift in Sources */,
 				F437A51D29D404FB004D38C8 /* ID.swift in Sources */,
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
 				F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */,

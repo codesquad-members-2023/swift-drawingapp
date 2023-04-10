@@ -11,6 +11,10 @@ import OSLog
 class ViewController: UIViewController {
   private var rectangleFactory: RectangleFactory?
   
+  private var colorFactory: ColorFactory?
+  
+  private var colorConverter = ColorConverter()
+  
   private var selectedRectangleView: RectangleView?
   
   private var selectedRectangle: Rectangle?
@@ -59,6 +63,14 @@ class ViewController: UIViewController {
     updateInfoPane(with: rect)
   }
   
+  @IBAction func colorChanged(_ sender: Any) {
+    guard let newColor = colorFactory?.make() else { return }
+    selectedRectangle?.setColor(to: newColor)
+    let uiColor = colorConverter.convert(newColor)
+    selectedRectangleView?.setColor(with: uiColor)
+    updateInfoPane(with: selectedRectangle)
+  }
+  
   @IBAction func alphaChanged(_ sender: UISlider) {
     let newValue = sender.value
     selectedRectangle?.setAlpha(to: newValue)
@@ -75,6 +87,8 @@ class ViewController: UIViewController {
     let pointFactory = RandomPointFactory(xRange: viewXRange, yRange: viewYRange)
     let rectFactory = RandomRectangleFactory(pointFactory: pointFactory)
     self.rectangleFactory = rectFactory
+    
+    self.colorFactory = RandomColorFactory()
   }
   
   private func makeRectView(outOf rect: Rectangle) -> RectangleView {
@@ -82,11 +96,7 @@ class ViewController: UIViewController {
       let rectOrigin = CGPoint(x: rect.origin.x, y: rect.origin.y)
       let rectView = RectangleView(frame: CGRect(origin: rectOrigin, size: rectSize))
       let color = rect.backgroundColor
-      let uiColor = UIColor(
-        red: CGFloat(color.red),
-        green: CGFloat(color.green),
-        blue: CGFloat(color.blue),
-        alpha: CGFloat(color.alpha.floatValue))
+      let uiColor = colorConverter.convert(color)
       rectView.setColor(with: uiColor)
       return rectView
     }
