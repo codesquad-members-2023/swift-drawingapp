@@ -9,12 +9,10 @@ import UIKit
 import OSLog
 
 class ViewController: UIViewController {
+  // MARK: Properties
+  
   private var rectangleFactory: RectangleFactory?
-  
-  private var colorFactory: ColorFactory? {
-    rectangleFactory?.colorFactory
-  }
-  
+
   private var colorConverter = ColorConverter()
   
   private var selectedRectangleView: RectangleView?
@@ -24,6 +22,12 @@ class ViewController: UIViewController {
   private lazy var plane = Plane(size: Size(width: 0, height: 0))
   
   private var rectangleViews: [Rectangle: RectangleView] = [:]
+  
+  private var colorFactory: ColorFactory? {
+    rectangleFactory?.colorFactory
+  }
+  
+  // MARK: Outlets
   
   @IBOutlet weak var planeArea: UIView!
   
@@ -43,10 +47,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var alphaIncreasingButton: UIButton!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    configure()
-  }
+  // MARK: Actions
   
   @IBAction func addRandomRect(_ sender: Any) {
     guard let newRect = rectangleFactory?.make() else { return }
@@ -103,6 +104,15 @@ class ViewController: UIViewController {
     guard let newAlpha = selectedRectangle?.backgroundColor.alpha.increase() else { return }
     changeAlphaAndUpdateButtons(with: newAlpha)
   }
+  
+  // MARK: Life-cycle methods
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    configure()
+  }
+  
+  // MARK: Methods
   
   private func configure() {
     let viewWidth = Double(planeArea.frame.size.width)
