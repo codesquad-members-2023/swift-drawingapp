@@ -48,21 +48,14 @@ class ViewController: UIViewController {
     selectedRectangleView?.deselect()
     
     let location = sender.location(in: planeArea)
-    let latest = planeArea.hitTest(location, with: nil)
-    guard let lastesRectView = latest as? RectangleView else {
-      selectedRectangleView = nil
-      selectedRectangle = nil
-      colorInfoSection.isHidden = true
-      alphaSection.isHidden = true
-      return
-    }
-    
-    selectedRectangleView = lastesRectView
-    lastesRectView.select()
-    
     let point = Point(x: location.x, y: location.y)
     let rect = plane.getRectangles(on: point).last
     selectedRectangle = rect
+    
+    guard let rect else { return }
+    let rectView = rectangleViews[rect]
+    selectedRectangleView = rectView
+    selectedRectangleView?.select()
     updateInfoPane(with: rect)
   }
   
