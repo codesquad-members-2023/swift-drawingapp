@@ -32,7 +32,25 @@
 		F484774229DE721B00CE5BB8 /* RandomAlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */; };
 		F484774429DE722A00CE5BB8 /* RandomRectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */; };
 		F4C77BBF29E3A868007CA205 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C77BBE29E3A868007CA205 /* ColorConverter.swift */; };
+		F4C77BCD29E3F39E007CA205 /* PlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C77BCC29E3F39E007CA205 /* PlaneTests.swift */; };
+		F4C77BD329E3F48E007CA205 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1B829DA67A4005E7150 /* Plane.swift */; };
+		F4C77BD429E3F601007CA205 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52229D40826004D38C8 /* Size.swift */; };
+		F4C77BD529E40045007CA205 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52829D40B19004D38C8 /* Rectangle.swift */; };
+		F4C77BD629E4005C007CA205 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51E29D40634004D38C8 /* Point.swift */; };
+		F4C77BD729E4005F007CA205 /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A51C29D404FB004D38C8 /* ID.swift */; };
+		F4C77BD829E40064007CA205 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52429D40883004D38C8 /* Color.swift */; };
+		F4C77BD929E40B9D007CA205 /* Double+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1BC29DAAE8B005E7150 /* Double+Range.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4C77BCE29E3F39E007CA205 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F412CA9829D15D1D0034F420 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F412CA9F29D15D1D0034F420;
+			remoteInfo = DrawingApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F412CAA029D15D1D0034F420 /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,10 +80,19 @@
 		F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlphaFactory.swift; sourceTree = "<group>"; };
 		F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRectangleFactory.swift; sourceTree = "<group>"; };
 		F4C77BBE29E3A868007CA205 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
+		F4C77BCA29E3F39E007CA205 /* PlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C77BCC29E3F39E007CA205 /* PlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F412CA9D29D15D1D0034F420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C77BC729E3F39E007CA205 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				F412CAA229D15D1D0034F420 /* DrawingApp */,
+				F4C77BCB29E3F39E007CA205 /* PlaneTests */,
 				F412CAA129D15D1D0034F420 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				F412CAA029D15D1D0034F420 /* DrawingApp.app */,
+				F4C77BCA29E3F39E007CA205 /* PlaneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +185,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F4C77BCB29E3F39E007CA205 /* PlaneTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4C77BCC29E3F39E007CA205 /* PlaneTests.swift */,
+			);
+			path = PlaneTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +213,24 @@
 			productReference = F412CAA029D15D1D0034F420 /* DrawingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F4C77BC929E3F39E007CA205 /* PlaneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C77BD029E3F39E007CA205 /* Build configuration list for PBXNativeTarget "PlaneTests" */;
+			buildPhases = (
+				F4C77BC629E3F39E007CA205 /* Sources */,
+				F4C77BC729E3F39E007CA205 /* Frameworks */,
+				F4C77BC829E3F39E007CA205 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4C77BCF29E3F39E007CA205 /* PBXTargetDependency */,
+			);
+			name = PlaneTests;
+			productName = PlaneTests;
+			productReference = F4C77BCA29E3F39E007CA205 /* PlaneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,11 +238,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					F412CA9F29D15D1D0034F420 = {
 						CreatedOnToolsVersion = 14.1;
+					};
+					F4C77BC929E3F39E007CA205 = {
+						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
@@ -205,6 +263,7 @@
 			projectRoot = "";
 			targets = (
 				F412CA9F29D15D1D0034F420 /* DrawingApp */,
+				F4C77BC929E3F39E007CA205 /* PlaneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +276,13 @@
 				F412CAB029D15D1D0034F420 /* LaunchScreen.storyboard in Resources */,
 				F412CAAD29D15D1D0034F420 /* Assets.xcassets in Resources */,
 				F412CAAB29D15D1D0034F420 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C77BC829E3F39E007CA205 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +318,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4C77BC629E3F39E007CA205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C77BD929E40B9D007CA205 /* Double+Range.swift in Sources */,
+				F4C77BD329E3F48E007CA205 /* Plane.swift in Sources */,
+				F4C77BD629E4005C007CA205 /* Point.swift in Sources */,
+				F4C77BD829E40064007CA205 /* Color.swift in Sources */,
+				F4C77BD729E4005F007CA205 /* ID.swift in Sources */,
+				F4C77BD429E3F601007CA205 /* Size.swift in Sources */,
+				F4C77BCD29E3F39E007CA205 /* PlaneTests.swift in Sources */,
+				F4C77BD529E40045007CA205 /* Rectangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4C77BCF29E3F39E007CA205 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F412CA9F29D15D1D0034F420 /* DrawingApp */;
+			targetProxy = F4C77BCE29E3F39E007CA205 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F412CAA929D15D1D0034F420 /* Main.storyboard */ = {
@@ -450,6 +539,46 @@
 			};
 			name = Release;
 		};
+		F4C77BD129E3F39E007CA205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y67S3384LP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.effiethedev.PlaneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4C77BD229E3F39E007CA205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y67S3384LP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.effiethedev.PlaneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +596,15 @@
 			buildConfigurations = (
 				F412CAB529D15D1D0034F420 /* Debug */,
 				F412CAB629D15D1D0034F420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C77BD029E3F39E007CA205 /* Build configuration list for PBXNativeTarget "PlaneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C77BD129E3F39E007CA205 /* Debug */,
+				F4C77BD229E3F39E007CA205 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
