@@ -24,8 +24,28 @@ struct Color {
       Float(self.rawValue) / Float(10)
     }
     
+    var canBeIncreased: Bool {
+      self != .level10
+    }
+    
+    var canBeDecreased: Bool {
+      self != .level1
+    }
+    
     static func < (lhs: Alpha, rhs: Alpha) -> Bool {
       lhs.rawValue < rhs.rawValue
+    }
+    
+    func increase() -> Self? {
+      guard canBeIncreased else { return nil }
+      let newValue = self.rawValue + 1
+      return Alpha.init(rawValue: newValue)
+    }
+    
+    func decrease() -> Self? {
+      guard canBeDecreased else { return nil }
+      let newValue = self.rawValue - 1
+      return Alpha.init(rawValue: newValue)
     }
   }
   
