@@ -8,5 +8,7 @@
 import Foundation
 
 protocol RectangleFactory {
+  var colorFactory: ColorFactory { get set }
+  
   func make() -> Rectangle?
 }

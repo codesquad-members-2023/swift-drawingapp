@@ -11,7 +11,9 @@ import OSLog
 class ViewController: UIViewController {
   private var rectangleFactory: RectangleFactory?
   
-  private var colorFactory: ColorFactory?
+  private var colorFactory: ColorFactory? {
+    rectangleFactory?.colorFactory
+  }
   
   private var colorConverter = ColorConverter()
   
@@ -87,8 +89,6 @@ class ViewController: UIViewController {
     let pointFactory = RandomPointFactory(xRange: viewXRange, yRange: viewYRange)
     let rectFactory = RandomRectangleFactory(pointFactory: pointFactory)
     self.rectangleFactory = rectFactory
-    
-    self.colorFactory = RandomColorFactory()
   }
   
   private func makeRectView(outOf rect: Rectangle) -> RectangleView {
