@@ -29,11 +29,19 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var colorInfoSection: UIStackView!
   
+  @IBOutlet weak var sliderSection: UIStackView!
+  
   @IBOutlet weak var alphaSection: UIStackView!
   
   @IBOutlet weak var colorInfoLabel: UILabel!
   
   @IBOutlet weak var alphaSlider: UISlider!
+  
+  @IBOutlet weak var alphaGauge: UIProgressView!
+  
+  @IBOutlet weak var alphaDecreasingButton: UIButton!
+  
+  @IBOutlet weak var alphaIncreasingButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -58,7 +66,13 @@ class ViewController: UIViewController {
     let rect = plane.getRectangles(on: point).last
     selectedRectangle = rect
     
-    guard let rect else { return }
+    guard let rect else {
+      selectedRectangleView = nil
+      colorInfoSection.isHidden = true
+      sliderSection.isHidden = true
+      alphaSection.isHidden = true
+      return
+    }
     let rectView = rectangleViews[rect]
     selectedRectangleView = rectView
     selectedRectangleView?.select()
@@ -77,6 +91,17 @@ class ViewController: UIViewController {
     let newValue = sender.value
     selectedRectangle?.setAlpha(to: newValue)
     selectedRectangleView?.setAlpha(to: newValue)
+    alphaGauge.progress = sender.value
+  }
+  
+  @IBAction func decreaseAlpha(_ sender: UIButton) {
+    guard let newAlpha = selectedRectangle?.backgroundColor.alpha.decrease() else { return }
+    changeAlphaAndUpdateButtons(with: newAlpha)
+  }
+  
+  @IBAction func increaseAlpha(_ sender: UIButton) {
+    guard let newAlpha = selectedRectangle?.backgroundColor.alpha.increase() else { return }
+    changeAlphaAndUpdateButtons(with: newAlpha)
   }
   
   private func configure() {
@@ -89,23 +114,38 @@ class ViewController: UIViewController {
     let pointFactory = RandomPointFactory(xRange: viewXRange, yRange: viewYRange)
     let rectFactory = RandomRectangleFactory(pointFactory: pointFactory)
     self.rectangleFactory = rectFactory
+    
+    colorInfoSection.isHidden = true
+    sliderSection.isHidden = true
+    alphaSection.isHidden = true
   }
   
   private func makeRectView(outOf rect: Rectangle) -> RectangleView {
-      let rectSize = CGSize(width: rect.size.width, height: rect.size.height)
-      let rectOrigin = CGPoint(x: rect.origin.x, y: rect.origin.y)
-      let rectView = RectangleView(frame: CGRect(origin: rectOrigin, size: rectSize))
-      let color = rect.backgroundColor
-      let uiColor = colorConverter.convert(color)
-      rectView.setColor(with: uiColor)
-      return rectView
-    }
+    let rectSize = CGSize(width: rect.size.width, height: rect.size.height)
+    let rectOrigin = CGPoint(x: rect.origin.x, y: rect.origin.y)
+    let rectView = RectangleView(frame: CGRect(origin: rectOrigin, size: rectSize))
+    let color = rect.backgroundColor
+    let uiColor = colorConverter.convert(color)
+    rectView.setColor(with: uiColor)
+    return rectView
+  }
   
   private func updateInfoPane(with rect: Rectangle?) {
     guard let rect else { return }
     colorInfoSection.isHidden = false
+    sliderSection.isHidden = false
     alphaSection.isHidden = false
     colorInfoLabel.text = "#\(rect.backgroundColor.hexDescription)"
     alphaSlider.value = rect.backgroundColor.alpha.floatValue
+    alphaGauge.progress = rect.backgroundColor.alpha.floatValue
+  }
+  
+  private func changeAlphaAndUpdateButtons(with newAlpha: Color.Alpha) {
+    selectedRectangle?.setAlpha(to: newAlpha)
+    selectedRectangleView?.setAlpha(to: newAlpha.floatValue)
+    alphaGauge.progress = newAlpha.floatValue
+    alphaSlider.value = newAlpha.floatValue
+    alphaDecreasingButton.isEnabled = newAlpha.canBeDecreased
+    alphaIncreasingButton.isEnabled = newAlpha.canBeIncreased
   }
 }
