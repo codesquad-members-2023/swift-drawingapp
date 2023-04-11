@@ -13,17 +13,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        let rect1 = RectangleFactory.createRectangle()
+        let rect1 = RandomRectangleFactory().makeRectangle()
         os_log("\(rect1.description)")
     }
 }
+//Product Protocol
+protocol RectangleComponent: CustomStringConvertible {
+    var id:Id { get set }
+    var size:RectangleSize { get set }
+    var position:RectanglePosition { get set }
+    var backGroundColor:BackGroundColor { get set }
+    var alpha:Alpha { get set }
+}
 
-protocol RectangleComponent {
-    var id:String { get }
-    var size:RectangleSize { get }
-    var position:RectanglePosition { get }
-    var backGroundColor:(red:Int, green:Int, blue:Int) { get }
-    var alpha:Int { get }
+//Creator
+//return 하는 객체는 Product Protocol을 준수해야 함
+protocol RectangleFactory {
+    func makeRectangle() -> RectangleComponent
 }
 
 class RectangleSize {
@@ -41,14 +47,9 @@ class RectanglePosition {
     private var X:Double
     private var Y:Double
     
-    init(X: Double, Y: Double) {
-        self.X = X
-        self.Y = Y
-    }
-    func randomPosition() -> RectanglePosition {
-        let x = Double.random(in: 0...UIScreen.main.bounds.width)
-        let y = Double.random(in: 0...UIScreen.main.bounds.height)
-        return RectanglePosition(X: x, Y: y)
+    init() {
+        self.X = Double.random(in: 0...UIScreen.main.bounds.width)
+        self.Y = Double.random(in: 0...UIScreen.main.bounds.height)
     }
     func getPositionX() -> Double {
         return self.X
@@ -109,17 +110,19 @@ class IdRandomizer {
                 let letter = letters[letters.index(letters.startIndex, offsetBy: randomIndex)]
                 randomString.append(letter)
         }
-        return "\(randomString.prefix(3))-\(randomString.prefix(6).suffix(3))-\(randomString.suffix(3))"
+        let id = Id(id: "\(randomString.prefix(3))-\(randomString.prefix(6).suffix(3))-\(randomString.suffix(3))")
+        return id
         }
 }
 
-class RectangleFactory {
-    static func createRectangle() -> Rectangle {
+//Factory(Concrete Createor)
+class RandomRectangleFactory: RectangleFactory {
+     func makeRectangle() -> RectangleComponent {
         let id = IdRandomizer().randomString()
         let size = RectangleSize()
-        let position = RectanglePosition(X: 0, Y: 0).randomPosition()
-        let backGroundColor = (red: Int.random(in: 0...255), green: Int.random(in: 0...255), blue: Int.random(in: 0...255))
-        let alpha = Int.random(in: 1...10)
+        let position = RectanglePosition()
+        let backGroundColor = BackGroundColor()
+        let alpha = Alpha()
 
         return Rectangle(
             id: id,

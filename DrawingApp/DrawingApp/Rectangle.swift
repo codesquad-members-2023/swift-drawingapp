@@ -7,14 +7,15 @@
 
 import Foundation
 
+//Concrete Product
 class Rectangle : RectangleComponent {
-    let id:String
-    let size:RectangleSize
-    let position:RectanglePosition
-    let backGroundColor:(red:Int, green:Int, blue:Int)
-    let alpha:Int
+    var id:Id
+    var size:RectangleSize
+    var position:RectanglePosition
+    var backGroundColor:BackGroundColor
+    var alpha:Alpha
     
-    init(id:String, size:RectangleSize, position:RectanglePosition, backGroundColor:(red:Int, green:Int, blue:Int), alpha:Int) {
+    init(id:Id, size:RectangleSize, position:RectanglePosition, backGroundColor:BackGroundColor, alpha:Alpha) {
         
         self.id = id
         self.size = size
@@ -27,6 +28,6 @@ class Rectangle : RectangleComponent {
 
 extension Rectangle : CustomStringConvertible {
     var description: String {
-        return "(\(id), X:\(position.getPositionX()), Y\(position.getPositionY()):, W\(size.getWidth()), H\(size.getHeight()), R:\(backGroundColor.red), G:\(backGroundColor.green), B:\(backGroundColor.blue), Alpha:\(alpha))"
+        return "(\(id.getId()), X:\(position.getPositionX()), Y\(position.getPositionY()):, W\(size.getWidth()), H\(size.getHeight()), R:\(backGroundColor.getRed()), G:\(backGroundColor.getGreen()), B:\(backGroundColor.getBlue()), Alpha:\(alpha.getAlpha()))"
     }
 }
