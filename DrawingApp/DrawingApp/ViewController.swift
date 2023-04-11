@@ -62,7 +62,7 @@ class ViewController: UIViewController {
     
     let location = sender.location(in: planeArea)
     let point = Point(x: location.x, y: location.y)
-    let rect = plane.getRectangles(on: point).last
+    let rect = plane.findRectangles(containing: point).last
     selectedRectangle = rect
     
     guard let rect else {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class IDGenerator {
+class IDFactory {
   
   static let defaultLength = [3, 3, 3]
 

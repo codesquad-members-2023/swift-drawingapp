@@ -8,18 +8,18 @@
 import Foundation
 
 class RandomRectangleFactory: RectangleFactory {
-  var idGenerator: IDGenerator
+  var idFactory: IDFactory
   var pointFactory: PointFactory
   var colorFactory: ColorFactory
   
   init(pointFactory: RandomPointFactory) {
-    self.idGenerator = IDGenerator()
+    self.idFactory = IDFactory()
     self.pointFactory = pointFactory
     self.colorFactory = RandomColorFactory()
   }
   
   func make() -> Rectangle? {
-    let id = idGenerator.make()
+    let id = idFactory.make()
     let size = Size(width: 150, height: 120)
     let position = pointFactory.makeOrigin(consideringSize: size) ?? Point(x: 0, y: 0)
     let color = colorFactory.make() ?? Color(r: 0, g: 0, b: 0, alpha: .level10)
