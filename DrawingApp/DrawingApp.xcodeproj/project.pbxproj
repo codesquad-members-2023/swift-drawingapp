@@ -22,7 +22,7 @@
 		F437A53129D48B17004D38C8 /* PointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53029D48B17004D38C8 /* PointFactory.swift */; };
 		F437A53329D48B30004D38C8 /* ColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53229D48B30004D38C8 /* ColorFactory.swift */; };
 		F437A53529D48B41004D38C8 /* AlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53429D48B41004D38C8 /* AlphaFactory.swift */; };
-		F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53629D52F58004D38C8 /* IDGenerator.swift */; };
+		F437A53729D52F58004D38C8 /* IDFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A53629D52F58004D38C8 /* IDFactory.swift */; };
 		F469C1B929DA67A4005E7150 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1B829DA67A4005E7150 /* Plane.swift */; };
 		F469C1BD29DAAE8B005E7150 /* Double+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1BC29DAAE8B005E7150 /* Double+Range.swift */; };
 		F469C1C329DAC4D0005E7150 /* UIColor+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */; };
@@ -69,7 +69,7 @@
 		F437A53029D48B17004D38C8 /* PointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointFactory.swift; sourceTree = "<group>"; };
 		F437A53229D48B30004D38C8 /* ColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFactory.swift; sourceTree = "<group>"; };
 		F437A53429D48B41004D38C8 /* AlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaFactory.swift; sourceTree = "<group>"; };
-		F437A53629D52F58004D38C8 /* IDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
+		F437A53629D52F58004D38C8 /* IDFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFactory.swift; sourceTree = "<group>"; };
 		F469C1B829DA67A4005E7150 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		F469C1BC29DAAE8B005E7150 /* Double+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Range.swift"; sourceTree = "<group>"; };
 		F469C1C229DAC4D0005E7150 /* UIColor+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Color.swift"; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		F4C77BC229E3EC2A007CA205 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				F437A53629D52F58004D38C8 /* IDGenerator.swift */,
+				F437A53629D52F58004D38C8 /* IDFactory.swift */,
 				F437A53029D48B17004D38C8 /* PointFactory.swift */,
 				F484773D29DE71E200CE5BB8 /* RandomPointFactory.swift */,
 				F437A53229D48B30004D38C8 /* ColorFactory.swift */,
@@ -292,7 +292,7 @@
 			files = (
 				F437A51D29D404FB004D38C8 /* ID.swift in Sources */,
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
-				F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */,
+				F437A53729D52F58004D38C8 /* IDFactory.swift in Sources */,
 				F437A51F29D40634004D38C8 /* Point.swift in Sources */,
 				F469C1C329DAC4D0005E7150 /* UIColor+Color.swift in Sources */,
 				F412CAA429D15D1D0034F420 /* AppDelegate.swift in Sources */,

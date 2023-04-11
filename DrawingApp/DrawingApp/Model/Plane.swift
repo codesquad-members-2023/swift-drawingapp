@@ -26,13 +26,13 @@ struct Plane {
     return rectangles[index]
   }
   
-  private func areaContains(_ point: Point) -> Bool {
+  private func contains(point: Point) -> Bool {
     let (xRange, yRange) = size.getArea(fromOrigin: Point(x: 0, y: 0))
     return point.x.isOn(range: xRange) && point.y.isOn(range: yRange)
   }
   
-  func getRectangles(on point: Point) -> [Rectangle] {
-    guard areaContains(point) else { return [] }
+  func findRectangles(containing point: Point) -> [Rectangle] {
+    guard self.contains(point: point) else { return [] }
     return rectangles.filter { rect in rect.areaContains(point) }
   }
   

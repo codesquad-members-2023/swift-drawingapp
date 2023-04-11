@@ -79,7 +79,7 @@ final class PlaneTests: XCTestCase {
     sut = Plane(size: size)
     
     let targetPoint = Point(x: 50, y: 50)
-    let rects = sut.getRectangles(on: targetPoint)
+    let rects = sut.findRectangles(containing: targetPoint)
     
     XCTAssertEqual(rects.count, 0)
   }
@@ -96,7 +96,7 @@ final class PlaneTests: XCTestCase {
     
     let targetPoint = Point(x: 5, y: 5)
     guard newRect.areaContains(targetPoint) else { return }
-    let rects = sut.getRectangles(on: targetPoint)
+    let rects = sut.findRectangles(containing: targetPoint)
     
     XCTAssertGreaterThanOrEqual(rects.count, 1)
   }
@@ -105,7 +105,7 @@ final class PlaneTests: XCTestCase {
     let count = 5
     (0 ..< count).forEach { _ in sut.add(rect: dummy10x10Rectangle) }
     
-    let rects = sut.getRectangles(on: pointAvailableIn10x10Rectangle)
+    let rects = sut.findRectangles(containing: pointAvailableIn10x10Rectangle)
     
     XCTAssertEqual(rects.count, count)
     
