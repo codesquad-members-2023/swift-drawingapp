@@ -31,7 +31,6 @@
 		F484774029DE720D00CE5BB8 /* RandomColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */; };
 		F484774229DE721B00CE5BB8 /* RandomAlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */; };
 		F484774429DE722A00CE5BB8 /* RandomRectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */; };
-		F4C77BBF29E3A868007CA205 /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C77BBE29E3A868007CA205 /* ColorConverter.swift */; };
 		F4C77BCD29E3F39E007CA205 /* PlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C77BCC29E3F39E007CA205 /* PlaneTests.swift */; };
 		F4C77BD329E3F48E007CA205 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469C1B829DA67A4005E7150 /* Plane.swift */; };
 		F4C77BD429E3F601007CA205 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437A52229D40826004D38C8 /* Size.swift */; };
@@ -79,7 +78,6 @@
 		F484773F29DE720D00CE5BB8 /* RandomColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorFactory.swift; sourceTree = "<group>"; };
 		F484774129DE721B00CE5BB8 /* RandomAlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlphaFactory.swift; sourceTree = "<group>"; };
 		F484774329DE722A00CE5BB8 /* RandomRectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRectangleFactory.swift; sourceTree = "<group>"; };
-		F4C77BBE29E3A868007CA205 /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		F4C77BCA29E3F39E007CA205 /* PlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C77BCC29E3F39E007CA205 /* PlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +124,6 @@
 				F412CAA329D15D1D0034F420 /* AppDelegate.swift */,
 				F412CAA529D15D1D0034F420 /* SceneDelegate.swift */,
 				F412CAA729D15D1D0034F420 /* ViewController.swift */,
-				F4C77BBE29E3A868007CA205 /* ColorConverter.swift */,
 				F4C77BC029E3EBF5007CA205 /* Extension */,
 				F4C77BC129E3EC1E007CA205 /* Model */,
 				F4C77BC229E3EC2A007CA205 /* Factory */,
@@ -293,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4C77BBF29E3A868007CA205 /* ColorConverter.swift in Sources */,
 				F437A51D29D404FB004D38C8 /* ID.swift in Sources */,
 				F412CAA829D15D1D0034F420 /* ViewController.swift in Sources */,
 				F437A53729D52F58004D38C8 /* IDGenerator.swift in Sources */,
