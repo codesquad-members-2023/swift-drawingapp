@@ -12,8 +12,6 @@ class ViewController: UIViewController {
   // MARK: Properties
   
   private var rectangleFactory: RectangleFactory?
-
-  private var colorConverter = ColorConverter()
   
   private var selectedRectangleView: RectangleView?
   
@@ -83,8 +81,7 @@ class ViewController: UIViewController {
   @IBAction func colorChanged(_ sender: Any) {
     guard let newColor = colorFactory?.make() else { return }
     selectedRectangle?.setColor(to: newColor)
-    let uiColor = colorConverter.convert(newColor)
-    selectedRectangleView?.setColor(with: uiColor)
+    selectedRectangleView?.setColor(with: UIColor(color: newColor))
     updateInfoPane(with: selectedRectangle)
   }
   
@@ -135,8 +132,7 @@ class ViewController: UIViewController {
     let rectOrigin = CGPoint(x: rect.origin.x, y: rect.origin.y)
     let rectView = RectangleView(frame: CGRect(origin: rectOrigin, size: rectSize))
     let color = rect.backgroundColor
-    let uiColor = colorConverter.convert(color)
-    rectView.setColor(with: uiColor)
+    rectView.setColor(with: UIColor(color: color))
     return rectView
   }
   
