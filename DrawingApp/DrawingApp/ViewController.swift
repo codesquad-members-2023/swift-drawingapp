@@ -57,10 +57,51 @@ class RectanglePosition {
         return self.Y
     }
 }
-
+class Id {
+    private var id:String
+    
+    init(id: String) {
+        self.id = id
+    }
+    func getId() -> String {
+        return self.id
+    }
+}
+class Alpha {
+    private var alpha:Int
+    
+    init() {
+        self.alpha = Int.random(in: 1...10)
+    }
+    func getAlpha() -> Int {
+        return self.alpha
+    }
+}
+class BackGroundColor {
+    private var red:Int
+    private var green:Int
+    private var blue:Int
+    
+    init() {
+        self.red = Int.random(in: 0...255)
+        self.green = Int.random(in: 0...255)
+        self.blue = Int.random(in: 0...255)
+    }
+    func getRed() -> Int {
+        return self.red
+    }
+        
+    func getGreen() -> Int {
+        return self.green
+    }
+        
+    func getBlue() -> Int {
+        return self.blue
+    }
+}
 
 class IdRandomizer {
-    func randomString() -> String {
+    func randomString() -> Id {
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         var randomString = ""
         for _ in 0..<9 {
