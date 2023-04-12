@@ -106,6 +106,7 @@
 ---
 
 - [ ]  피드백 반영
+    - [ ] Plane 내부에 있는 Model객체를 모아놓은 배열의 변화는 Plane내부에서 처리 할 것. 잡일은 Plane이 해라.   
 - [ ]  Observer Pattern
     - [ ]  Notification Center 구조로 구현
     - 설계 하고 구현하기
