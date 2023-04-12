@@ -14,6 +14,14 @@
 		CC64773B29D295A3009B7183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC64773A29D295A3009B7183 /* Assets.xcassets */; };
 		CC64773E29D295A3009B7183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC64773C29D295A3009B7183 /* LaunchScreen.storyboard */; };
 		CC64774629D5CD7B009B7183 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64774529D5CD7B009B7183 /* Rectangle.swift */; };
+		CC64774829E50598009B7183 /* RectangleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64774729E50598009B7183 /* RectangleComponent.swift */; };
+		CC64774A29E505CC009B7183 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64774929E505CC009B7183 /* RectangleFactory.swift */; };
+		CC64774C29E505F0009B7183 /* RandomRectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64774B29E505F0009B7183 /* RandomRectangleFactory.swift */; };
+		CC64774E29E5061E009B7183 /* IdRandomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64774D29E5061E009B7183 /* IdRandomizer.swift */; };
+		CC64775029E5063F009B7183 /* BackGroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64774F29E5063F009B7183 /* BackGroundColor.swift */; };
+		CC64775229E5065F009B7183 /* Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64775129E5065F009B7183 /* Alpha.swift */; };
+		CC64775429E5066E009B7183 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64775329E5066E009B7183 /* Id.swift */; };
+		CC64775829E506E6009B7183 /* RectangleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC64775729E506E6009B7183 /* RectangleSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		CC64773D29D295A3009B7183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC64773F29D295A3009B7183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC64774529D5CD7B009B7183 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		CC64774729E50598009B7183 /* RectangleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleComponent.swift; sourceTree = "<group>"; };
+		CC64774929E505CC009B7183 /* RectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
+		CC64774B29E505F0009B7183 /* RandomRectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomRectangleFactory.swift; sourceTree = "<group>"; };
+		CC64774D29E5061E009B7183 /* IdRandomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdRandomizer.swift; sourceTree = "<group>"; };
+		CC64774F29E5063F009B7183 /* BackGroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundColor.swift; sourceTree = "<group>"; };
+		CC64775129E5065F009B7183 /* Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpha.swift; sourceTree = "<group>"; };
+		CC64775329E5066E009B7183 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		CC64775729E506E6009B7183 /* RectangleSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleSize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +77,15 @@
 				CC64773129D295A1009B7183 /* AppDelegate.swift */,
 				CC64773329D295A1009B7183 /* SceneDelegate.swift */,
 				CC64773529D295A1009B7183 /* ViewController.swift */,
+				CC64774729E50598009B7183 /* RectangleComponent.swift */,
 				CC64774529D5CD7B009B7183 /* Rectangle.swift */,
+				CC64775729E506E6009B7183 /* RectangleSize.swift */,
+				CC64774929E505CC009B7183 /* RectangleFactory.swift */,
+				CC64774B29E505F0009B7183 /* RandomRectangleFactory.swift */,
+				CC64774F29E5063F009B7183 /* BackGroundColor.swift */,
+				CC64775129E5065F009B7183 /* Alpha.swift */,
+				CC64775329E5066E009B7183 /* Id.swift */,
+				CC64774D29E5061E009B7183 /* IdRandomizer.swift */,
 				CC64773729D295A1009B7183 /* Main.storyboard */,
 				CC64773A29D295A3009B7183 /* Assets.xcassets */,
 				CC64773C29D295A3009B7183 /* LaunchScreen.storyboard */,
@@ -141,10 +165,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC64775029E5063F009B7183 /* BackGroundColor.swift in Sources */,
 				CC64773629D295A1009B7183 /* ViewController.swift in Sources */,
+				CC64775829E506E6009B7183 /* RectangleSize.swift in Sources */,
+				CC64774829E50598009B7183 /* RectangleComponent.swift in Sources */,
+				CC64774A29E505CC009B7183 /* RectangleFactory.swift in Sources */,
 				CC64773229D295A1009B7183 /* AppDelegate.swift in Sources */,
 				CC64773429D295A1009B7183 /* SceneDelegate.swift in Sources */,
+				CC64775229E5065F009B7183 /* Alpha.swift in Sources */,
+				CC64774E29E5061E009B7183 /* IdRandomizer.swift in Sources */,
 				CC64774629D5CD7B009B7183 /* Rectangle.swift in Sources */,
+				CC64774C29E505F0009B7183 /* RandomRectangleFactory.swift in Sources */,
+				CC64775429E5066E009B7183 /* Id.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
