@@ -38,37 +38,20 @@
                                 <rect key="frame" x="377" y="761" width="444" height="36"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-ge-CXx" userLabel="InnerColor">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="444" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRa-2J-HPB">
-                                                <rect key="frame" x="0.0" y="8" width="47.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="8" width="57" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <colorWell contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GYh-MY-aLk">
-                                                <rect key="frame" x="67.5" y="0.0" width="36" height="36"/>
+                                                <rect key="frame" x="77" y="0.0" width="367" height="36"/>
                                                 <variation key="widthClass=regular">
                                                     <nil key="backgroundColor"/>
                                                 </variation>
                                             </colorWell>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S8L-rI-BR6" userLabel="InnerAlpha">
-                                        <rect key="frame" x="235.5" y="3" width="208.5" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALPHA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-1F-mcc">
-                                                <rect key="frame" x="0.0" y="0.0" width="23.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BHD-CF-2HM">
-                                                <rect key="frame" x="41.5" y="0.0" width="169" height="31"/>
-                                                <connections>
-                                                    <action selector="sliderValueDidChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2I6-eK-P7t"/>
-                                                </connections>
-                                            </slider>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -85,7 +68,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorWell" destination="GYh-MY-aLk" id="Ghq-5l-Hpb"/>
+                        <outlet property="colorWell" destination="GYh-MY-aLk" id="RnN-B6-0kB"/>
                         <outlet property="controlPanel" destination="Vnk-if-g5F" id="RRU-qW-xY5"/>
                     </connections>
                 </viewController>
