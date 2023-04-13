@@ -217,12 +217,10 @@
                         <outlet property="alphaDecreasingButton" destination="uEC-oh-tLM" id="2ZN-hP-sa2"/>
                         <outlet property="alphaGauge" destination="wn3-df-qSV" id="PZE-VC-2AV"/>
                         <outlet property="alphaIncreasingButton" destination="ssc-yL-Dfi" id="UBh-LV-SAk"/>
-                        <outlet property="alphaSection" destination="dR3-iE-KnS" id="n47-4o-YAx"/>
                         <outlet property="alphaSlider" destination="Ymr-vz-Tpa" id="O0f-YP-dKd"/>
                         <outlet property="colorInfoLabel" destination="yqN-Jv-hgw" id="55c-qS-nkb"/>
-                        <outlet property="colorInfoSection" destination="0sh-nj-IHs" id="MqV-qv-08W"/>
+                        <outlet property="infoSection" destination="hbv-aM-kHQ" id="Nm6-N3-k0x"/>
                         <outlet property="planeArea" destination="IOE-iW-fZT" id="NnC-38-4oh"/>
-                        <outlet property="sliderSection" destination="4Ha-Mg-8RS" id="izF-gx-1wX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
