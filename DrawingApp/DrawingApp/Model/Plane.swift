@@ -62,4 +62,8 @@ struct Plane {
   func setSelectedRectangle(withColor newColor: Color) {
     selectedRectangle?.setColor(to: newColor)
   }
+  
+  func setSelectedRectangle(withAlpha newValue: Float) {
+    selectedRectangle?.setAlpha(to: newValue)
+  }
 }

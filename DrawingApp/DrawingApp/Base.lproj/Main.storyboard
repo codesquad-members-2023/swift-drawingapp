@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +35,7 @@
                                                 <rect key="frame" x="20" y="30" width="159" height="730"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0sh-nj-IHs">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="76"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배경색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x22-rP-jmM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
@@ -45,16 +44,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RNR-Ns-TqD">
-                                                                <rect key="frame" x="0.0" y="26" width="159" height="34.5"/>
+                                                                <rect key="frame" x="0.0" y="26" width="159" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqN-Jv-hgw">
-                                                                        <rect key="frame" x="8" y="8" width="143" height="18.5"/>
+                                                                        <rect key="frame" x="8" y="8" width="143" height="34"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtM-Oj-pV8">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="34.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="50"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                                         <connections>
@@ -77,7 +76,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Ha-Mg-8RS">
-                                                        <rect key="frame" x="0.0" y="80.5" width="159" height="56"/>
+                                                        <rect key="frame" x="0.0" y="96" width="159" height="56"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투명도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcJ-HB-Fnd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
@@ -93,53 +92,8 @@
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-iE-KnS">
-                                                        <rect key="frame" x="0.0" y="156.5" width="159" height="60"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투명도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpf-bC-K5k">
-                                                                <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="YYj-K1-agj">
-                                                                <rect key="frame" x="0.0" y="26" width="159" height="34"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEC-oh-tLM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="8" height="34"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="8" id="xHv-nA-Pe5"/>
-                                                                        </constraints>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain">
-                                                                            <imageReference key="image" image="minus" catalog="system" symbolScale="small"/>
-                                                                        </buttonConfiguration>
-                                                                        <connections>
-                                                                            <action selector="decreaseAlpha:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mpp-gZ-jIN"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wn3-df-qSV">
-                                                                        <rect key="frame" x="20" y="15" width="119" height="4"/>
-                                                                    </progressView>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssc-yL-Dfi">
-                                                                        <rect key="frame" x="151" y="0.0" width="8" height="34"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain">
-                                                                            <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
-                                                                        </buttonConfiguration>
-                                                                        <connections>
-                                                                            <action selector="increaseAlpha:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3v-3V-13M"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="ssc-yL-Dfi" firstAttribute="width" secondItem="uEC-oh-tLM" secondAttribute="width" id="v8s-vl-ntG"/>
-                                                                </constraints>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-aI-xDL">
-                                                        <rect key="frame" x="0.0" y="236.5" width="159" height="493.5"/>
+                                                        <rect key="frame" x="0.0" y="172" width="159" height="558"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -214,9 +168,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alphaDecreasingButton" destination="uEC-oh-tLM" id="2ZN-hP-sa2"/>
-                        <outlet property="alphaGauge" destination="wn3-df-qSV" id="PZE-VC-2AV"/>
-                        <outlet property="alphaIncreasingButton" destination="ssc-yL-Dfi" id="UBh-LV-SAk"/>
                         <outlet property="alphaSlider" destination="Ymr-vz-Tpa" id="O0f-YP-dKd"/>
                         <outlet property="colorInfoLabel" destination="yqN-Jv-hgw" id="55c-qS-nkb"/>
                         <outlet property="infoSection" destination="hbv-aM-kHQ" id="Nm6-N3-k0x"/>
@@ -234,8 +185,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="minus" catalog="system" width="128" height="26"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
