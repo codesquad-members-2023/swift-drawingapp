@@ -14,7 +14,6 @@ class SquareViewController: UIViewController {
     var selectedView : UIView? = nil
     @IBOutlet weak var controlPanel: UIStackView!
     @IBOutlet weak var colorWell: UIColorWell!
-    var modelSynchronizer = ModelSynchronizer()
     
     override func viewDidLoad() {
         
@@ -24,6 +23,8 @@ class SquareViewController: UIViewController {
                 self.view.addGestureRecognizer(tapGestureRecognizer)
         
         colorWell.addTarget(self, action: #selector(colorWellDidChange(_:)), for: .valueChanged)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(synchronizeView) , name: Notification.Name(rawValue:"MODEL CHANGED"), object: nil )
     }
 
     func createSquare(howMany amount : Int) -> Square?{
