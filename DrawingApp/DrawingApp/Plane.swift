@@ -8,7 +8,7 @@
 import Foundation
 
 class Plane  {
-    var squareIncluded : [Square] = []
+    private var squareIncluded : [Square] = []
     
     
     subscript(index: Int) -> Square {
@@ -30,6 +30,20 @@ class Plane  {
             }
         }
         return false
+    }
+    
+    func update(index : Int, colorValue : Color , alphaValue : Alpha) {
+        
+        guard self.squareIncluded.count > index else {
+            return 
+        }
+        self.squareIncluded[index].backgroundColor = colorValue
+        self.squareIncluded[index].alpha = alphaValue
+        
+        var obj = colorValue.convert()
+        obj.append(alphaValue.convert())
+        
+        NotificationCenter.default.post(name: Notification.Name("MODEL CHANGED"), object: obj)
     }
     
 }
