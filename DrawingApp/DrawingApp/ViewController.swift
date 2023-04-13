@@ -61,9 +61,7 @@ class ViewController: UIViewController {
   
   @IBAction func colorChanged(_ sender: Any) {
     guard let newColor = colorFactory?.make() else { return }
-    selectedRectangle?.setColor(to: newColor)
-    selectedRectangleView?.setColor(with: UIColor(color: newColor))
-    updateInfoPane(with: selectedRectangle)
+    plane.setSelectedRectangle(withColor: newColor)
   }
   
   @IBAction func alphaChanged(_ sender: UISlider) {
@@ -125,6 +123,12 @@ class ViewController: UIViewController {
       selector: #selector(deselectRectangle(notification:)),
       name: .deselectRectangle,
       object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(setSelectedRectangle(notification:)),
+      name: .setNewColor,
+      object: nil)
   }
   
   private func makeRectView(outOf rect: Rectangle) -> RectangleView {
@@ -137,14 +141,14 @@ class ViewController: UIViewController {
   }
   
   @objc private func addNewRectangleView(notification: Notification) {
-    guard let newRect = notification.userInfo?["newRect"] as? Rectangle else { return }
+    guard let newRect = notification.userInfo?[Notification.UserInfoKey.newRect] as? Rectangle else { return }
     let rectView = makeRectView(outOf: newRect)
     planeArea.addSubview(rectView)
     rectangleViews.updateValue(rectView, forKey: newRect)
   }
   
   @objc private func selectRectangle(notification: Notification) {
-    guard let newRect = notification.userInfo?["newRect"] as? Rectangle else { return }
+    guard let newRect = notification.userInfo?[Notification.UserInfoKey.newRect] as? Rectangle else { return }
     let rectView = rectangleViews[newRect]
     selectedRectangleView = rectView
     selectedRectangleView?.select()
@@ -156,6 +160,12 @@ class ViewController: UIViewController {
     colorInfoSection.isHidden = true
     sliderSection.isHidden = true
     alphaSection.isHidden = true
+  }
+  
+  @objc private func setSelectedRectangle(notification: Notification) {
+    guard let newRect = notification.userInfo?[Notification.UserInfoKey.newRect] as? Rectangle else { return }
+    selectedRectangleView?.setColor(with: UIColor(color: newRect.backgroundColor))
+    updateInfoPane(with: newRect)
   }
   
   private func updateInfoPane(with rect: Rectangle?) {
