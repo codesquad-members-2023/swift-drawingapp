@@ -58,4 +58,8 @@ struct Plane {
                                     object: nil,
                                     userInfo: [Notification.UserInfoKey.newRect: selectedRectangle])
   }
+  
+  func setSelectedRectangle(withColor newColor: Color) {
+    selectedRectangle?.setColor(to: newColor)
+  }
 }

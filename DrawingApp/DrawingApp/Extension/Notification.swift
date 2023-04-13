@@ -11,12 +11,11 @@ extension Notification.Name {
   static let newRectangleHasBeenAdded = Notification.Name("newRectangleHasBeenAdded")
   static let selectRectangle = Notification.Name("selectRectangle")
   static let deselectRectangle = Notification.Name("deselectRectangle")
+  static let setNewColor = Notification.Name("setNewColor")
 }
 
 extension Notification {
-  struct UserInfoKey {
-    typealias Key = String
-    
-    static let newRect: Key = "newRect"
+  enum UserInfoKey {
+    case newRect
   }
 }

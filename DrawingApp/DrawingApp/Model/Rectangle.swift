@@ -50,6 +50,9 @@ extension Rectangle {
 extension Rectangle {
   func setColor(to newColor: Color) {
     backgroundColor = newColor
+    NotificationCenter.default.post(name: .setNewColor,
+                                    object: nil,
+                                    userInfo: [Notification.UserInfoKey.newRect: self])
   }
   
   func setAlpha(to newAlpha: Color.Alpha) {
