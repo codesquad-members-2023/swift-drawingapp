@@ -29,11 +29,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var planeArea: UIView!
   
-  @IBOutlet weak var colorInfoSection: UIStackView!
-  
-  @IBOutlet weak var sliderSection: UIStackView!
-  
-  @IBOutlet weak var alphaSection: UIStackView!
+  @IBOutlet weak var infoSection: UIView!
   
   @IBOutlet weak var colorInfoLabel: UILabel!
   
@@ -101,9 +97,7 @@ class ViewController: UIViewController {
     let rectFactory = RandomRectangleFactory(pointFactory: pointFactory)
     self.rectangleFactory = rectFactory
     
-    colorInfoSection.isHidden = true
-    sliderSection.isHidden = true
-    alphaSection.isHidden = true
+    infoSection.subviews.forEach { view in view.isHidden = true }
     
     // add observer
     NotificationCenter.default.addObserver(
@@ -140,6 +134,13 @@ class ViewController: UIViewController {
     return rectView
   }
   
+  private func updateInfoPane(with rect: Rectangle?) {
+    guard let rect else { return }
+    colorInfoLabel.text = "#\(rect.backgroundColor.hexDescription)"
+    alphaSlider.value = rect.backgroundColor.alpha.floatValue
+    alphaGauge.progress = rect.backgroundColor.alpha.floatValue
+  }
+  
   @objc private func addNewRectangleView(notification: Notification) {
     guard let newRect = notification.userInfo?[Notification.UserInfoKey.newRect] as? Rectangle else { return }
     let rectView = makeRectView(outOf: newRect)
@@ -152,30 +153,20 @@ class ViewController: UIViewController {
     let rectView = rectangleViews[newRect]
     selectedRectangleView = rectView
     selectedRectangleView?.select()
+    
+    infoSection.subviews.forEach { view in view.isHidden = false }
     updateInfoPane(with: newRect)
   }
   
   @objc private func deselectRectangle(notification: Notification) {
     selectedRectangleView = nil
-    colorInfoSection.isHidden = true
-    sliderSection.isHidden = true
-    alphaSection.isHidden = true
+    infoSection.subviews.forEach { view in view.isHidden = true }
   }
   
   @objc private func setSelectedRectangle(notification: Notification) {
     guard let newRect = notification.userInfo?[Notification.UserInfoKey.newRect] as? Rectangle else { return }
     selectedRectangleView?.setColor(with: UIColor(color: newRect.backgroundColor))
     updateInfoPane(with: newRect)
-  }
-  
-  private func updateInfoPane(with rect: Rectangle?) {
-    guard let rect else { return }
-    colorInfoSection.isHidden = false
-    sliderSection.isHidden = false
-    alphaSection.isHidden = false
-    colorInfoLabel.text = "#\(rect.backgroundColor.hexDescription)"
-    alphaSlider.value = rect.backgroundColor.alpha.floatValue
-    alphaGauge.progress = rect.backgroundColor.alpha.floatValue
   }
   
   private func changeAlphaAndUpdateButtons(with newAlpha: Color.Alpha) {
