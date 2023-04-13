@@ -55,12 +55,11 @@ extension Rectangle {
                                     userInfo: [Notification.UserInfoKey.newRect: self])
   }
   
-  func setAlpha(to newAlpha: Color.Alpha) {
-    backgroundColor.alpha = newAlpha
-  }
-  
   func setAlpha(to newValue: Float) {
     let newAlpha = Color.Alpha.init(floatValue: newValue)
     backgroundColor.alpha = newAlpha ?? .level10
+    NotificationCenter.default.post(name: .setNewAlpha,
+                                    object: nil,
+                                    userInfo: [Notification.UserInfoKey.newRect: self])
   }
 }

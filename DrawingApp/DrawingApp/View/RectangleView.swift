@@ -35,8 +35,4 @@ class RectangleView: UIView {
   func setColor(with color: UIColor) {
     backgroundColor = color
   }
-  
-  func setAlpha(to newValue: Float) {
-    alpha = CGFloat(newValue)
-  }
 }

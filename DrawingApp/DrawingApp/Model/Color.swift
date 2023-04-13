@@ -8,7 +8,7 @@
 import Foundation
 
 struct Color {
-  enum Alpha: Int, CaseIterable, Comparable {
+  enum Alpha: Int, CaseIterable {
     case level1 = 1
     case level2 = 2
     case level3 = 3
@@ -22,30 +22,6 @@ struct Color {
     
     var floatValue: Float {
       Float(self.rawValue) / Float(10)
-    }
-    
-    var canBeIncreased: Bool {
-      self != .level10
-    }
-    
-    var canBeDecreased: Bool {
-      self != .level1
-    }
-    
-    static func < (lhs: Alpha, rhs: Alpha) -> Bool {
-      lhs.rawValue < rhs.rawValue
-    }
-    
-    func increase() -> Self? {
-      guard canBeIncreased else { return nil }
-      let newValue = self.rawValue + 1
-      return Alpha.init(rawValue: newValue)
-    }
-    
-    func decrease() -> Self? {
-      guard canBeDecreased else { return nil }
-      let newValue = self.rawValue - 1
-      return Alpha.init(rawValue: newValue)
     }
   }
   

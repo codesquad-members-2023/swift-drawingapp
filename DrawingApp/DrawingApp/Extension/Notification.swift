@@ -12,6 +12,7 @@ extension Notification.Name {
   static let selectRectangle = Notification.Name("selectRectangle")
   static let deselectRectangle = Notification.Name("deselectRectangle")
   static let setNewColor = Notification.Name("setNewColor")
+  static let setNewAlpha = Notification.Name("setNewAlpha")
 }
 
 extension Notification {
