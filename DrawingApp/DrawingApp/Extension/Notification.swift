@@ -9,6 +9,8 @@ import Foundation
 
 extension Notification.Name {
   static let newRectangleHasBeenAdded = Notification.Name("newRectangleHasBeenAdded")
+  static let selectRectangle = Notification.Name("selectRectangle")
+  static let deselectRectangle = Notification.Name("deselectRectangle")
 }
 
 extension Notification {
