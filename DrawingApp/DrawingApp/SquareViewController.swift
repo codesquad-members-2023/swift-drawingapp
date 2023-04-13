@@ -106,23 +106,23 @@ class SquareViewController: UIViewController {
     }
     
     @objc func colorWellDidChange(_ sender: UIColorWell) {
-        guard let modificationOf = selectedView else {
+        guard let selectedView = self.selectedView else {
             return
         }
-        modificationOf.backgroundColor = sender.selectedColor
-        
-        guard let matchedIndex = pickCorrespondenceSquare(selectedView: modificationOf) else {
+    
+        guard let matchedIndex = pickCorrespondenceSquare(selectedView: selectedView) else {
             return
         }
         
-        let matchedModel = self.plane[matchedIndex]
+        guard let color = sender.selectedColor?.colorConvert() else {
+            return
+        }
         
-        guard let convertedColor = modificationOf.backgroundColor?.convert() else {
+        guard let alpha = sender.selectedColor?.alphaConvert() else {
             return
         }
         
         modelSynchronizer.synchronizeColorOfModel(synchronizeTarget: matchedModel, color: convertedColor)
-        log.printLog(of: matchedModel, order: 1)
     }
     
     func pickCorrespondenceSquare(selectedView : UIView) -> Int? {
