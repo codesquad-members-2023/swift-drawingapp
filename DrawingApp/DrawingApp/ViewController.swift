@@ -54,23 +54,9 @@ class ViewController: UIViewController {
   
   @IBAction func somePositionDidTouched(_ sender: UITapGestureRecognizer) {
     selectedRectangleView?.deselect()
-    
-    let location = sender.location(in: planeArea)
+    let location = sender.location(in: sender.view)
     let point = Point(x: location.x, y: location.y)
-    let rect = plane.findRectangles(containing: point).last
-    selectedRectangle = rect
-    
-    guard let rect else {
-      selectedRectangleView = nil
-      colorInfoSection.isHidden = true
-      sliderSection.isHidden = true
-      alphaSection.isHidden = true
-      return
-    }
-    let rectView = rectangleViews[rect]
-    selectedRectangleView = rectView
-    selectedRectangleView?.select()
-    updateInfoPane(with: rect)
+    plane.selectRectangle(on: point)
   }
   
   @IBAction func colorChanged(_ sender: Any) {
@@ -127,6 +113,18 @@ class ViewController: UIViewController {
       selector: #selector(addNewRectangleView(notification:)),
       name: .newRectangleHasBeenAdded,
       object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(selectRectangle(notification:)),
+      name: .selectRectangle,
+      object: nil)
+    
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(deselectRectangle(notification:)),
+      name: .deselectRectangle,
+      object: nil)
   }
   
   private func makeRectView(outOf rect: Rectangle) -> RectangleView {
@@ -143,6 +141,21 @@ class ViewController: UIViewController {
     let rectView = makeRectView(outOf: newRect)
     planeArea.addSubview(rectView)
     rectangleViews.updateValue(rectView, forKey: newRect)
+  }
+  
+  @objc private func selectRectangle(notification: Notification) {
+    guard let newRect = notification.userInfo?["newRect"] as? Rectangle else { return }
+    let rectView = rectangleViews[newRect]
+    selectedRectangleView = rectView
+    selectedRectangleView?.select()
+    updateInfoPane(with: newRect)
+  }
+  
+  @objc private func deselectRectangle(notification: Notification) {
+    selectedRectangleView = nil
+    colorInfoSection.isHidden = true
+    sliderSection.isHidden = true
+    alphaSection.isHidden = true
   }
   
   private func updateInfoPane(with rect: Rectangle?) {
