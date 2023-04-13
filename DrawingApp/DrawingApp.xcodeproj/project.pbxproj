@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		634CD7B729DA7626001BBE55 /* RandomFigureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CD7B329DA7626001BBE55 /* RandomFigureFactory.swift */; };
-		634CD7B829DA7626001BBE55 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CD7B429DA7626001BBE55 /* RectangleFactory.swift */; };
-		634CD7B929DA7626001BBE55 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CD7B529DA7626001BBE55 /* Rectangle.swift */; };
-		634CD7BA29DA7626001BBE55 /* RandomFigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634CD7B629DA7626001BBE55 /* RandomFigure.swift */; };
+		633E35B129E68D6500CD9A87 /* RandomColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E35B029E68D6500CD9A87 /* RandomColorFactory.swift */; };
 		635B1F6529D1379C00CCDCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F6429D1379C00CCDCFF /* AppDelegate.swift */; };
 		635B1F6729D1379C00CCDCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F6629D1379C00CCDCFF /* SceneDelegate.swift */; };
 		635B1F6929D1379C00CCDCFF /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F6829D1379C00CCDCFF /* DrawingViewController.swift */; };
@@ -19,11 +16,17 @@
 		635B1F7C29D1379D00CCDCFF /* DrawingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F7B29D1379D00CCDCFF /* DrawingAppTests.swift */; };
 		635B1F8629D1379D00CCDCFF /* DrawingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F8529D1379D00CCDCFF /* DrawingAppUITests.swift */; };
 		635B1F8829D1379D00CCDCFF /* DrawingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F8729D1379D00CCDCFF /* DrawingAppUITestsLaunchTests.swift */; };
-		635B1F9D29D529C700CCDCFF /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F9C29D529C700CCDCFF /* Size.swift */; };
-		635B1FAF29D52A7900CCDCFF /* RandomAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1FAB29D52A7900CCDCFF /* RandomAlpha.swift */; };
-		635B1FB029D52A7900CCDCFF /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1FAC29D52A7900CCDCFF /* RandomColor.swift */; };
-		635B1FB129D52A7900CCDCFF /* RandomId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1FAD29D52A7900CCDCFF /* RandomId.swift */; };
-		635B1FB429D52AE300CCDCFF /* RandomPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1FB329D52AE300CCDCFF /* RandomPoint.swift */; };
+		63D7CDE029DD4F57001998F2 /* RandomValueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */; };
+		63D7CDE129DD4F57001998F2 /* FigureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDD629DD4F56001998F2 /* FigureFactory.swift */; };
+		63D7CDE229DD4F57001998F2 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDD729DD4F56001998F2 /* RectangleFactory.swift */; };
+		63D7CDE329DD4F57001998F2 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDA29DD4F56001998F2 /* Id.swift */; };
+		63D7CDE429DD4F57001998F2 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDB29DD4F56001998F2 /* Size.swift */; };
+		63D7CDE529DD4F57001998F2 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDC29DD4F56001998F2 /* Point.swift */; };
+		63D7CDE629DD4F57001998F2 /* Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDD29DD4F56001998F2 /* Alpha.swift */; };
+		63D7CDE729DD4F57001998F2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDE29DD4F56001998F2 /* Color.swift */; };
+		63D7CDE829DD4F57001998F2 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDF29DD4F56001998F2 /* Rectangle.swift */; };
+		63D7CDEB29DD4F61001998F2 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDE929DD4F61001998F2 /* Figure.swift */; };
+		63D7CDEC29DD4F61001998F2 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDEA29DD4F61001998F2 /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		634CD7B329DA7626001BBE55 /* RandomFigureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFigureFactory.swift; sourceTree = "<group>"; };
-		634CD7B429DA7626001BBE55 /* RectangleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
-		634CD7B529DA7626001BBE55 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		634CD7B629DA7626001BBE55 /* RandomFigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFigure.swift; sourceTree = "<group>"; };
+		633E35B029E68D6500CD9A87 /* RandomColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorFactory.swift; sourceTree = "<group>"; };
 		635B1F6129D1379C00CCDCFF /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B1F6429D1379C00CCDCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635B1F6629D1379C00CCDCFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,11 +60,17 @@
 		635B1F8129D1379D00CCDCFF /* DrawingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B1F8529D1379D00CCDCFF /* DrawingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppUITests.swift; sourceTree = "<group>"; };
 		635B1F8729D1379D00CCDCFF /* DrawingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		635B1F9C29D529C700CCDCFF /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		635B1FAB29D52A7900CCDCFF /* RandomAlpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAlpha.swift; sourceTree = "<group>"; };
-		635B1FAC29D52A7900CCDCFF /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
-		635B1FAD29D52A7900CCDCFF /* RandomId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomId.swift; sourceTree = "<group>"; };
-		635B1FB329D52AE300CCDCFF /* RandomPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPoint.swift; sourceTree = "<group>"; };
+		63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomValueFactory.swift; sourceTree = "<group>"; };
+		63D7CDD629DD4F56001998F2 /* FigureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigureFactory.swift; sourceTree = "<group>"; };
+		63D7CDD729DD4F56001998F2 /* RectangleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
+		63D7CDDA29DD4F56001998F2 /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		63D7CDDB29DD4F56001998F2 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		63D7CDDC29DD4F56001998F2 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		63D7CDDD29DD4F56001998F2 /* Alpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alpha.swift; sourceTree = "<group>"; };
+		63D7CDDE29DD4F56001998F2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		63D7CDDF29DD4F56001998F2 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		63D7CDE929DD4F61001998F2 /* Figure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		63D7CDEA29DD4F61001998F2 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,15 +124,13 @@
 				635B1F6429D1379C00CCDCFF /* AppDelegate.swift */,
 				635B1F6629D1379C00CCDCFF /* SceneDelegate.swift */,
 				635B1F6829D1379C00CCDCFF /* DrawingViewController.swift */,
-				634CD7B629DA7626001BBE55 /* RandomFigure.swift */,
-				634CD7B329DA7626001BBE55 /* RandomFigureFactory.swift */,
-				634CD7B529DA7626001BBE55 /* Rectangle.swift */,
-				634CD7B429DA7626001BBE55 /* RectangleFactory.swift */,
-				635B1F9C29D529C700CCDCFF /* Size.swift */,
-				635B1FA229D52A6200CCDCFF /* RandomValue */,
+				63D7CDE929DD4F61001998F2 /* Figure.swift */,
+				63D7CDEA29DD4F61001998F2 /* Plane.swift */,
 				635B1F6A29D1379C00CCDCFF /* Main.storyboard */,
 				635B1F6D29D1379D00CCDCFF /* Assets.xcassets */,
 				635B1F7229D1379D00CCDCFF /* Info.plist */,
+				63D7CDD429DD4F56001998F2 /* Factory */,
+				63D7CDD829DD4F56001998F2 /* Model */,
 			);
 			path = DrawingApp;
 			sourceTree = "<group>";
@@ -148,15 +152,36 @@
 			path = DrawingAppUITests;
 			sourceTree = "<group>";
 		};
-		635B1FA229D52A6200CCDCFF /* RandomValue */ = {
+		63D7CDD429DD4F56001998F2 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				635B1FAB29D52A7900CCDCFF /* RandomAlpha.swift */,
-				635B1FAC29D52A7900CCDCFF /* RandomColor.swift */,
-				635B1FAD29D52A7900CCDCFF /* RandomId.swift */,
-				635B1FB329D52AE300CCDCFF /* RandomPoint.swift */,
+				63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */,
+				633E35B029E68D6500CD9A87 /* RandomColorFactory.swift */,
+				63D7CDD629DD4F56001998F2 /* FigureFactory.swift */,
+				63D7CDD729DD4F56001998F2 /* RectangleFactory.swift */,
 			);
-			path = RandomValue;
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		63D7CDD829DD4F56001998F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63D7CDDF29DD4F56001998F2 /* Rectangle.swift */,
+				63D7CDD929DD4F56001998F2 /* Properties */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63D7CDD929DD4F56001998F2 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				63D7CDDA29DD4F56001998F2 /* Id.swift */,
+				63D7CDDB29DD4F56001998F2 /* Size.swift */,
+				63D7CDDC29DD4F56001998F2 /* Point.swift */,
+				63D7CDDD29DD4F56001998F2 /* Alpha.swift */,
+				63D7CDDE29DD4F56001998F2 /* Color.swift */,
+			);
+			path = Properties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,18 +314,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634CD7B829DA7626001BBE55 /* RectangleFactory.swift in Sources */,
-				635B1F9D29D529C700CCDCFF /* Size.swift in Sources */,
+				63D7CDE429DD4F57001998F2 /* Size.swift in Sources */,
 				635B1F6929D1379C00CCDCFF /* DrawingViewController.swift in Sources */,
-				634CD7B929DA7626001BBE55 /* Rectangle.swift in Sources */,
+				63D7CDE729DD4F57001998F2 /* Color.swift in Sources */,
+				633E35B129E68D6500CD9A87 /* RandomColorFactory.swift in Sources */,
+				63D7CDE829DD4F57001998F2 /* Rectangle.swift in Sources */,
+				63D7CDE029DD4F57001998F2 /* RandomValueFactory.swift in Sources */,
+				63D7CDE229DD4F57001998F2 /* RectangleFactory.swift in Sources */,
+				63D7CDEC29DD4F61001998F2 /* Plane.swift in Sources */,
+				63D7CDE129DD4F57001998F2 /* FigureFactory.swift in Sources */,
+				63D7CDE529DD4F57001998F2 /* Point.swift in Sources */,
+				63D7CDE629DD4F57001998F2 /* Alpha.swift in Sources */,
+				63D7CDEB29DD4F61001998F2 /* Figure.swift in Sources */,
 				635B1F6529D1379C00CCDCFF /* AppDelegate.swift in Sources */,
-				635B1FAF29D52A7900CCDCFF /* RandomAlpha.swift in Sources */,
+				63D7CDE329DD4F57001998F2 /* Id.swift in Sources */,
 				635B1F6729D1379C00CCDCFF /* SceneDelegate.swift in Sources */,
-				635B1FB029D52A7900CCDCFF /* RandomColor.swift in Sources */,
-				634CD7BA29DA7626001BBE55 /* RandomFigure.swift in Sources */,
-				635B1FB129D52A7900CCDCFF /* RandomId.swift in Sources */,
-				635B1FB429D52AE300CCDCFF /* RandomPoint.swift in Sources */,
-				634CD7B729DA7626001BBE55 /* RandomFigureFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

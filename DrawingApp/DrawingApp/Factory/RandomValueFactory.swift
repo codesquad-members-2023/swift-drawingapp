@@ -17,7 +17,7 @@ struct RandomValueFactory {
         uuid.insert("-", at: sixthIndex)
         return Id(id: String(uuid))
     }
-    
+        
     func createPoint() -> Point {
         let figureWidth: Double = 150
         let rangeOfX = safeArea.x...(screen.width - figureWidth)
