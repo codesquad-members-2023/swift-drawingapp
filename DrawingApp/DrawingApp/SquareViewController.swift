@@ -49,27 +49,26 @@ class SquareViewController: UIViewController {
         self.view.bringSubviewToFront(controlPanel)
     }
     
-    @IBAction func sliderValueDidChanged(_ sender: UISlider) {
-        guard let modificationOf = selectedView else {
+    @objc func synchronizeView(notification: Notification) {
+        guard let selectedView = self.selectedView else {
             return
         }
-        modificationOf.alpha = CGFloat(sender.value)
+        let receivedNotificationObject = notification.object as! [CGFloat]
         
-        guard let matchedIndex = pickCorrespondenceSquare(selectedView: modificationOf) else {
-            return
+        var color : UIColor  {
+            let red = receivedNotificationObject[0]
+            let green = receivedNotificationObject[1]
+            let blue = receivedNotificationObject[2]
+            let alpha = receivedNotificationObject[3]
+            
+            return UIColor(cgColor: CGColor(red: red, green: green, blue: blue, alpha: alpha))
         }
-        
-        let matchedModel = self.plane[matchedIndex]
-        
-        modelSynchronizer.synchronizeAlphaOfModel(synchronizeTarget: matchedModel, alpha: modificationOf.alpha)
-        
-        log.printLog(of: matchedModel, order: 1)
+        selectedView.backgroundColor = color
     }
     
     func visualize() {
-        guard let createdSquare = self.plane.squareIncluded.last else {
-            return
-        }
+        let index = self.plane.count()-1
+        let createdSquare = self.plane[index]
         let squareView = createSquareView(from : createdSquare.manufacturing())
         
         self.view.addSubview(squareView)
@@ -122,7 +121,7 @@ class SquareViewController: UIViewController {
             return
         }
         
-        modelSynchronizer.synchronizeColorOfModel(synchronizeTarget: matchedModel, color: convertedColor)
+        self.plane.update(index: matchedIndex, colorValue: color , alphaValue: alpha)
     }
     
     func pickCorrespondenceSquare(selectedView : UIView) -> Int? {
