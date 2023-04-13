@@ -50,11 +50,6 @@ class ViewController: UIViewController {
   @IBAction func addRandomRect(_ sender: Any) {
     guard let newRect = rectangleFactory?.make() else { return }
     plane.add(rect: newRect)
-    
-    let rectView = makeRectView(outOf: newRect)
-    planeArea.addSubview(rectView)
-    
-    rectangleViews.updateValue(rectView, forKey: newRect)
   }
   
   @IBAction func somePositionDidTouched(_ sender: UITapGestureRecognizer) {
@@ -125,6 +120,13 @@ class ViewController: UIViewController {
     colorInfoSection.isHidden = true
     sliderSection.isHidden = true
     alphaSection.isHidden = true
+    
+    // add observer
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(addNewRectangleView(notification:)),
+      name: .newRectangleHasBeenAdded,
+      object: nil)
   }
   
   private func makeRectView(outOf rect: Rectangle) -> RectangleView {
@@ -134,6 +136,13 @@ class ViewController: UIViewController {
     let color = rect.backgroundColor
     rectView.setColor(with: UIColor(color: color))
     return rectView
+  }
+  
+  @objc private func addNewRectangleView(notification: Notification) {
+    guard let newRect = notification.userInfo?["newRect"] as? Rectangle else { return }
+    let rectView = makeRectView(outOf: newRect)
+    planeArea.addSubview(rectView)
+    rectangleViews.updateValue(rectView, forKey: newRect)
   }
   
   private func updateInfoPane(with rect: Rectangle?) {

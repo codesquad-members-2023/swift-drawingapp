@@ -38,5 +38,9 @@ struct Plane {
   
   mutating func add(rect: Rectangle) {
     rectangles.append(rect)
+    let notification = Notification(name: .newRectangleHasBeenAdded,
+                                    object: nil,
+                                    userInfo: [Notification.UserInfoKey.newRect: rect])
+    NotificationCenter.default.post(notification)
   }
 }
