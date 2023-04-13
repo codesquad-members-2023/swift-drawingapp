@@ -11,8 +11,8 @@ protocol Square {
     var id : ID { get }
     var size : Size { get }
     var position : Position { get }
-    var backgroundColor : Color { get set}
-    var alpha : Alpha { get set}
+    var backgroundColor : Color { get set }
+    var alpha : Alpha { get set }
     var description : String { get }
     
     func manufacturing() -> MaterialOfSquareView

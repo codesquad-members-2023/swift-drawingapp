@@ -10,9 +10,9 @@ import UIKit
 
 class RandomSquare : Square{
     
-    var id : ID
-    var size : Size
-    var position : Position
+    private(set) var id : ID
+    private(set) var size : Size
+    private(set) var position : Position
     var backgroundColor : Color
     var alpha : Alpha
     
