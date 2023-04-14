@@ -8,13 +8,13 @@
 import Foundation
 
 class Rectangle {
-  let id: ID
+  private let id: ID
   
-  var size: Size
+  private(set) var size: Size
   
-  var origin: Point
+  private(set) var origin: Point
   
-  var backgroundColor: Color
+  private(set) var backgroundColor: Color
   
   init(id: ID, size: Size, origin: Point, backgroundColor: Color) {
     self.id = id
