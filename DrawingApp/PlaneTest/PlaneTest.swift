@@ -23,10 +23,8 @@ final class PlaneTest: XCTestCase {
     
     func testAdd_OneSquare() {
            test = Plane() // []
-           XCTAssertTrue(test.squareIncluded.isEmpty)
-           
            test.add(MockSquare()) //
-           XCTAssertFalse(test.squareIncluded.isEmpty)
+           XCTAssertNotNil(test[0])
        }
        
        func testCount_Zero() {
@@ -45,15 +43,15 @@ final class PlaneTest: XCTestCase {
        func testIsThereSquareIncludedCoordinate_When_x100_y50() {
            test = Plane()
            test.add(MockSquare()) // origin = 0,0
-           
-           XCTAssertTrue(test.isThereSquareIncludedCoordinate(point: CGPoint(x: 100, y: 50)))
+
+           XCTAssertTrue(test.whichIndexOfSquareisIncludedCoordinate(point: CGPoint(x: 100, y: 50)) == 0)
        }
-       
+
        func testIsThereSquareIncludedCoordinate_When_x300_y500() {
            test = Plane()
            test.add(MockSquare()) // origin = 0,0
-           
-           XCTAssertFalse(test.isThereSquareIncludedCoordinate(point: CGPoint(x: 300, y: 500)))
+
+           XCTAssertNil(test.whichIndexOfSquareisIncludedCoordinate(point: CGPoint(x: 300, y: 500)))
        }
 }
 
@@ -91,11 +89,15 @@ struct Position {
 }
 
 struct Color {
-    
+    func convert()-> [CGFloat]{
+        return [0,0,0]
+    }
 }
 
 struct Alpha{
-    
+    func convert()-> CGFloat{
+        return 0
+    }
 }
 
 struct MaterialOfSquareView {
