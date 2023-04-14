@@ -23,13 +23,8 @@ class Plane  {
         return self.squareIncluded.count
     }
     
-    func isThereSquareIncludedCoordinate (point : CGPoint) -> Bool{
-        for item in squareIncluded.reversed() {
-            guard !item.position.isCoordinateContained(point: point) else {
-                return true
-            }
-        }
-        return false
+    func whichIndexOfSquareisIncludedCoordinate (point : CGPoint) -> Int?{
+        return squareIncluded.lastIndex(where: {$0.position.isCoordinateContained(point: point)})
     }
     
     func update(index : Int, colorValue : Color , alphaValue : Alpha) {
