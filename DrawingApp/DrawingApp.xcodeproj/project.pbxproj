@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40FC05C29E8ED9500EC6D1E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F469E29D6775A00F8F4DB /* Plane.swift */; };
 		E432C71529D3E6B300F78809 /* SquareFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432C71429D3E6B300F78809 /* SquareFactory.swift */; };
 		E432C71729D3E6C500F78809 /* RandomSquareFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432C71629D3E6C500F78809 /* RandomSquareFactory.swift */; };
 		E432C71929D3E6D300F78809 /* RandomSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432C71829D3E6D300F78809 /* RandomSquare.swift */; };
@@ -21,7 +22,6 @@
 		E4D64EA429DAB7A200BE9862 /* MaterialOfSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EA329DAB7A200BE9862 /* MaterialOfSquareView.swift */; };
 		E4D64EAC29DE8F9900BE9862 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EAB29DE8F9900BE9862 /* Extension.swift */; };
 		E4D64EB829DEBE1F00BE9862 /* PlaneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D64EB729DEBE1F00BE9862 /* PlaneTest.swift */; };
-		E4D64EBE29DEBE5000BE9862 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43F469E29D6775A00F8F4DB /* Plane.swift */; };
 		E4E9CE5529D1325F0052762E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9CE5429D1325F0052762E /* AppDelegate.swift */; };
 		E4E9CE5729D1325F0052762E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E9CE5629D1325F0052762E /* SceneDelegate.swift */; };
 		E4E9CE5C29D1325F0052762E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E9CE5A29D1325F0052762E /* Main.storyboard */; };
@@ -187,6 +187,7 @@
 				TargetAttributes = {
 					E4D64EB429DEBE1F00BE9862 = {
 						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E4E9CE5029D1325F0052762E;
 					};
 					E4E9CE5029D1325F0052762E = {
 						CreatedOnToolsVersion = 14.2;
@@ -237,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D64EBE29DEBE5000BE9862 /* Plane.swift in Sources */,
+				E40FC05C29E8ED9500EC6D1E /* Plane.swift in Sources */,
 				E4D64EB829DEBE1F00BE9862 /* PlaneTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +311,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DrawingApp";
 			};
 			name = Debug;
 		};
@@ -328,6 +330,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DrawingApp";
 			};
 			name = Release;
 		};
