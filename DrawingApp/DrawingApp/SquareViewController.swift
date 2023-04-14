@@ -96,12 +96,16 @@ class SquareViewController: UIViewController {
             old.layer.borderColor = UIColor.clear.cgColor
         }
         
-        if let selectedView = self.view.hitTest(location, with: nil), selectedView != self.view && type(of: selectedView) == UIView.self {
-            selectedView.layer.borderWidth = 2.0
-            selectedView.layer.borderColor = UIColor.red.cgColor
- 
-            self.selectedView = selectedView
+        guard let index = self.plane.whichIndexOfSquareisIncludedCoordinate(point: location) else {
+            return
         }
+        
+        let selectedView = squareViews[index]
+        selectedView.layer.borderWidth = 2.0
+        selectedView.layer.borderColor = UIColor.red.cgColor
+ 
+        self.selectedView = selectedView
+        
     }
     
     @objc func colorWellDidChange(_ sender: UIColorWell) {
