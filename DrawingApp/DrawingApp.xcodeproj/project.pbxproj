@@ -16,8 +16,10 @@
 		635B1F7C29D1379D00CCDCFF /* DrawingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F7B29D1379D00CCDCFF /* DrawingAppTests.swift */; };
 		635B1F8629D1379D00CCDCFF /* DrawingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F8529D1379D00CCDCFF /* DrawingAppUITests.swift */; };
 		635B1F8829D1379D00CCDCFF /* DrawingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B1F8729D1379D00CCDCFF /* DrawingAppUITestsLaunchTests.swift */; };
+		639DC73129E8FB3F001686AC /* RandomAlphaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DC73029E8FB3F001686AC /* RandomAlphaFactory.swift */; };
+		639DC73329E8FB5D001686AC /* RandomPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DC73229E8FB5D001686AC /* RandomPointFactory.swift */; };
+		639DC73529E8FB65001686AC /* RandomIdFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DC73429E8FB65001686AC /* RandomIdFactory.swift */; };
 		63D7CDE029DD4F57001998F2 /* RandomValueFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */; };
-		63D7CDE129DD4F57001998F2 /* FigureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDD629DD4F56001998F2 /* FigureFactory.swift */; };
 		63D7CDE229DD4F57001998F2 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDD729DD4F56001998F2 /* RectangleFactory.swift */; };
 		63D7CDE329DD4F57001998F2 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDA29DD4F56001998F2 /* Id.swift */; };
 		63D7CDE429DD4F57001998F2 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D7CDDB29DD4F56001998F2 /* Size.swift */; };
@@ -60,8 +62,10 @@
 		635B1F8129D1379D00CCDCFF /* DrawingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635B1F8529D1379D00CCDCFF /* DrawingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppUITests.swift; sourceTree = "<group>"; };
 		635B1F8729D1379D00CCDCFF /* DrawingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		639DC73029E8FB3F001686AC /* RandomAlphaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAlphaFactory.swift; sourceTree = "<group>"; };
+		639DC73229E8FB5D001686AC /* RandomPointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPointFactory.swift; sourceTree = "<group>"; };
+		639DC73429E8FB65001686AC /* RandomIdFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomIdFactory.swift; sourceTree = "<group>"; };
 		63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomValueFactory.swift; sourceTree = "<group>"; };
-		63D7CDD629DD4F56001998F2 /* FigureFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigureFactory.swift; sourceTree = "<group>"; };
 		63D7CDD729DD4F56001998F2 /* RectangleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
 		63D7CDDA29DD4F56001998F2 /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		63D7CDDB29DD4F56001998F2 /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
@@ -155,10 +159,12 @@
 		63D7CDD429DD4F56001998F2 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */,
-				633E35B029E68D6500CD9A87 /* RandomColorFactory.swift */,
-				63D7CDD629DD4F56001998F2 /* FigureFactory.swift */,
 				63D7CDD729DD4F56001998F2 /* RectangleFactory.swift */,
+				63D7CDD529DD4F56001998F2 /* RandomValueFactory.swift */,
+				639DC73429E8FB65001686AC /* RandomIdFactory.swift */,
+				639DC73229E8FB5D001686AC /* RandomPointFactory.swift */,
+				633E35B029E68D6500CD9A87 /* RandomColorFactory.swift */,
+				639DC73029E8FB3F001686AC /* RandomAlphaFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -316,17 +322,19 @@
 			files = (
 				63D7CDE429DD4F57001998F2 /* Size.swift in Sources */,
 				635B1F6929D1379C00CCDCFF /* DrawingViewController.swift in Sources */,
+				639DC73129E8FB3F001686AC /* RandomAlphaFactory.swift in Sources */,
 				63D7CDE729DD4F57001998F2 /* Color.swift in Sources */,
 				633E35B129E68D6500CD9A87 /* RandomColorFactory.swift in Sources */,
 				63D7CDE829DD4F57001998F2 /* Rectangle.swift in Sources */,
 				63D7CDE029DD4F57001998F2 /* RandomValueFactory.swift in Sources */,
 				63D7CDE229DD4F57001998F2 /* RectangleFactory.swift in Sources */,
 				63D7CDEC29DD4F61001998F2 /* Plane.swift in Sources */,
-				63D7CDE129DD4F57001998F2 /* FigureFactory.swift in Sources */,
 				63D7CDE529DD4F57001998F2 /* Point.swift in Sources */,
 				63D7CDE629DD4F57001998F2 /* Alpha.swift in Sources */,
 				63D7CDEB29DD4F61001998F2 /* Figure.swift in Sources */,
 				635B1F6529D1379C00CCDCFF /* AppDelegate.swift in Sources */,
+				639DC73529E8FB65001686AC /* RandomIdFactory.swift in Sources */,
+				639DC73329E8FB5D001686AC /* RandomPointFactory.swift in Sources */,
 				63D7CDE329DD4F57001998F2 /* Id.swift in Sources */,
 				635B1F6729D1379C00CCDCFF /* SceneDelegate.swift in Sources */,
 			);
