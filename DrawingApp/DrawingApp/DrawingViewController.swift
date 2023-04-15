@@ -9,7 +9,12 @@ class DrawingViewController: UIViewController {
     var rectangleViews: [UIView] = []
     var logger: Logger = Logger(subsystem: "com.inwoo.DrawingApp", category: "ViewController")
     var rectangleCreator = UIButton()
+    // 우측 투명도와 색상을 변경시켜주는 뷰를 숨겨주는 버튼입니다.
     var inspectorHider = UIButton()
+
+    private(set) var safeArea: Point?
+    private(set) var screen: Size?
+    var isButtonsPlaced = false
     
     @IBOutlet weak var alphaSlider: UISlider!
     @IBOutlet weak var figureInsperctorView: UIView!
@@ -27,14 +32,30 @@ class DrawingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if rectangleFactory == nil {
-            let safeAreaPoint = getSafeAreaPoint()
-            guard let screenSize = getScreenSize() else {
-                return
-            }
-            rectangleFactory = RectangleFactory(deviceSafeArea: safeAreaPoint,
-                                                deviceScreenSize: screenSize)
+        
+        // 팩토리가 viewDidAppear 최초 호출시에만 초기화 되도록 구현 했습니다.
+        // viewDidAppear에서 초기화 한 이유는 SafeArea값을 팩토리에서 생성하는데 필요하기 때문입니다.
+        // 최초 호출을 하도록 의도한 이유는 viewDidAppear의 재호출시 팩토리의 중복초기화를 피하기 위함입니다.
+        if safeArea == nil, screen == nil {
+            safeArea = getSafeAreaPoint()
+            screen = getScreenSize()
         }
+        
+        guard var screenWidth = screen?.width, let screenHeight = screen?.height else {
+            return
+        }
+        screenWidth -= figureInsperctorView.frame.width
+        rectangleFactory = RectangleFactory(safeArea: safeArea,
+                                            screen: Size(width: screenWidth, height: screenHeight))
+        
+        if !isButtonsPlaced {
+            // 두개의 버튼을 원하는 위치에 두는 메소드입니다.
+            // SafeArea가 호출된 후에 위치를 지정하도록 했습니다.
+            place(button: rectangleCreator, type: .rectangleCreator)
+            place(button: inspectorHider, type: .inspectorhider)
+            isButtonsPlaced = true
+        }
+        
     }
     
     @objc func tap(_ sender: UITapGestureRecognizer) {
@@ -57,7 +78,7 @@ class DrawingViewController: UIViewController {
     }
     
     @IBAction func changeColor(_ sender: UIButton) {
-        let randomColor = RandomColorFactory.createColor()
+        let randomColor = RandomColorFactory.make()
         
         let viewIndices = findIndex(of: selectedView)
         plane.changeColor(indicies: viewIndices, with: randomColor)
@@ -78,15 +99,15 @@ class DrawingViewController: UIViewController {
         plane.changeAlpha(indices: viewIndices, with: value)
         
         viewIndices.forEach {
-            rectangleViews[$0].alpha = CGFloat(value)
+            rectangleViews[$0].alpha = value
         }
     }
     
     @objc func create(_ sender: UIButton) {
-        guard let rectangle = rectangleFactory?.create() else { return }
+        guard let rectangle = rectangleFactory?.makeRectangle() else { return }
         plane.add(element: rectangle)
         
-        let rectangleView = converToView(by: rectangle)
+        let rectangleView = convertToView(by: rectangle)
         
         self.rectangleViews.append(rectangleView)
         self.view.addSubview(rectangleView)
@@ -104,28 +125,54 @@ class DrawingViewController: UIViewController {
 }
 
 extension DrawingViewController {
+    // 버튼 구현을 IBAction대신 코드로 작성한 이유는 Configuration을 적용시키기 위함입니다.
     private func makeRectangleCreatorButton() -> UIButton {
-        var title = AttributedString("사각형")
-        title.font = .systemFont(ofSize: 16.0, weight: .light)
+        let buttonSize = CGSize(width: 106, height: 66)
+        let frame = CGRect(origin: CGPoint(x: 0, y: 0),
+                           size: buttonSize)
+        let button = UIButton(frame: frame)
+        button.addTarget(self, action: #selector(create), for: .touchUpInside)
         
         var config = UIButton.Configuration.gray()
-        config.attributedTitle = title
         config.image = UIImage(systemName: "rectangle")
         config.imagePadding = 10
         config.imagePlacement = .top
         config.buttonSize = .medium
         
-        let frame = CGRect(x: 554, y: 748, width: 106, height: 66)
-        let button = UIButton(frame: frame)
-        button.configuration = config
-        button.addTarget(self, action: #selector(create), for: .touchUpInside)
+        var title = AttributedString("사각형")
+        title.font = .systemFont(ofSize: 16.0, weight: .light)
+        config.attributedTitle = title
         
+        button.configuration = config
         self.view.addSubview(button)
         return button
     }
     
+    // 버튼 위치를 지정해주는 함수를 작성한 이유는 SafeArea영역을 이용해
+    // 원하는 위치에 두기 위해서입니다.
+    private func place(button: UIButton, type: ButtonType) {
+        guard let screenSize = screen, let safeAreaPoint = safeArea else {
+            return
+        }
+        var pointX: Double = screenSize.width - button.frame.width
+        var pointY: Double = 0
+        
+        let closure = { (button: UIButton) -> () in
+            switch type {
+            case .inspectorhider:
+                button.frame.origin = CGPoint(x: pointX, y: safeAreaPoint.y)
+            case .rectangleCreator:
+                pointX /= 2
+                pointY = screenSize.height - (button.frame.height + self.view.layoutMargins.bottom)
+                button.frame.origin = CGPoint(x: pointX, y: pointY)
+            }
+        }
+        
+        closure(button)
+    }
+    
     private func makeInspectorHideButton() -> UIButton {
-        let button = UIButton(frame: CGRect(x: 1136, y: 22, width: 58, height: 34))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 58, height: 34))
         button.tintColor = UIColor.white
         button.backgroundColor = UIColor.gray
         button.setImage(UIImage(systemName: "eye.fill"), for: .normal)
@@ -144,7 +191,7 @@ extension DrawingViewController {
         return viewIndices
     }
     
-    private func converToView(by rectangle: Rectangle) -> UIView {
+    private func convertToView(by rectangle: Rectangle) -> UIView {
         let rectangleView = UIView(
             frame: CGRect(x: rectangle.point.x,
                           y: rectangle.point.y,
@@ -157,10 +204,9 @@ extension DrawingViewController {
     
     // Color를 UIColor로 변경하여 return 하는 메소드
     private func convertToUIColor(by color: Color, with alpha: Alpha) -> UIColor {
-        let rgbMaxValue = 255.0
-        let red = CGFloat(color.red / rgbMaxValue)
-        let green = CGFloat(color.green / rgbMaxValue)
-        let blue = CGFloat(color.blue / rgbMaxValue)
+        let red = CGFloat(color.red)
+        let green = CGFloat(color.green)
+        let blue = CGFloat(color.blue)
         let alphaMaxValue = 10.0
         let color = UIColor(red: red, green: green, blue: blue, alpha: alpha.rawValue / alphaMaxValue)
         return color
@@ -176,8 +222,15 @@ extension DrawingViewController {
         guard let screenBounds = self.view.window?.windowScene?.screen.bounds else {
             return nil
         }
-        let screenWidth = screenBounds.size.width - figureInsperctorView.frame.width
+        let screenWidth = screenBounds.size.width
         let screenHeight = screenBounds.size.height
         return Size(width: screenWidth, height: screenHeight)
+    }
+}
+
+fileprivate extension DrawingViewController {
+    enum ButtonType {
+        case inspectorhider
+        case rectangleCreator
     }
 }
