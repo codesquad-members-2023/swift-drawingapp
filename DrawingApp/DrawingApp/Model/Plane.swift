@@ -14,5 +14,7 @@ struct Plane {
         return rectangles.count
     }
     
-    
+    subscript(index: Int) -> Rectangle? {
+        return countOfRectangles > 0 && index >= 0 ? rectangles[index] : nil
+    }
 }
