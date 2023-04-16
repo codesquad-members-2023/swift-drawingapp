@@ -8,11 +8,11 @@
 import Foundation
 
 class Rectangle {
-    private var id: Id
-    private var size: Size
-    private var coordinate: Coordinate
-    private var color: Rgb
-    private var alpha: Alpha
+    var id: Id
+    var size: Size
+    var coordinate: Coordinate
+    var color: Rgb
+    var alpha: Alpha
     
     init(id: Id, size: Size, coordinate: Coordinate, color: Rgb, alpha: Alpha) {
         self.id = id
