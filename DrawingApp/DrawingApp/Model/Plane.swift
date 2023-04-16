@@ -21,4 +21,12 @@ struct Plane {
     mutating func addRectangle(rectangle: Rectangle) {
         rectangles.append(rectangle)
     }
+    
+    func makeUiView(rect: Rectangle) -> UIView {
+        let rectangle: CGRect = .init(x: rect.coordinate.x, y: rect.coordinate.y, width: rect.size.width, height: rect.size.height)
+        let rectangleView: UIView = .init(frame: rectangle)
+        let rgba = setUiColor(color: rect.color, alpha: rect.alpha)
+        rectangleView.backgroundColor = rgba
+        return rectangleView
+    }
 }
