@@ -54,4 +54,8 @@ struct Plane {
         rectangles[index].alpha.alpha = alpha
         return setUiColor(color: rectangles[index].color, alpha: rectangles[index].alpha)
     }
+    
+    func setUiColor(color: Rgb, alpha: Alpha) -> UIColor {
+        return uiColor.convertCodeToColor(color, alpha)
+    }
 }
