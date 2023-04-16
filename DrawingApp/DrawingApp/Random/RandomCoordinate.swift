@@ -8,9 +8,9 @@
 import Foundation
 
 class Coordinate {
-    private var x: Double = 0
-    private var y: Double = 0
-    private let size = Size()
+    var x: Double = 0
+    var y: Double = 0
+    let size = Size()
 
     init(width: Double, height: Double) {
         x = Double.random(in: 0...(width - size.width))
