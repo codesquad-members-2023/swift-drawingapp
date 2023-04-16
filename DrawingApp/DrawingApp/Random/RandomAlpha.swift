@@ -8,11 +8,11 @@
 import Foundation
 
 class Alpha {
-    private let alpha = Int.random(in: 1...10)
+    var alpha = floor(Double.random(in: 1...10))
 }
 
 extension Alpha: CustomStringConvertible {
     var description: String {
-        return "Alpha: \(alpha)"
+        return "\(Int(alpha))"
     }
 }
