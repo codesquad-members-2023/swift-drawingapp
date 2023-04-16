@@ -35,4 +35,18 @@ struct Plane {
         rectangles[index].color = backgroundColor
         return setUiColor(color: backgroundColor, alpha: rectangles[index].alpha)
     }
+    
+    func getUiViewIndex(x: Double, y: Double) -> Int {
+        var xRange: ClosedRange<Double>
+        var yRange: ClosedRange<Double>
+        var lastIndex = -1
+        
+        for index in 0 ..< countOfRectangles {
+            xRange = rectangles[index].coordinate.x...(rectangles[index].coordinate.x + rectangles[index].size.width)
+            yRange = rectangles[index].coordinate.y...(rectangles[index].coordinate.y + rectangles[index].size.height)
+            if xRange.contains(x) && yRange.contains(y) { lastIndex = index }
+        }
+        
+        return lastIndex
+    }
 }
