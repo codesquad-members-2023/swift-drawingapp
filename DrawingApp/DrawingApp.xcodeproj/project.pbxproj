@@ -20,12 +20,22 @@
 		4F52ED2E29DBFBA000473E8E /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2D29DBFBA000473E8E /* Size.swift */; };
 		4F52ED3029DC4ABC00473E8E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2F29DC4ABC00473E8E /* Plane.swift */; };
 		4F8A4A7529D9AE2C004BCE03 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */; };
-		4FEC29D329DD6428003CE18E /* DrawingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC29D229DD6428003CE18E /* DrawingAppTests.swift */; };
+		4F8C8DA829E5B2FE002A7ED5 /* RgbToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C8DA729E5B2FE002A7ED5 /* RgbToUIColor.swift */; };
+		4F8C8DB029EAE653002A7ED5 /* PlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C8DAF29EAE653002A7ED5 /* PlaneTests.swift */; };
+		4F8C8DB629EAF16A002A7ED5 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2F29DC4ABC00473E8E /* Plane.swift */; };
+		4F8C8DB729EB1406002A7ED5 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC1B8B29D60A2E0075672B /* Rectangle.swift */; };
+		4F8C8DB929EB140C002A7ED5 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2D29DBFBA000473E8E /* Size.swift */; };
+		4F8C8DBA29EB1413002A7ED5 /* RgbToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8C8DA729E5B2FE002A7ED5 /* RgbToUIColor.swift */; };
+		4F8C8DBB29EB1419002A7ED5 /* RandomAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2B29DB1E5500473E8E /* RandomAlpha.swift */; };
+		4F8C8DBC29EB141C002A7ED5 /* RandomRgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2929DB1E4C00473E8E /* RandomRgb.swift */; };
+		4F8C8DBD29EB141F002A7ED5 /* RandomCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2729DB1E4000473E8E /* RandomCoordinate.swift */; };
+		4F8C8DBE29EB1421002A7ED5 /* RandomId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F52ED2529DB1E2E00473E8E /* RandomId.swift */; };
+		4F8C8DC029EB25D7002A7ED5 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */; };
 		4FFC1B8C29D60A2E0075672B /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC1B8B29D60A2E0075672B /* Rectangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4FEC29D429DD6428003CE18E /* PBXContainerItemProxy */ = {
+		4F8C8DB129EAE653002A7ED5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4F2D83EF29D1763A0050E07F /* Project object */;
 			proxyType = 1;
@@ -50,8 +60,9 @@
 		4F52ED2D29DBFBA000473E8E /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		4F52ED2F29DC4ABC00473E8E /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
-		4FEC29D029DD6427003CE18E /* DrawingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FEC29D229DD6428003CE18E /* DrawingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppTests.swift; sourceTree = "<group>"; };
+		4F8C8DA729E5B2FE002A7ED5 /* RgbToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RgbToUIColor.swift; sourceTree = "<group>"; };
+		4F8C8DAD29EAE653002A7ED5 /* PlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F8C8DAF29EAE653002A7ED5 /* PlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneTests.swift; sourceTree = "<group>"; };
 		4FFC1B8B29D60A2E0075672B /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +74,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FEC29CD29DD6427003CE18E /* Frameworks */ = {
+		4F8C8DAA29EAE653002A7ED5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4F2D83F929D1763A0050E07F /* DrawingApp */,
-				4FEC29D129DD6428003CE18E /* DrawingAppTests */,
+				4F8C8DAE29EAE653002A7ED5 /* PlaneTests */,
 				4F2D83F829D1763A0050E07F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				4F2D83F729D1763A0050E07F /* DrawingApp.app */,
-				4FEC29D029DD6427003CE18E /* DrawingAppTests.xctest */,
+				4F8C8DAD29EAE653002A7ED5 /* PlaneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,8 +109,8 @@
 				4F2D83FC29D1763A0050E07F /* SceneDelegate.swift */,
 				4F52ED2429DB1C0B00473E8E /* Random */,
 				4FFC1B8E29D60A680075672B /* Model */,
+				4FEC29D929DF0C45003CE18E /* View */,
 				4FFC1B8D29D60A560075672B /* Controller */,
-				4F2D840029D1763A0050E07F /* Main.storyboard */,
 				4F2D840329D1763B0050E07F /* Assets.xcassets */,
 				4F2D840529D1763B0050E07F /* LaunchScreen.storyboard */,
 				4F2D840829D1763B0050E07F /* Info.plist */,
@@ -118,12 +129,20 @@
 			path = Random;
 			sourceTree = "<group>";
 		};
-		4FEC29D129DD6428003CE18E /* DrawingAppTests */ = {
+		4F8C8DAE29EAE653002A7ED5 /* PlaneTests */ = {
 			isa = PBXGroup;
 			children = (
-				4FEC29D229DD6428003CE18E /* DrawingAppTests.swift */,
+				4F8C8DAF29EAE653002A7ED5 /* PlaneTests.swift */,
 			);
-			path = DrawingAppTests;
+			path = PlaneTests;
+			sourceTree = "<group>";
+		};
+		4FEC29D929DF0C45003CE18E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F2D840029D1763A0050E07F /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4FFC1B8D29D60A560075672B /* Controller */ = {
@@ -141,6 +160,7 @@
 				4F8A4A7429D9AE2C004BCE03 /* RectangleFactory.swift */,
 				4F52ED2D29DBFBA000473E8E /* Size.swift */,
 				4F52ED2F29DC4ABC00473E8E /* Plane.swift */,
+				4F8C8DA729E5B2FE002A7ED5 /* RgbToUIColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,22 +185,22 @@
 			productReference = 4F2D83F729D1763A0050E07F /* DrawingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4FEC29CF29DD6427003CE18E /* DrawingAppTests */ = {
+		4F8C8DAC29EAE653002A7ED5 /* PlaneTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4FEC29D629DD6428003CE18E /* Build configuration list for PBXNativeTarget "DrawingAppTests" */;
+			buildConfigurationList = 4F8C8DB329EAE653002A7ED5 /* Build configuration list for PBXNativeTarget "PlaneTests" */;
 			buildPhases = (
-				4FEC29CC29DD6427003CE18E /* Sources */,
-				4FEC29CD29DD6427003CE18E /* Frameworks */,
-				4FEC29CE29DD6427003CE18E /* Resources */,
+				4F8C8DA929EAE653002A7ED5 /* Sources */,
+				4F8C8DAA29EAE653002A7ED5 /* Frameworks */,
+				4F8C8DAB29EAE653002A7ED5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4FEC29D529DD6428003CE18E /* PBXTargetDependency */,
+				4F8C8DB229EAE653002A7ED5 /* PBXTargetDependency */,
 			);
-			name = DrawingAppTests;
-			productName = DrawingAppTests;
-			productReference = 4FEC29D029DD6427003CE18E /* DrawingAppTests.xctest */;
+			name = PlaneTests;
+			productName = PlaneTests;
+			productReference = 4F8C8DAD29EAE653002A7ED5 /* PlaneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +216,7 @@
 					4F2D83F629D1763A0050E07F = {
 						CreatedOnToolsVersion = 14.2;
 					};
-					4FEC29CF29DD6427003CE18E = {
+					4F8C8DAC29EAE653002A7ED5 = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 4F2D83F629D1763A0050E07F;
 					};
@@ -216,7 +236,7 @@
 			projectRoot = "";
 			targets = (
 				4F2D83F629D1763A0050E07F /* DrawingApp */,
-				4FEC29CF29DD6427003CE18E /* DrawingAppTests */,
+				4F8C8DAC29EAE653002A7ED5 /* PlaneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,7 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FEC29CE29DD6427003CE18E /* Resources */ = {
+		4F8C8DAB29EAE653002A7ED5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,25 +276,35 @@
 				4F2D83FD29D1763A0050E07F /* SceneDelegate.swift in Sources */,
 				4F52ED2A29DB1E4D00473E8E /* RandomRgb.swift in Sources */,
 				4FFC1B8C29D60A2E0075672B /* Rectangle.swift in Sources */,
+				4F8C8DA829E5B2FE002A7ED5 /* RgbToUIColor.swift in Sources */,
 				4F52ED3029DC4ABC00473E8E /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FEC29CC29DD6427003CE18E /* Sources */ = {
+		4F8C8DA929EAE653002A7ED5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FEC29D329DD6428003CE18E /* DrawingAppTests.swift in Sources */,
+				4F8C8DC029EB25D7002A7ED5 /* RectangleFactory.swift in Sources */,
+				4F8C8DB729EB1406002A7ED5 /* Rectangle.swift in Sources */,
+				4F8C8DB929EB140C002A7ED5 /* Size.swift in Sources */,
+				4F8C8DB629EAF16A002A7ED5 /* Plane.swift in Sources */,
+				4F8C8DBA29EB1413002A7ED5 /* RgbToUIColor.swift in Sources */,
+				4F8C8DB029EAE653002A7ED5 /* PlaneTests.swift in Sources */,
+				4F8C8DBC29EB141C002A7ED5 /* RandomRgb.swift in Sources */,
+				4F8C8DBD29EB141F002A7ED5 /* RandomCoordinate.swift in Sources */,
+				4F8C8DBB29EB1419002A7ED5 /* RandomAlpha.swift in Sources */,
+				4F8C8DBE29EB1421002A7ED5 /* RandomId.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4FEC29D529DD6428003CE18E /* PBXTargetDependency */ = {
+		4F8C8DB229EAE653002A7ED5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4F2D83F629D1763A0050E07F /* DrawingApp */;
-			targetProxy = 4FEC29D429DD6428003CE18E /* PBXContainerItemProxy */;
+			targetProxy = 4F8C8DB129EAE653002A7ED5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -472,17 +502,16 @@
 			};
 			name = Release;
 		};
-		4FEC29D729DD6428003CE18E /* Debug */ = {
+		4F8C8DB429EAE653002A7ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4Y5BW58548;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.demian.DrawingAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demian.PlaneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -491,17 +520,16 @@
 			};
 			name = Debug;
 		};
-		4FEC29D829DD6428003CE18E /* Release */ = {
+		4F8C8DB529EAE653002A7ED5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4Y5BW58548;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.demian.DrawingAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demian.PlaneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -531,11 +559,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4FEC29D629DD6428003CE18E /* Build configuration list for PBXNativeTarget "DrawingAppTests" */ = {
+		4F8C8DB329EAE653002A7ED5 /* Build configuration list for PBXNativeTarget "PlaneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4FEC29D729DD6428003CE18E /* Debug */,
-				4FEC29D829DD6428003CE18E /* Release */,
+				4F8C8DB429EAE653002A7ED5 /* Debug */,
+				4F8C8DB529EAE653002A7ED5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
