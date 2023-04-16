@@ -29,4 +29,10 @@ struct Plane {
         rectangleView.backgroundColor = rgba
         return rectangleView
     }
+    
+    func changeBackgroundColor(index: Int) -> UIColor {
+        let backgroundColor: Rgb = .init()
+        rectangles[index].color = backgroundColor
+        return setUiColor(color: backgroundColor, alpha: rectangles[index].alpha)
+    }
 }
