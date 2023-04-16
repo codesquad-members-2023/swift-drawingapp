@@ -49,4 +49,9 @@ struct Plane {
         
         return lastIndex
     }
+    
+    func changeAlpha(index: Int, alpha: Double) -> UIColor {
+        rectangles[index].alpha.alpha = alpha
+        return setUiColor(color: rectangles[index].color, alpha: rectangles[index].alpha)
+    }
 }
