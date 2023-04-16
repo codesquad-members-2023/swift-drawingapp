@@ -17,4 +17,8 @@ struct Plane {
     subscript(index: Int) -> Rectangle? {
         return countOfRectangles > 0 && index >= 0 ? rectangles[index] : nil
     }
+    
+    mutating func addRectangle(rectangle: Rectangle) {
+        rectangles.append(rectangle)
+    }
 }
